@@ -1139,15 +1139,135 @@ Resumen de Álgebra II\\
 					\end{tikzpicture}
 				
 			\section{Autovalores y Autovectores}
+					
 				\subsection{Definiciones básicas}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							\textbf{Autovector:} Un vector $\vect{v} \neq 0$ es autovector de $A \in K^{n \times n} \Longleftrightarrow \exists \lambda \in K$ $\vert$ $A \vect{v}=\lambda \vect{v}$\\
+							
+							\textbf{Autoespacio:} El autoespacio de $A$ asociado a un autovalor $\lambda$ es $S_\lambda (A)=\nul{A-\lambda I}$\\
+							
+							\textbf{Polinomio característico:} El polinomio característico de una matriz $A \in K^{n \times n}$ es $p_A(\lambda)=\dete{A-\lambda I}$, y tiene grado $n$. Si $K=R$ el polinomio tiene a lo sumo $n$ raíces. Si $K=C$ tiene exactamente $n$ raíces.\\
+							
+							\textbf{Autovalor:} Los autovalores $\lambda$ de una matriz son las raíces de su polinomio característico.\\
+							
+							\textbf{Espectro de una matriz:} $\sigma (A)=\{ \lambda \in K$ $\vert$ $\lambda$ es autovalor de $A \}$.
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Definiciones básicas};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Autovalores complejos de matriz real}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Supongamos que $\vect{v}$ es un autovector de $A \in R^{n \times n}$ asociado a $\lambda=a+\jmath b$ con $a,b \in R,b \neq 0$.\\
+							Entonces  $\vect{v}^*$ es también un autovector de $A \in R^{n \times n}$ asociado a $\lambda^*=a-\jmath b$.\\
+							
+							En particular si $\{\vect{v}_1,\ldots,\vect{v}_n \}$ es una base de $S_\lambda$, entonces $\{\vect{v}_1^*,\ldots,\vect{v}_n^* \}$ es una base de $S_{\lambda^*}$
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Autovalores complejos};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Multiplicidad geométrica y algebráica de un Autovalor}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Se define:
+							\begin{itemize}
+								\item $m_g(\lambda)=\dime{S_\lambda(A)}$
+								\item $m_a(\lambda) \doteq$ número de veces que aparece $\lambda$ como raíz del polinomio característico.
+							\end{itemize}
+							
+							Siempre se verifica que:
+							\begin{align}
+								1 \leq m_g(\lambda) \leq m_a(\lambda)
+							\end{align}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Multiplicidad de Autovalores};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Propiedades}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Propiedades de Autovalores y Autovectores};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Autovalores y Autovectores de operadores lineales}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Autovalores y Autovectores de Operadores lineales};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Diagonalización}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Diagonalización};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 					\subsubsection{Matrices trivialmente diagonalizables}
+						
+						\begin{tikzpicture}
+							\node [definicion] (box){%
+						    \begin{minipage}{0.80\textwidth}
+	
+						    \end{minipage}
+							};
+							\node[fancytitle, right=10pt] at (box.north west) {Diagonalizaciones triviales};
+							\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+						\end{tikzpicture}
+					
 					\subsubsection{Propiedades}
+						
+						\begin{tikzpicture}
+							\node [definicion] (box){%
+						    \begin{minipage}{0.80\textwidth}
+	
+						    \end{minipage}
+							};
+							\node[fancytitle, right=10pt] at (box.north west) {Propiedades de la diagonalización};
+							\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+						\end{tikzpicture}
+					
 					\subsubsection{Diagonalización de transformaciones lineales}
+						
+						\begin{tikzpicture}
+							\node [definicion] (box){%
+						    \begin{minipage}{0.80\textwidth}
+	
+						    \end{minipage}
+							};
+							\node[fancytitle, right=10pt] at (box.north west) {Diagonalización de Transformaciones Lineales};
+							\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+						\end{tikzpicture}
+					
 			\section{Matrices hermíticas y simétricas}
 				\subsection{Diagonalización}
 				\subsection{Descomposición espectral}
