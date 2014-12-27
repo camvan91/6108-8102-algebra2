@@ -41,6 +41,7 @@
 \newcommand{\fil}[1]{\text{Fil}(#1)}
 \newcommand{\col}[1]{\text{Col}(#1)}
 \newcommand{\nul}[1]{\text{Nul}(#1)}
+\newcommand{\im}[1]{\text{Im}(#1)}
 \newcommand{\rg}[1]{\text{rango}(#1)}
 \newcommand{\dime}[1]{\text{Dim}(#1)}
 \newcommand{\dete}[1]{\vert #1 \vert}
@@ -934,7 +935,12 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-						
+							Para que una transformación se considere lineal debe cumplir:
+							\begin{enumerate}
+								\item $T(\vect{u}+\vect{v})=T(\vect{u})+T(\vect{v})$, con $\vect{u},\vect{v}$ $\in V$
+								\item $T(\alpha \vect{u}+\beta \vect{v})=\alpha \cdot T(\vect{u})+\beta \cdot T(\vect{v})$, con $\vect{u},\vect{v} \in V_K$ y $\alpha,\beta \in K$
+								\item $T(0_{V_K})=0_{V_K}$
+							\end{enumerate}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Condiciones para ser Transformación lineal};
@@ -946,7 +952,12 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-						
+							\textbf{Núcleo:} $\nul{T}=\{ \vect{v} \in V_K \text{ } \vert \text{ } T(\vect{v})=0_W \}=C_B^{-1}(\nul{A})$.\\
+							\textbf{Imágen:} $\im{T}=\{ \vect{w} \in W_K \text{ } \vert \text{ } T(\vect{v})=\vect{w} \text{ con } \vect{v} \in V_K \}=C_C^{-1}(\col{A})$.\\
+							
+							Ambos son subespacios vectoriales.\\
+							
+							La imágen de una Transformación Lineal puede obtenerse como lo que generan los transformados de una base del espacio de partida.
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Núcleo e Imágen};
@@ -956,7 +967,10 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [teorema] (box){%
 					    \begin{minipage}{0.80\textwidth}
-						
+							Sea $T \in \ell (V,W)$ y sea $\dime{V}=n$ (finita). Entonces:
+							\begin{align}
+								\dime{V}=\dime{\nul{T}}+\dime{\im{T}}
+							\end{align}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Teorema de la dimensión};
@@ -969,7 +983,18 @@ Resumen de Álgebra II\\
 						\begin{tikzpicture}
 							\node [definicion] (box){%
 						    \begin{minipage}{0.80\textwidth}
-							
+								Una Transformación lineal es inyectiva si verifica:
+								\begin{align}
+									\vect{v}_1 \neq \vect{v}_2 \Rightarrow T(\vect{v}_1) \neq T(\vect{v}_2) \text{ , } \forall \vect{v}_1,\vect{v}_2 \in V \\
+									\nul{T}=\{0_v\} \Longleftrightarrow \dime{\im{T}}=\dime{V}
+								\end{align}
+								Una Transformación Lineal Inyectiva transforma conjuntos Linealmente Independientes a conjuntos Linealmente Independientes.\\
+								
+								La recíproca también es cierta: si $A$ es un conjunto Linealmente Independiente y es transformado en otro conjunto Linealmente Independiente, la Transformación Lineal es inyectiva. Es decir: Si $T$ es inyectiva y $A$ es Linealmente Independiente, $T(A)$ es Linealmente Independiente.\\
+								
+								Las matrices asociadas a Transformaciones Lineales inyectivas tienen sus columnas Linealmente Independientes.\\
+								
+								Si $\dime{V} > \dime{W}$, $T$ \underline{no} puede ser inyectiva.
 						    \end{minipage}
 							};
 							\node[fancytitle, right=10pt] at (box.north west) {Monomorfismo};
@@ -981,7 +1006,13 @@ Resumen de Álgebra II\\
 						\begin{tikzpicture}
 							\node [definicion] (box){%
 						    \begin{minipage}{0.80\textwidth}
-							
+								Una Transformación lineal es sobreyectiva si y solo si:
+								\begin{align}
+									\im{T}=W
+								\end{align}
+								Las matrices asociadas a Transformaciones lineales sobreyectivas tienen sus filas Linealmente Independientes.\\
+								
+								Si $\dime{W} > \dime{V}$, $T$ \underline{no} puede ser sobreyectiva.
 						    \end{minipage}
 							};
 							\node[fancytitle, right=10pt] at (box.north west) {Epimorfismo};

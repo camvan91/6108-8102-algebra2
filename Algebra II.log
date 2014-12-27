@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.10.31)  27 DEC 2014 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.10.31)  27 DEC 2014 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,25 +1006,25 @@ LaTeX Info: Redefining \% on input line 7.
 )
 \openout1 = `"Algebra II.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Info: Redefining \. on input line 62.
-LaTeX Info: Redefining \% on input line 62.
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1124,7 +1124,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 62.
+(lastpage)             ! on input line 63.
 \c@lstlisting=\count165
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1135,12 +1135,12 @@ ABD: EveryShipout initializing macros
 File: includes/fiuba.pdf Graphic file (type pdf)
 
 <use includes/fiuba.pdf>
-Package pdftex.def Info: includes/fiuba.pdf used on input line 78.
+Package pdftex.def Info: includes/fiuba.pdf used on input line 79.
 (pdftex.def)             Requested size: 72.57167pt x 141.83096pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 92.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./includes/fiuba.pdf>] (./
@@ -1155,306 +1155,365 @@ LaTeX Info: Redefining \% on input line 49.
 \tf@toc=\write4
 \openout4 = `"Algebra II.toc"'.
 
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 121.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 122.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 152--153
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 153--154
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 194--195
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 195--196
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 226--227
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 227--228
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 228.
-LaTeX Info: Redefining \% on input line 228.
+LaTeX Info: Redefining \. on input line 229.
+LaTeX Info: Redefining \% on input line 229.
 [3]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 243--244
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 244--245
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 268--269
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 269--270
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 282.
-LaTeX Info: Redefining \% on input line 282.
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
 [4]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 282--283
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 283--284
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 296--297
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 297--298
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 312--313
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 313--314
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 329--330
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 330--331
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 331.
-LaTeX Info: Redefining \% on input line 331.
+LaTeX Info: Redefining \. on input line 332.
+LaTeX Info: Redefining \% on input line 332.
 [5]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 345--346
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 346--347
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 360--361
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 361--362
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 378--379
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 379--380
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 394--395
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 395--396
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 396.
-LaTeX Info: Redefining \% on input line 396.
+LaTeX Info: Redefining \. on input line 397.
+LaTeX Info: Redefining \% on input line 397.
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 418--419
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 419--420
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 435--436
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 436--437
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 451--452
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 452--453
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 472--473
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 473--474
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 474.
-LaTeX Info: Redefining \% on input line 474.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
 [7]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 492--493
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 493--494
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 508--509
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 509--510
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 546--547
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 547--548
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--556
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
 
  []
 
-LaTeX Info: Redefining \. on input line 562.
-LaTeX Info: Redefining \% on input line 562.
+LaTeX Info: Redefining \. on input line 563.
+LaTeX Info: Redefining \% on input line 563.
 [8]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 562--563
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 563--564
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 576--577
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 577--578
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 590--591
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 591--592
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 592.
-LaTeX Info: Redefining \% on input line 592.
+LaTeX Info: Redefining \. on input line 593.
+LaTeX Info: Redefining \% on input line 593.
 [9]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 609--610
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 610--611
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 627--628
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 628--629
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 652--653
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 653--654
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 654.
-LaTeX Info: Redefining \% on input line 654.
+LaTeX Info: Redefining \. on input line 655.
+LaTeX Info: Redefining \% on input line 655.
 [10]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 670--671
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 671--672
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--687
+Underfull \hbox (badness 10000) in paragraph at lines 686--688
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 693--694
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 694--695
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 695.
-LaTeX Info: Redefining \% on input line 695.
+LaTeX Info: Redefining \. on input line 696.
+LaTeX Info: Redefining \% on input line 696.
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 709--711
+Underfull \hbox (badness 10000) in paragraph at lines 710--712
 
  []
 
 <proyeccion.png, id=81, 227.34938pt x 189.70876pt>
 File: proyeccion.png Graphic file (type png)
  <use proyeccion.png>
-Package pdftex.def Info: proyeccion.png used on input line 722.
+Package pdftex.def Info: proyeccion.png used on input line 723.
 (pdftex.def)             Requested size: 113.67441pt x 94.85414pt.
 
-Overfull \hbox (48.203pt too wide) in paragraph at lines 697--726
+Overfull \hbox (48.203pt too wide) in paragraph at lines 698--727
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 747--748
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 748--749
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 749.
-LaTeX Info: Redefining \% on input line 749.
+LaTeX Info: Redefining \. on input line 750.
+LaTeX Info: Redefining \% on input line 750.
 [12 <./proyeccion.png>]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 764--765
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 765--766
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--778
+Underfull \hbox (badness 10000) in paragraph at lines 778--779
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 784--785
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 785--786
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 791--792
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 817--818
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 818--819
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 819.
-LaTeX Info: Redefining \% on input line 819.
+LaTeX Info: Redefining \. on input line 820.
+LaTeX Info: Redefining \% on input line 820.
 [13]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 836--837
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 837--838
 [][] 
  []
 
 <cuad_min.png, id=91, 304.13625pt x 150.5625pt>
 File: cuad_min.png Graphic file (type png)
  <use cuad_min.png>
-Package pdftex.def Info: cuad_min.png used on input line 860.
+Package pdftex.def Info: cuad_min.png used on input line 861.
 (pdftex.def)             Requested size: 106.44928pt x 52.69765pt.
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 869--870
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 870--871
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 888.
-LaTeX Info: Redefining \% on input line 888.
+LaTeX Info: Redefining \. on input line 889.
+LaTeX Info: Redefining \% on input line 889.
 [14]
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 888--889
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 889--890
 [][] 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 904--905
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 905--906
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--920
+Underfull \hbox (badness 10000) in paragraph at lines 919--921
 
  []
 
 
-Overfull \hbox (13.43942pt too wide) in paragraph at lines 926--927
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 927--928
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 928.
-LaTeX Info: Redefining \% on input line 928.
+LaTeX Info: Redefining \. on input line 929.
+LaTeX Info: Redefining \% on input line 929.
 [15 <./cuad_min.png>]
-LaTeX Info: Redefining \. on input line 991.
-LaTeX Info: Redefining \% on input line 991.
- [16]
-LaTeX Info: Redefining \. on input line 1059.
-LaTeX Info: Redefining \% on input line 1059.
- [17]
-LaTeX Info: Redefining \. on input line 1059.
-LaTeX Info: Redefining \% on input line 1059.
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 948--949
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--957
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 958--959
+
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 965--966
+[][] 
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 978--979
+[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 980.
+LaTeX Info: Redefining \% on input line 980.
+[16]
+Underfull \hbox (badness 1281) in paragraph at lines 990--992
+\OT1/ptm/m/n/10 Una Trans-for-ma-ci[]on Li-neal In-yec-ti-va trans-for-ma con-j
+un-tos Li-neal-men-te In-de-pen-dien-tes a con-jun-tos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--992
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--996
+
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1002--1003
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1014
+
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1020--1021
+[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1046.
+LaTeX Info: Redefining \% on input line 1046.
+[17]
+LaTeX Info: Redefining \. on input line 1090.
+LaTeX Info: Redefining \% on input line 1090.
  [18] 
 AED: lastpage setting LastPage
 (./Algebra II.aux
@@ -1462,10 +1521,10 @@ LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 21544 strings out of 494918
- 435595 string characters out of 6178390
- 567902 words of memory out of 5000000
- 24279 multiletter control sequences out of 15000+600000
+ 21545 strings out of 494918
+ 435597 string characters out of 6178390
+ 567913 words of memory out of 5000000
+ 24280 multiletter control sequences out of 15000+600000
  39836 words of font info for 89 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  48i,23n,82p,416b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1484,7 +1543,7 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on "Algebra II.pdf" (19 pages, 233125 bytes).
+Output written on "Algebra II.pdf" (19 pages, 237755 bytes).
 PDF statistics:
  162 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
