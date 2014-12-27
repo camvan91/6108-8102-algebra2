@@ -908,10 +908,20 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-
+							Sean los puntos $\vect{P}_i=(x_i,y_i)$ con $i=1,2,\ldots,n$. La recta que mejor aproxima a los puntos es:
+							\begin{align}
+								\vect{y}=\alpha_0\vect{1}+\alpha_1 \vect{x}
+							\end{align}
+							Y los coeficientes $\alpha_i$ se obtienen resolviendo el sistema:
+							\begin{align}
+								\begin{bmatrix}{1}&{x_1}\\{1}&{x_2}\\{\vdots}&{\vdots} \\{1}&{x_n} \end{bmatrix} \begin{bmatrix}{\alpha_0}\\{\alpha_1}\end{bmatrix}=\begin{bmatrix}{y_1}\\{y_2}\\{\vdots}\\{y_n}\end{bmatrix}
+							\end{align}
+							Si se aproxima por una parábola se agrega otro nivel de complejidad, con $y=\alpha_2x^2+\alpha_1x+\alpha_0$, lo que implica una columna adicional a la matriz para los términos cuadráticos, una fila adicional para la constante $\alpha_2$ en la variable.\\
+							
+							Se siguen agregando columnas a la matriz y filas al vector tantas veces como grados de complejidad se necesiten.
 					    \end{minipage}
 						};
-						\node[fancytitle, right=10pt] at (box.north west) {Propiedades de la proyección};
+						\node[fancytitle, right=10pt] at (box.north west) {Regresión lineal};
 						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
 					\end{tikzpicture}
 					

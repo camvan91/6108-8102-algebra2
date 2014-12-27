@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {4.7}Inversas y pseudoinversas}{13}
 \contentsline {subsection}{\numberline {4.8}Cuadrados m\IeC {\'\i }nimos}{14}
 \contentsline {subsubsection}{\numberline {4.8.1}Norma m\IeC {\'\i }nima}{14}
-\contentsline {subsection}{\numberline {4.9}Regresi\IeC {\'o}n lineal}{14}
+\contentsline {subsection}{\numberline {4.9}Regresi\IeC {\'o}n lineal}{15}
 \contentsline {section}{\numberline {5}Transformaciones lineales}{15}
 \contentsline {section}{\numberline {6}Autovalores y Autovectores}{15}
 \contentsline {section}{\numberline {7}Matrices herm\IeC {\'\i }ticas y sim\IeC {\'e}tricas}{15}
