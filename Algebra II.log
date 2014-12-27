@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.10.31)  27 DEC 2014 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.10.31)  27 DEC 2014 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1509,44 +1509,110 @@ Overfull \hbox (13.43942pt too wide) in paragraph at lines 1020--1021
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 1046.
-LaTeX Info: Redefining \% on input line 1046.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1033
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1036
+
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1043--1044
+[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1045.
+LaTeX Info: Redefining \% on input line 1045.
 [17]
-LaTeX Info: Redefining \. on input line 1090.
-LaTeX Info: Redefining \% on input line 1090.
- [18] 
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1065--1066
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1070--1071
+
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1080--1081
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1092
+
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1098--1099
+[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1100.
+LaTeX Info: Redefining \% on input line 1100.
+[18] <composicion.png, id=112, 370.38374pt x 224.84pt>
+File: composicion.png Graphic file (type png)
+ <use composicion.png>
+Package pdftex.def Info: composicion.png used on input line 1120.
+(pdftex.def)             Requested size: 111.11597pt x 67.45251pt.
+
+Overfull \hbox (48.203pt too wide) in paragraph at lines 1102--1124
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \hbox (13.43942pt too wide) in paragraph at lines 1139--1140
+[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1181.
+LaTeX Info: Redefining \% on input line 1181.
+[19 <./composicion.png>]
+Overfull \vbox (99.14246pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1181.
+LaTeX Info: Redefining \% on input line 1181.
+
+[20] 
 AED: lastpage setting LastPage
 (./Algebra II.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
-) ) 
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 21545 strings out of 494918
- 435597 string characters out of 6178390
- 567913 words of memory out of 5000000
- 24280 multiletter control sequences out of 15000+600000
+ 21550 strings out of 494918
+ 435691 string characters out of 6178390
+ 567915 words of memory out of 5000000
+ 24284 multiletter control sequences out of 15000+600000
  39836 words of font info for 89 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  48i,23n,82p,416b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on "Algebra II.pdf" (19 pages, 237755 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on "Algebra II.pdf" (21 pages, 247840 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 169 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

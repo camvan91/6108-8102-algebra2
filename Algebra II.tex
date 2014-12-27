@@ -42,7 +42,7 @@
 \newcommand{\col}[1]{\text{Col}(#1)}
 \newcommand{\nul}[1]{\text{Nul}(#1)}
 \newcommand{\im}[1]{\text{Im}(#1)}
-\newcommand{\rg}[1]{\text{rango}(#1)}
+\newcommand{\rg}[1]{\text{rango}\left(#1\right)}
 \newcommand{\dime}[1]{\text{Dim}(#1)}
 \newcommand{\dete}[1]{\vert #1 \vert}
 \newcommand{\tr}[1]{\text{tr}(#1)}
@@ -418,20 +418,20 @@ Resumen de Álgebra II\\
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
 					\end{tikzpicture}
 					
-				\subsection{Matriz de cambio de variable}
+				\subsection{Matriz de cambio de base}
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
 							Sean $B=\{\vect{v}_1,\ldots,\vect{v}_n \}$ y $C=\{\vect{w}_1,\ldots,\vect{w}_n \}$ bases del espacio $V$. Las matrices de cambio de base son:
 							\begin{align}
-								C_{BC}=\begin{bmatrix}{|}&{|}&{ }&{|}\\{C_C(v_1)}&{C_C(v_2)}&{\ldots}&{C_C(v_n)}\\{|}&{|}&{ }&{|}\end{bmatrix} \\
-								C_{CB}=\begin{bmatrix}{|}&{|}&{ }&{|}\\{C_B(w_1)}&{C_B(w_2)}&{\ldots}&{C_B(w_n)}\\{|}&{|}&{ }&{|}\end{bmatrix}=C_{BC}^{-1}
+								C_{BC}=\begin{bmatrix}{|}&{|}&{ }&{|}\\{C_C(\vect{v}_1)}&{C_C(\vect{v}_2)}&{\ldots}&{C_C(\vect{v}_n)}\\{|}&{|}&{ }&{|}\end{bmatrix} \\
+								C_{CB}=\begin{bmatrix}{|}&{|}&{ }&{|}\\{C_B(\vect{w}_1)}&{C_B(\vect{w}_2)}&{\ldots}&{C_B(\vect{w}_n)}\\{|}&{|}&{ }&{|}\end{bmatrix}=C_{BC}^{-1}
 							\end{align}
 							Si $B$ y $C$ son bases ortonormales, entonces $C_{BC}$ es una matriz ortogonal.
 					    \end{minipage}
 					};
-					\node[fancytitle, right=10pt] at (box.north west) {Matriz de cambio de variable};
+					\node[fancytitle, right=10pt] at (box.north west) {Matriz de cambio de base};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
 					\end{tikzpicture}
 					
@@ -986,7 +986,7 @@ Resumen de Álgebra II\\
 								Una Transformación lineal es inyectiva si verifica:
 								\begin{align}
 									\vect{v}_1 \neq \vect{v}_2 \Rightarrow T(\vect{v}_1) \neq T(\vect{v}_2) \text{ , } \forall \vect{v}_1,\vect{v}_2 \in V \\
-									\nul{T}=\{0_v\} \Longleftrightarrow \dime{\im{T}}=\dime{V}
+									\nul{T}=\{0_V\} \Longleftrightarrow \dime{\im{T}}=\dime{V}
 								\end{align}
 								Una Transformación Lineal Inyectiva transforma conjuntos Linealmente Independientes a conjuntos Linealmente Independientes.\\
 								
@@ -1024,7 +1024,18 @@ Resumen de Álgebra II\\
 						\begin{tikzpicture}
 							\node [definicion] (box){%
 						    \begin{minipage}{0.80\textwidth}
-							
+								Una Transformación lineal es biyectiva si y solo si:
+								\begin{align}
+									\dime{W}=\dime{V} \\
+									\nul{T}=\{ 0_V \}
+								\end{align}
+								Es decir, si es Inyectiva y Sobreyectiva a la vez.\\
+								
+								$T$ es biyectiva $\Longleftrightarrow$ si $\{\vect{v}_1,\ldots,\vect{v}_n \}$ es base de $V$ $\Rightarrow$ $\{T(\vect{v}_1),\ldots,T(\vect{v}_n) \}$ es base de $W$\\
+								La matriz asociada a una Transformación lineal biyectiva tiene sus filas y columnas Linealmente Independientes, o sea que es una matriz inversible, es decir, existe una transformación lineal inversa $T^{-1}=[T]^{-1}$\\
+								
+								Si $\dime{V}=\dime{W}$, entonces o bien $T$ es inyectiva y sobreyectiva, o no es ninguna de las dos.
+								
 						    \end{minipage}
 							};
 							\node[fancytitle, right=10pt] at (box.north west) {Biyectividad};
@@ -1036,10 +1047,35 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-						
+					    	Sea $T \in \ell (V_K,W_K)$, sea $B=\{ \vect{v}_1,\ldots,\vect{v}_q \}$ base de $V$ y $C=\{ \vect{w}_1,\ldots,\vect{w}_m \}$ base de $W$. Entonces $T$ se puede escribir como $T(\vect{x})=A\vect{x}$, con $A \in K^{m \times q}$ tal que:
+					    	\begin{align}
+					    		A=[T]_{BC}=\begin{bmatrix}{|}&{|}&{ }&{|}\\{C_C(T(\vect{v}_1))}&{C_C(T(\vect{v}_2))}&{\ldots}&{C_C(T(\vect{v}_q))}\\{|}&{|}&{ }&{|}\end{bmatrix}
+					    	\end{align}
+					    	Dicha matriz posee las siguientes propiedades:
+					    	\begin{itemize}
+					    		\item $[T]_{BC} \cdot C_B(\vect{v})=C_C(T(\vect{v}))$ $,\forall \vect{v} \in V$
+					    		\item $\vect{v} \in \nul{T} \Longleftrightarrow C_B(\vect{v}) \in \nul{A}$
+					    		\item $\vect{w} \in \im{T} \Longleftrightarrow C_C(\vect{w}) \in \col{A}$
+					    		\item $\dime{\im{T}}=\rg{A}$
+					    	\end{itemize}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Matriz de la Transformación lineal};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
+					\begin{tikzpicture}
+						\node [teorema] (box){%
+					    \begin{minipage}{0.80\textwidth}
+					    	Sean $V$y $W$ $K$-espacios vectoriales ($K=R$ o $C$). Sea $T:V \to W$.\\
+					    	
+					    	Si $B_1$ y $B_2$ son bases ordenadas de $V$, y $C_1$ y $C_2$ son bases ordenadas de $W$, entonces:
+					    	\begin{align}
+					    		\rg{[T]_{B_1 C_1}}=\rg{[T]_{B_2 C_2}}
+					    	\end{align}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Teorema para matrices de Transformación lineal};
 						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
 					\end{tikzpicture}
 					
@@ -1048,7 +1084,13 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [teorema] (box){%
 					    \begin{minipage}{0.80\textwidth}
-						
+							Sea $B=\{\vect{v}_1,\ldots,\vect{v}_n \}$ base de $V$ y $\vect{w}_1,\ldots,\vect{w}_n$ vectores de $W$. Entonces existe y es única la Transformación lineal que verifica:
+							\begin{align}
+								T(\vect{v}_i)=\vect{w}_i \text{ , } \forall i=1,\ldots,n			
+							\end{align}		
+							Además, dada una Transformación lineal y un par de bases, existe una única matriz asociada.\\
+							
+							La recíproca tambíen es verdadera: dada una matriz y un par de bases, existe una única Transformación lineal asociada.								
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Teorema fundamental de las Transformaciones lineales};
@@ -1057,22 +1099,39 @@ Resumen de Álgebra II\\
 					
 				\subsection{Composición de Transformaciones lineales}
 					
-					\begin{tikzpicture}
-						\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-						
-					    \end{minipage}
-						};
-						\node[fancytitle, right=10pt] at (box.north west) {Composición de Transformaciones lineales};
-						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}
+					\begin{minipage}{0.6\textwidth}
+						\begin{tikzpicture}
+							\node [definicion] (box){%
+						    \begin{minipage}{0.90\textwidth}
+								Sea $f \in \ell (V,W)$ y $g \in \ell (W,H)$ $\Rightarrow g \circ f \in (V,H)$. Podemos encontrar la siguientes propiedades:
+								\begin{align}
+									\nul{f} \subseteq  \nul{g \circ f} \\
+									\im{g \circ f} \subseteq \im{g}				
+								\end{align}
+						    \end{minipage}
+							};
+							\node[fancytitle, right=10pt] at (box.north west) {Composición de Transformaciones lineales};
+							\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+						\end{tikzpicture}
+					\end{minipage}
+					\begin{minipage}{0.3\textwidth}
+						\begin{figure}[H]
+							\begin{center}
+								\includegraphics[scale=0.3]{composicion}\caption{Composición}
+							\end{center}
+						\end{figure}
+					\end{minipage}
 					
 				\subsection{Operadores lineales}
 				
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-						
+							Un operador lineal es una Transformación lineal que va de un espacio en si mismo, se escríbe como $T \in \ell (V)$ y cuenta con las siguientes propiedades:
+							\begin{itemize}
+								\item Si $T_1 \in \ell (V)$ y $T_2 \in \ell (V)$, entonces  $T_1 \circ T_2 \in \ell (V)$
+								\item Si $T \in \ell (V)$, $T^n=\underbrace{T \circ T \circ \ldots \circ T}_{\text{n veces}}$					
+							\end{itemize}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Operadores lineales};
@@ -1080,11 +1139,43 @@ Resumen de Álgebra II\\
 					\end{tikzpicture}
 				
 			\section{Autovalores y Autovectores}
+				\subsection{Definiciones básicas}
+				\subsection{Autovalores complejos de matriz real}
+				\subsection{Multiplicidad geométrica y algebráica de un Autovalor}
+				\subsection{Propiedades}
+				\subsection{Autovalores y Autovectores de operadores lineales}
+				\subsection{Diagonalización}
+					\subsubsection{Matrices trivialmente diagonalizables}
+					\subsubsection{Propiedades}
+					\subsubsection{Diagonalización de transformaciones lineales}
 			\section{Matrices hermíticas y simétricas}
+				\subsection{Diagonalización}
+				\subsection{Descomposición espectral}
+				\subsection{Subespacios invariantes por una transformación lineal}
 			\section{Formas cuadráticas}
+				\subsection{Clasificación}
+				\subsection{Optimización restringida}
 			\section{Descomposición en Valores Singulares (DVS)}
+				\subsection{Definición}
+				\subsection{Aplicación de las DVS}
+				\subsection{Propiedades de las DVS}
+				\subsection{DVS reducida y Pseudoinversa}
 			\section{Ecuaciones diferenciales}
+				\subsection{Wronskiano}
+				\subsection{Identidad de Abel}
+				\subsection{Existencia y unicidad de Problemas de Valores Iniciales (PVI)}
+				\subsection{Variables separables}
+				\subsection{Homogéneas}
+				\subsection{Lineales de 1er orden}
+				\subsection{Diferencial exacta}
+				\subsection{Lineales homogéneas de orden superior con coeficientes constantes}
+				\subsection{Lineales no homogéneas de orden superior con coeficientes constantes}
 			\section{Sistemas de Ecuaciones diferenciales lineales}
-
+				\subsection{Sistemas homogéneos con A diagonalizable}
+				\subsection{Sistemas no homogéneos con A diagonalizable}
+				\subsection{Sistemas homogéneos con A no diagonalizable}
+					\subsubsection{Caso A 2x2}
+					\subsubsection{Caso A 3x3}
+				
 \pagebreak
 \end{document}

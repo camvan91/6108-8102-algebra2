@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.3}Operaciones con subespacios}{6}
 \contentsline {subsection}{\numberline {2.4}Bases}{7}
 \contentsline {subsection}{\numberline {2.5}Coordenadas de un vector en una base}{7}
-\contentsline {subsection}{\numberline {2.6}Matriz de cambio de variable}{7}
+\contentsline {subsection}{\numberline {2.6}Matriz de cambio de base}{7}
 \contentsline {subsection}{\numberline {2.7}Teorema de la dimensi\IeC {\'o}n}{7}
 \contentsline {section}{\numberline {3}Producto interno}{8}
 \contentsline {subsection}{\numberline {3.1}Axiomas}{8}
@@ -36,14 +36,46 @@
 \contentsline {subsection}{\numberline {5.3}Clasificaci\IeC {\'o}n de las Transformaciones lineales}{17}
 \contentsline {subsubsection}{\numberline {5.3.1}Monomorfismo(Inyectividad)}{17}
 \contentsline {subsubsection}{\numberline {5.3.2}Epimorfismo(Sobreyectividad)}{17}
-\contentsline {subsubsection}{\numberline {5.3.3}Isomorfismo(Biyectividad)}{17}
+\contentsline {subsubsection}{\numberline {5.3.3}Isomorfismo(Biyectividad)}{18}
 \contentsline {subsection}{\numberline {5.4}Matriz asociada a una Transformaci\IeC {\'o}n lineal}{18}
-\contentsline {subsection}{\numberline {5.5}Teorema fundamental de las Transformaciones lineales}{18}
-\contentsline {subsection}{\numberline {5.6}Composici\IeC {\'o}n de Transformaciones lineales}{18}
-\contentsline {subsection}{\numberline {5.7}Operadores lineales}{18}
-\contentsline {section}{\numberline {6}Autovalores y Autovectores}{18}
-\contentsline {section}{\numberline {7}Matrices herm\IeC {\'\i }ticas y sim\IeC {\'e}tricas}{18}
-\contentsline {section}{\numberline {8}Formas cuadr\IeC {\'a}ticas}{18}
-\contentsline {section}{\numberline {9}Descomposici\IeC {\'o}n en Valores Singulares (DVS)}{18}
-\contentsline {section}{\numberline {10}Ecuaciones diferenciales}{18}
-\contentsline {section}{\numberline {11}Sistemas de Ecuaciones diferenciales lineales}{18}
+\contentsline {subsection}{\numberline {5.5}Teorema fundamental de las Transformaciones lineales}{19}
+\contentsline {subsection}{\numberline {5.6}Composici\IeC {\'o}n de Transformaciones lineales}{19}
+\contentsline {subsection}{\numberline {5.7}Operadores lineales}{19}
+\contentsline {section}{\numberline {6}Autovalores y Autovectores}{20}
+\contentsline {subsection}{\numberline {6.1}Definiciones b\IeC {\'a}sicas}{20}
+\contentsline {subsection}{\numberline {6.2}Autovalores complejos de matriz real}{20}
+\contentsline {subsection}{\numberline {6.3}Multiplicidad geom\IeC {\'e}trica y algebr\IeC {\'a}ica de un Autovalor}{20}
+\contentsline {subsection}{\numberline {6.4}Propiedades}{20}
+\contentsline {subsection}{\numberline {6.5}Autovalores y Autovectores de operadores lineales}{20}
+\contentsline {subsection}{\numberline {6.6}Diagonalizaci\IeC {\'o}n}{20}
+\contentsline {subsubsection}{\numberline {6.6.1}Matrices trivialmente diagonalizables}{20}
+\contentsline {subsubsection}{\numberline {6.6.2}Propiedades}{20}
+\contentsline {subsubsection}{\numberline {6.6.3}Diagonalizaci\IeC {\'o}n de transformaciones lineales}{20}
+\contentsline {section}{\numberline {7}Matrices herm\IeC {\'\i }ticas y sim\IeC {\'e}tricas}{20}
+\contentsline {subsection}{\numberline {7.1}Diagonalizaci\IeC {\'o}n}{20}
+\contentsline {subsection}{\numberline {7.2}Descomposici\IeC {\'o}n espectral}{20}
+\contentsline {subsection}{\numberline {7.3}Subespacios invariantes por una transformaci\IeC {\'o}n lineal}{20}
+\contentsline {section}{\numberline {8}Formas cuadr\IeC {\'a}ticas}{20}
+\contentsline {subsection}{\numberline {8.1}Clasificaci\IeC {\'o}n}{20}
+\contentsline {subsection}{\numberline {8.2}Optimizaci\IeC {\'o}n restringida}{20}
+\contentsline {section}{\numberline {9}Descomposici\IeC {\'o}n en Valores Singulares (DVS)}{20}
+\contentsline {subsection}{\numberline {9.1}Definici\IeC {\'o}n}{20}
+\contentsline {subsection}{\numberline {9.2}Aplicaci\IeC {\'o}n de las DVS}{20}
+\contentsline {subsection}{\numberline {9.3}Propiedades de las DVS}{20}
+\contentsline {subsection}{\numberline {9.4}DVS reducida y Pseudoinversa}{20}
+\contentsline {section}{\numberline {10}Ecuaciones diferenciales}{20}
+\contentsline {subsection}{\numberline {10.1}Wronskiano}{20}
+\contentsline {subsection}{\numberline {10.2}Identidad de Abel}{20}
+\contentsline {subsection}{\numberline {10.3}Existencia y unicidad de Problemas de Valores Iniciales (PVI)}{20}
+\contentsline {subsection}{\numberline {10.4}Variables separables}{20}
+\contentsline {subsection}{\numberline {10.5}Homog\IeC {\'e}neas}{20}
+\contentsline {subsection}{\numberline {10.6}Lineales de 1er orden}{20}
+\contentsline {subsection}{\numberline {10.7}Diferencial exacta}{20}
+\contentsline {subsection}{\numberline {10.8}Lineales homog\IeC {\'e}neas de orden superior con coeficientes constantes}{20}
+\contentsline {subsection}{\numberline {10.9}Lineales no homog\IeC {\'e}neas de orden superior con coeficientes constantes}{20}
+\contentsline {section}{\numberline {11}Sistemas de Ecuaciones diferenciales lineales}{20}
+\contentsline {subsection}{\numberline {11.1}Sistemas homog\IeC {\'e}neos con A diagonalizable}{20}
+\contentsline {subsection}{\numberline {11.2}Sistemas no homog\IeC {\'e}neos con A diagonalizable}{20}
+\contentsline {subsection}{\numberline {11.3}Sistemas homog\IeC {\'e}neos con A no diagonalizable}{20}
+\contentsline {subsubsection}{\numberline {11.3.1}Caso A 2x2}{20}
+\contentsline {subsubsection}{\numberline {11.3.2}Caso A 3x3}{20}
