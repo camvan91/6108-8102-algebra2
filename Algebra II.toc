@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {6.3}Multiplicidad geom\IeC {\'e}trica y algebr\IeC {\'a}ica de un Autovalor}{20}
 \contentsline {subsection}{\numberline {6.4}Propiedades}{21}
 \contentsline {subsection}{\numberline {6.5}Autovalores y Autovectores de operadores lineales}{21}
-\contentsline {subsection}{\numberline {6.6}Diagonalizaci\IeC {\'o}n}{21}
+\contentsline {subsection}{\numberline {6.6}Diagonalizaci\IeC {\'o}n}{22}
 \contentsline {subsubsection}{\numberline {6.6.1}Matrices trivialmente diagonalizables}{22}
 \contentsline {subsubsection}{\numberline {6.6.2}Propiedades}{22}
 \contentsline {subsubsection}{\numberline {6.6.3}Diagonalizaci\IeC {\'o}n de transformaciones lineales}{22}

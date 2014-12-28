@@ -1256,8 +1256,19 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-
-					    \end{minipage}
+					    	Los siguientes enunciados son equivalentes para definir si $A \in K^{n \times n}$ es diagonalizable:
+					    	\begin{itemize}
+					    		\item $A \sim D$
+					    		\item $\exists$ una base de $K^n$ compuesta por autovectores de $A$
+					    		\item $A$ tiene $n$ autovalores Linealmente Independientes 
+					    		\item $m_g(\lambda)=m_a(\lambda)$ $\forall \lambda \in \sigma(A)$
+					    		\item $\exists P$ invertible y $D$ diagonal tal que:
+								\begin{align}
+									A=PDP^{-1}
+								\end{align}
+								Siendo $P$ la matriz de autovectores y $D$ la matriz diagonal de autovalores.
+							\end{itemize}	
+ 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Diagonalización};
 						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
@@ -1268,7 +1279,14 @@ Resumen de Álgebra II\\
 						\begin{tikzpicture}
 							\node [definicion] (box){%
 						    \begin{minipage}{0.80\textwidth}
-	
+								\begin{itemize}
+									\item \textbf{Matriz nula:}
+									\item \textbf{Matriz identidad:}
+									\item \textbf{Matriz diagonal:}
+									\item \textbf{Matriz escalar:}
+									\item \textbf{Matriz de proyección:}
+									\item \textbf{Matriz de reflexión:}
+								\end{itemize}
 						    \end{minipage}
 							};
 							\node[fancytitle, right=10pt] at (box.north west) {Diagonalizaciones triviales};
