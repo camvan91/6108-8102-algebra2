@@ -1201,7 +1201,22 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-
+							Sea $A \in K^{n \times n}$:
+							\begin{itemize}
+								\item $A$ es singular $\Longleftrightarrow 0$ es un autovalor de $A \Longleftrightarrow m_g(0)=n-k \Longleftrightarrow \rg{A}=k<n$
+								\item Dos autovectores asociados a autovalores distintos son Linealmente Independientes
+								\item Si $A \in K^{2x2}$, entonces $p_A(\lambda)=\lambda^2-\tr{A}\lambda+\dete{A}$
+								\item Si todas las filas o columnas de $A$ sumas $s$, entonces $s$ es autovalor de $A$.
+								\item Sea $p(t)$ un polinomio de grado $k$. Si $\lambda$ es autovalor de $A$, entonces se cumple que $p(\lambda)$ es autovalor de $p(A)$, y para cada autovalor $\mu$ de $p(A)$ existe un autovalor $\lambda$ de $A$ tal que $p(\lambda)=\mu$.
+								\item Si $\lambda$ es autovalor de $A$:
+								\begin{itemize}
+									\item $\lambda$ es autovalor de $A^T$
+									\item $\lambda^{-1}$ es autovalor de $A^{-1}$ y $S_{\lambda^{-1}}\left(A^{-1}\right)=S_\lambda(A)$
+									\item $r \cdot \lambda$ es autovalor de $r \cdot A$
+									\item $\lambda^k$ es autovalor de $A^k$, con $k \in N$
+									\item $\lambda+r$ es autovalor de $A+r \cdot I$
+								\end{itemize}
+							\end{itemize}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Propiedades de Autovalores y Autovectores};
@@ -1213,7 +1228,23 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-
+							$T:V_K \to V_K$. Un vector $\vect{v} \neq \vect{0}$ es autovector de $T \Longleftrightarrow T(\vect{v})=\lambda \vect{v}$, con $\lambda$ autovalor de $T$.\\
+							$S_\lambda(T)=\{ \vect{x} \in V$ $\vert$ $T(\vect{x})=\lambda \vect{x}$ y $\lambda$ autovalor de $T\}=\nul{T-\lambda I}$. Si $B$ es base de $V$ y $A$ es la matriz de $T$ en esa base, entonces:
+							\begin{align}
+								\sigma(A)=\sigma(T) \forall B \text{ base de } V \\
+								\vect{x} \text{ es autovector de } T \Longleftrightarrow C_B(\vect{x}) \text{ es autovector de } [T]_B=A  
+							\end{align}
+							Se deducen las siguientes propiedades:
+							\begin{itemize}
+								\item $T(\vect{x})=\lambda \vect{x} \Rightarrow T^n(\vect{x})=\lambda^n \vect{x}$, $n \in N$
+								\item Si $\lambda$ es autovalor de $T$, $\lambda^{-1}$ es autovalor de $T^{-1}$
+								\item Si $h$ es un polinomio en $K$ y $T(\vect{x})=A\vect{x}$, entonces:
+								\begin{align}
+									\sigma[h(A)]=h[\sigma(A)] \\
+									S_{h(\lambda)}h(A)=S_\lambda(A)
+								\end{align}
+								\item $T:V_K \to V_K$ es regular $\Longleftrightarrow 0 \notin \sigma(T)$
+							\end{itemize}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Autovalores y Autovectores de Operadores lineales};
