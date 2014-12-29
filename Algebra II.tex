@@ -1734,7 +1734,11 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-							
+							Sea el problema $a_ny(\vect{x})^{(n)}+a_{n-1} \cdot y(\vect{x})^{(n-1)}+\ldots+a_1 \cdot y^\prime(\vect{x})+a_0 \cdot y(\vect{x})=f(\vect{x})$ sujeto a la condición inigial $y(\vect{x}_0)=y_0$. La condición de existencia y unicidad de la solución del problema de valores iniciales es:
+							\begin{align}
+								\text{Ecuación diferencial normal en } I:a_n \neq 0, \forall \vect{x} \in I \\
+								\vect{x}_0 \in I
+							\end{align}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Problemas de Valores Iniciales};
@@ -1745,23 +1749,26 @@ Resumen de Álgebra II\\
 					
 					\begin{tikzpicture}
 						\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-							
+					    \begin{minipage}{0.50\textwidth}
+					    	\begin{align*}
+					    		y^\prime(\vect{x})=\frac{f(\vect{x})}{g(y)} \\
+					    		\frac{dy}{d\vect{x}}=\frac{f(\vect{x})}{g(y)} \\
+								g(y) dy =f(\vect{x}) d\vect{x} \\
+								G(y)=F(\vect{x})+c						
+					    	\end{align*}				
+					    \end{minipage}
+					      \begin{minipage}{0.30\textwidth}
+					    	\begin{align*}
+					    		\text{Ecuación diferencial} \\
+					    		\text{ } \\	
+					    		\text{Derivada con diferenciales} \\
+								\text{ } \\					    		
+								\text{Separo las variables} \\
+								\text{Integro}				
+					    	\end{align*}				
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Variables separables};
-						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}
-					
-				\subsection{Homogéneas}
-					
-					\begin{tikzpicture}
-						\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-							
-					    \end{minipage}
-						};
-						\node[fancytitle, right=10pt] at (box.north west) {Homogéneas};
 						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
 					\end{tikzpicture}
 					
@@ -1770,7 +1777,15 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-							
+							Obtenemos primero la solución general de la homogénea $y_H$ y luego una particular de la no homogénea $y_P$. La solución buscada será $y_G=y_H+y_P$
+							\begin{itemize}
+								\item La solución de la ecuación homogénea asociada a $y^\prime=p(x)y=0$ es de variables separables, una solución es $y_H(x)=e^{-\int p(x)dx}$
+								\item La solución no homogénea se obtiene multiplicando toda la ecuación por el factor integrante de Lagrange:
+								\begin{align}
+									u(v)=e^{\int p(x) dx}
+								\end{align}
+								Y la ecuación a resolver será $[u(v) \cdot y(x)]^\prime=u(v) \cdot q(x)$
+							\end{itemize}
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Lineales de $1^{er}$ orden};
@@ -1782,7 +1797,16 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
+							Son del tipo $P(x,y)dx+Q(x,y)dy=0$.\\
 							
+							Es diferencial exacta si existe $f(x,y)$ tal que $df=P(x,y)dx+Q(x,y)dy$, es decir si:
+							\begin{align}
+								\frac{df}{dx}=P(x,y) \\
+								\frac{df}{dy}=Q(x,y)
+							\end{align}
+							En ese caso, la solución general es $f(x,y)=C$. Se cumple que la ecuación anterior es diferencial exacta si y solo si $\frac{dP}{dy}=\frac{dQ}{dx}$\\
+							
+							Se dice además que $\mu(x,y)$ es un factor integrante de la ecuación $P(x,y)dx+Q(x,y)dy=0$ si al multiplicar la ecuación por $\mu(x,y)$ la ecuación resulta diferencial exacta.
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Diferencial exacta};
@@ -1794,7 +1818,20 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
+							Son del tipo $\sum_{i=0}^n a_i \cdot y^{(i)}(t)=0$, $\forall t \in I$.\\
 							
+							Polinomio característico: $p(\lambda)=\sum_{i=0}^n a_i \lambda_i^n$\\
+							
+							Espectro de la ecuación diferencial: $\sigma(p)=\{ \lambda \in C$ $\vert$ $p(\lambda)=0 \}$\\
+							
+							$y_H(t)=t^k e^{\lambda t}$ es una solución de la Ecuación diferencial si $\lambda \in \sigma(p)$, con multiplicidad $m$, $k=0,1,\ldots,m-1$\\
+							
+							Si la ecuación diferencial es de coeficientes reales, las raíces del polinomio característico aparecerán conjugadas. Es decir: $\lambda_{1,2}=\alpha \pm \jmath \beta$.Luego:
+							\begin{align*}
+								y_1(t)=e^{\alpha t} \left(\cos (\beta t)+\jmath \sin (\beta t) \right) \\
+								y_2(t)=e^{\alpha t} \left(\cos (\beta t)-\jmath \sin (\beta t) \right)
+							\end{align*}							  
+							Entonces, $\text{gen}\{ y_1,y_2\}=\text{gen} \{e^{\alpha t} \cos (\beta t),e^{\alpha t} \sin (\beta t) \}$
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Lineales homogéneas de orden superior con coeficientes constantes};
@@ -1806,7 +1843,24 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
+							Son del tipo $\sum_{i=0}^n a_i \cdot y^{(i)}(t)=f(x)$.\\
 							
+							La solución es de la forma $y_G(x)=y_H(x)+y_P(x)$, donde $y_H(x)$ se obtiene del caso anterior, e $y_P(x)$ se obtiene mediante algunos de estos métodos:
+							\begin{itemize}
+								\item \textbf{Método de variación de parámetros:} Aplicable en cualquier caso.\\
+									$y_P(t)=\sum_{i=1}^n u_i(x) \cdot y_i(x)$, siendo $y_i(x)$ las soluciones de $y_H(x)$, y $u_i(x)$ las funciones que satisfacen:
+									\begin{align}
+										\begin{bmatrix} {y_1}&{y_2}&{\ldots}&{y_n} \\ {y^\prime_1}&{y^\prime_2}&{\ldots}&{y^\prime_n} \\ {\vdots}&{\vdots}&{\ddots}&{\vdots} \\ {y^{(n)}_1}&{y^{(n)}_2}&{\ldots}&{y^{(n)}_n} \end{bmatrix} \begin{bmatrix} {u^\prime_1} \\ {u^\prime_2} \\ {\vdots} \\ {u^\prime_n} \end{bmatrix}=\begin{bmatrix} {0} \\ {0} \\ {\vdots} \\ {\frac{f(x)}{a_n}} \end{bmatrix}
+									\end{align}
+								\item \textbf{Método de coeficientes indeterminados:} Aplicable cuando $f(x)$ es exponencial, polinómica o trigonométrica.\\
+								
+								Siendo $a_2y^{\prime\prime}(t)+a_1y^\prime(t)+a_0y(t)=f(x)$, con $f(x)=\sum_{i=1}^k p_i(x) \cdot e^{m_i x}$, $y_P(t)=\sum_{i=1}^k q_i(x) \cdot e^{m_i x}$
+								\begin{itemize}
+									\item Si $e^{m_k x}$ no es solución de la Ecuación diferencial ordinaria homogénea asociada (i.e. $m_k$ no es solución de $a_2 \lambda^2+a_1\lambda+a_0=$), $q_k$ es un polinomio de grado $p_k$ con coeficientes a determinar
+									\item Si $e^{m_k x}$ si es solución de la Ecuación diferencial ordinaria homogénea asociada (i.e. $m_k$ no es solución de $a_2 \lambda^2+a_1\lambda+a_0=$), $q_k$ es un polinomio de un grado mayor que $p_k$ con coeficientes a determinar
+									\item Una vez armada la $y_P(t)$ se reemplaza en la ecuación diferencial original, e igualando los términos semejantes se hallan los coeficientes indeterminados.
+								\end{itemize}
+							\end{itemize}			
 					    \end{minipage}
 						};
 						\node[fancytitle, right=10pt] at (box.north west) {Lineales no homogéneas de orden superior con coeficientes constantes};
@@ -1814,11 +1868,121 @@ Resumen de Álgebra II\\
 					\end{tikzpicture}
 					
 			\section{Sistemas de Ecuaciones diferenciales lineales}
-				\subsection{Sistemas homogéneos con A diagonalizable}
-				\subsection{Sistemas no homogéneos con A diagonalizable}
-				\subsection{Sistemas homogéneos con A no diagonalizable}
-					\subsubsection{Caso A 2x2}
-					\subsubsection{Caso A 3x3}
 				
+				$\begin{cases} x^\prime(t)=a_{11}x+a_{12}y+b_1 \\ y^\prime(t)=a_{21}x+a_{22}y+b_2 \end{cases} \Rightarrow \begin{bmatrix} {x^\prime} \\ {y^\prime} \end{bmatrix}=\begin{bmatrix} {a_{11}}&{a_{12}} \\ {a_{21}}&{a_{22}} \end{bmatrix} \begin{bmatrix} {x} \\ {y} \end{bmatrix}+\begin{bmatrix} {b_1} \\ {b_2} \end{bmatrix} \Rightarrow X^\prime=AX+B$
+					
+				\subsection{Sistemas homogéneos con $A$ diagonalizable}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							La solución de $X^\prime=AX+B$, $(A \in K^{n \times n}$, con $\lambda_i$ autovalor de $A$ y $\vect{v}_i$ autovector de $A$ asociado a $\lambda_i$,es:
+							\begin{align}
+								X=\sum_{i=1}^n c_i \vect{v}_i e^{\lambda_i t}=\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{v}_1 e^{\lambda_1 t}}&{\ldots}&{\vect{v}_n e^{\lambda_n t}}\\{|}&{ }&{|}\end{bmatrix}}_{\varphi (t) \in K^{n \times n}} \underbrace{\begin{bmatrix} {c_1} \\ {\vdots} \\ {c_n}\end{bmatrix}}_{C}
+							\end{align}									
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Sistemas homogéneos con $A$ diagonalizable};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
+				\subsection{Sistemas no homogéneos con $A$ diagonalizable}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Sea  el sistema $X^\prime=AX+B$. La solución es $X_G=X_H+X_P$ con:
+							\begin{itemize}
+								\item $X_H=\sum_{i=1}^n c_i \vect{v}_i e^{\lambda_i t}=\varphi (t) C$
+								\item $X_P=\varphi (t) \cdot u(t)$, siendo $u(t)$ tal que $\varphi (t) \cdot u^\prime(t)=B$
+							\end{itemize}														
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A$ no diagonalizable};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}				
+					
+				\subsection{Sistemas homogéneos con $A$ no diagonalizable}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Sea  el sistema $X^\prime=AX$. Con $A$ no diagonalizable, proponemos una factorización de la forma $A=PJP^{-1}$, donde $J \in C^{n \times n}$ es la \textbf{matriz de Jordan} de $A$ que tiene la siguiente estructura en bloques:
+							\begin{align}
+								J=\begin{bmatrix} {J_1}&{0}&{0}&{0} \\ {0}&{J_2}&{0}&{0} \\ {\vdots}&{\vdots}&{\ddots}&{0} \\ {0}&{0}&{\ldots}&{J_l} \end{bmatrix}
+							\end{align}		
+							Donde cada bloque $J_i$ es una matriz de $k_i \times k_i$ de la forma:
+							\begin{align}
+								J_i=\begin{bmatrix} {\lambda_i}&{1}&{0}&{0} \\ {0}&{\lambda_i}&{1}&{0} \\ {\vdots}&{\vdots}&{\ddots}&{1} \\ {0}&{0}&{\ldots}&{\lambda_i} \end{bmatrix}
+							\end{align}		
+							Para algún autovalor $\lambda_i$ de $A$.\\
+							
+							Dado un autovalor $\lambda_i$, su multiplicidad geométrica es el número de bloques de Jordan correspondientes a $\lambda_i$, y su multiplicidad algebraica es la suma de los tamaños de los bloques correspondientes a ese autovalor.\\
+							
+							Luego: $X^\prime=AX$  $\underrightarrow{\text{{\scriptsize X=PY}}}$  $P Y^\prime=PJP^{-1}PY \longrightarrow Y^\prime=JY$. Resolvemos este sistema y la solución general del problema se expresará como $X(t)=P Y(t)$					
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A$ diagonalizable};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};					
+					\end{tikzpicture}
+					
+					\begin{tikzpicture}
+						\node [corolario] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							$A$ necesariamente posee un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$, con lo cual la matriz $J$ posee un solo bloque correspondiente a $\lambda$:
+							\begin{align}
+								J=\begin{bmatrix} {\lambda}&{1} \\ {0}&{\lambda} \end{bmatrix}									
+							\end{align}	
+							Respecto de la matriz $P=[\vect{v}_1,\vect{v}_2]$ debe ser inversible y $AP=PJ$. La matriz $P$ se obtiene hallando un par de vectores $\vect{v}_1$ y $\vect{v}_2$ Linealmente Independientes que satisfagan las condiciones $\left( A-\lambda I \right)\vect{v}_1=0$ y $\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1$. Observamos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$	 											
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A \in R^{2 \times 2}$ no diagonalizable};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}	
+					
+					\begin{tikzpicture}
+						\node [corolario] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							\begin{enumerate}
+								\item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $1$. En este caso:
+								\begin{align}
+									J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{1} \\ {0}&{0}&{\lambda} \end{bmatrix}
+								\end{align}
+								Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+								\begin{align}
+									\left( A-\lambda I \right)\vect{v}_1=0 \\
+									\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+									\left( A-\lambda I \right)\vect{v}_3=\vect{v}_2
+								\end{align}
+								Observemos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
+								\item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $2$. En este caso:
+								\begin{align}
+									J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\lambda} \end{bmatrix}
+								\end{align}
+								Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+								\begin{align}
+									\left( A-\lambda I \right)\vect{v}_1=0 \\
+									\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+									\left( A-\lambda I \right)\vect{v}_3=0
+								\end{align}
+								Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$
+								\item $A$ tiene un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$ y un autovalor $\mu \in R$ simple. En este caso $J$ debe tener dos bloques de Jordan
+								\begin{align}
+									J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\mu} \end{bmatrix}
+								\end{align}
+								Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+								\begin{align}
+									\left( A-\lambda I \right)\vect{v}_1=0 \\
+									\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+									\left( A-\lambda I \right)\vect{v}_3=0
+								\end{align}
+								Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$ y $\mu$ respectivamente.
+							\end{enumerate}																
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A \in R^{3 \times 3}$ no diagonalizable};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}	
+
 \pagebreak
 \end{document}
