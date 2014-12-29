@@ -44,7 +44,7 @@
 \newcommand{\im}[1]{\text{Im}(#1)}
 \newcommand{\rg}[1]{\text{rango}\left(#1\right)}
 \newcommand{\dime}[1]{\text{Dim}(#1)}
-\newcommand{\dete}[1]{\vert #1 \vert}
+\newcommand{\dete}[1]{\left\vert #1 \right\vert}
 \newcommand{\tr}[1]{\text{tr}(#1)}
 \newcommand{\gen}[1]{\text{gen}\left\{#1\right\}}
 \newcommand{\produ}[1]{(#1)}
@@ -1671,7 +1671,7 @@ Resumen de Álgebra II\\
 					\begin{tikzpicture}
 						\node [definicion] (box){%
 					    \begin{minipage}{0.80\textwidth}
-							Se define la pseudoinversa de Moore-Pensore como:
+							Se define la \textbf{pseudoinversa de Moore-Pensore} como:
 							\begin{align}
 								A^+=V_r \Sigma_r^{-1}U_r^T
 							\end{align}
@@ -1689,14 +1689,130 @@ Resumen de Álgebra II\\
 					
 			\section{Ecuaciones diferenciales}
 				\subsection{Wronskiano}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Sea $A=\{f_1,\ldots,f_q \}$ funciones definidas en un invervalo $I \subset R$, a valores en $C$, con derivada hasta el orden $q-1$ continua en $I$. La \textbf{matriz de Wronski} de $A$ es,para cada $\vect{x} \in I$
+							\begin{align}
+								M_{w_A}(\vect{x})=\begin{bmatrix} {f_1(\vect{x})}&{\ldots}&{f_q(\vect{x})} \\ {f_1^\prime(\vect{x})}&{\ldots}&{f_q^\prime(\vect{x})} \\ {f_1^{\prime\prime}(\vect{x})}&{\ldots}&{f_q^{\prime\prime}(\vect{x})} \\ {\vdots}&{ }&{\vdots} \\ {f_1^{(q-1)}(\vect{x})}&{\ldots}&{f_q^{(q-1)}(\vect{x})} \end{bmatrix}		
+							\end{align}
+							Se define al \textbf{Wronskiano} como:
+							\begin{align}
+								w_A(\vect{x})=\dete{M_{w_A}}=\dete{\begin{matrix} {f_1(\vect{x})}&{\ldots}&{f_q(\vect{x})} \\ {f_1^\prime(\vect{x})}&{\ldots}&{f_q^\prime(\vect{x})} \\ {f_1^{\prime\prime}(\vect{x})}&{\ldots}&{f_q^{\prime\prime}(\vect{x})} \\ {\vdots}&{ }&{\vdots} \\ {f_1^{(q-1)}(\vect{x})}&{\ldots}&{f_q^{(q-1)}(\vect{x})} \end{matrix}}
+							\end{align}
+							Se deducen las siguientes propiedades:
+							\begin{itemize}
+								\item Si existe un $\vect{x}_0 \in I$ tal que $w_A(\vect{x}_0) \neq 0$, entonces las funciones $f_1, \ldots,f_q$ son Linealmente Independientes 
+								\item Si un conjunto es Linealmente Dependiente en $I$, su wronskiano es la función nula. La recíproca es falsa; es verdadera solo si las funciones que componen el wronskiano son soluciones de una Ecuación Diferencial lineal de orden superior
+								\item La derivada del wronskiano es el determinante obtenido derivando la última fila.
+								\item La derivada del wronskiano es la suma de $q$ determinantes.
+							\end{itemize}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Matriz de Wronski};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Identidad de Abel}
+					
+					\begin{tikzpicture}
+						\node [teorema] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Sea la ecuación diferencial $y(\vect{x})^{(n)}+a_{n-1} \cdot y(\vect{x})^{(n-1)}+\ldots+a_1 \cdot y^\prime(\vect{x})+a_0 \cdot y(\vect{x})=0$ en un intervalo $I \subset R$, sea $S=\{y_1,\ldots,y_n \}$ el conjunto de las soluciones de la ecuación diferencial, y sea $W_s$ el Wronskiano de este conjunto. Entonces se verifica que:
+							\begin{align}
+								W^\prime_s(\vect{x})=-a_{n-1} \cdot W_s(\vect{x})
+							\end{align}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Identidad de Abel};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Existencia y unicidad de Problemas de Valores Iniciales (PVI)}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Problemas de Valores Iniciales};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Variables separables}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Variables separables};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Homogéneas}
-				\subsection{Lineales de 1er orden}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Homogéneas};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
+				\subsection{Lineales de $1^{er}$ orden}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Lineales de $1^{er}$ orden};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Diferencial exacta}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Diferencial exacta};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Lineales homogéneas de orden superior con coeficientes constantes}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Lineales homogéneas de orden superior con coeficientes constantes};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Lineales no homogéneas de orden superior con coeficientes constantes}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Lineales no homogéneas de orden superior con coeficientes constantes};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 			\section{Sistemas de Ecuaciones diferenciales lineales}
 				\subsection{Sistemas homogéneos con A diagonalizable}
 				\subsection{Sistemas no homogéneos con A diagonalizable}
