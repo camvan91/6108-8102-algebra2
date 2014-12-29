@@ -55,27 +55,27 @@
 \contentsline {subsection}{\numberline {7.1}Diagonalizaci\IeC {\'o}n}{23}
 \contentsline {subsection}{\numberline {7.2}Descomposici\IeC {\'o}n espectral}{25}
 \contentsline {subsection}{\numberline {7.3}Subespacios invariantes por una transformaci\IeC {\'o}n lineal}{25}
-\contentsline {section}{\numberline {8}Formas cuadr\IeC {\'a}ticas}{26}
+\contentsline {section}{\numberline {8}Formas cuadr\IeC {\'a}ticas}{25}
 \contentsline {subsection}{\numberline {8.1}Clasificaci\IeC {\'o}n}{26}
-\contentsline {subsection}{\numberline {8.2}Optimizaci\IeC {\'o}n restringida}{26}
-\contentsline {section}{\numberline {9}Descomposici\IeC {\'o}n en Valores Singulares (DVS)}{26}
-\contentsline {subsection}{\numberline {9.1}Definici\IeC {\'o}n}{26}
-\contentsline {subsection}{\numberline {9.2}Aplicaci\IeC {\'o}n de las DVS}{26}
-\contentsline {subsection}{\numberline {9.3}Propiedades de las DVS}{26}
-\contentsline {subsection}{\numberline {9.4}DVS reducida y Pseudoinversa}{26}
-\contentsline {section}{\numberline {10}Ecuaciones diferenciales}{26}
-\contentsline {subsection}{\numberline {10.1}Wronskiano}{26}
-\contentsline {subsection}{\numberline {10.2}Identidad de Abel}{26}
-\contentsline {subsection}{\numberline {10.3}Existencia y unicidad de Problemas de Valores Iniciales (PVI)}{26}
-\contentsline {subsection}{\numberline {10.4}Variables separables}{26}
-\contentsline {subsection}{\numberline {10.5}Homog\IeC {\'e}neas}{26}
-\contentsline {subsection}{\numberline {10.6}Lineales de 1er orden}{26}
-\contentsline {subsection}{\numberline {10.7}Diferencial exacta}{26}
-\contentsline {subsection}{\numberline {10.8}Lineales homog\IeC {\'e}neas de orden superior con coeficientes constantes}{26}
-\contentsline {subsection}{\numberline {10.9}Lineales no homog\IeC {\'e}neas de orden superior con coeficientes constantes}{26}
-\contentsline {section}{\numberline {11}Sistemas de Ecuaciones diferenciales lineales}{26}
-\contentsline {subsection}{\numberline {11.1}Sistemas homog\IeC {\'e}neos con A diagonalizable}{26}
-\contentsline {subsection}{\numberline {11.2}Sistemas no homog\IeC {\'e}neos con A diagonalizable}{26}
-\contentsline {subsection}{\numberline {11.3}Sistemas homog\IeC {\'e}neos con A no diagonalizable}{26}
-\contentsline {subsubsection}{\numberline {11.3.1}Caso A 2x2}{26}
-\contentsline {subsubsection}{\numberline {11.3.2}Caso A 3x3}{26}
+\contentsline {subsection}{\numberline {8.2}Optimizaci\IeC {\'o}n restringida}{27}
+\contentsline {section}{\numberline {9}Descomposici\IeC {\'o}n en Valores Singulares (DVS)}{27}
+\contentsline {subsection}{\numberline {9.1}Definici\IeC {\'o}n}{27}
+\contentsline {subsection}{\numberline {9.2}Subespacios de las DVS}{28}
+\contentsline {subsection}{\numberline {9.3}Propiedades de las DVS}{29}
+\contentsline {subsection}{\numberline {9.4}DVS reducida y Pseudoinversa}{29}
+\contentsline {section}{\numberline {10}Ecuaciones diferenciales}{30}
+\contentsline {subsection}{\numberline {10.1}Wronskiano}{30}
+\contentsline {subsection}{\numberline {10.2}Identidad de Abel}{30}
+\contentsline {subsection}{\numberline {10.3}Existencia y unicidad de Problemas de Valores Iniciales (PVI)}{30}
+\contentsline {subsection}{\numberline {10.4}Variables separables}{30}
+\contentsline {subsection}{\numberline {10.5}Homog\IeC {\'e}neas}{30}
+\contentsline {subsection}{\numberline {10.6}Lineales de 1er orden}{30}
+\contentsline {subsection}{\numberline {10.7}Diferencial exacta}{30}
+\contentsline {subsection}{\numberline {10.8}Lineales homog\IeC {\'e}neas de orden superior con coeficientes constantes}{30}
+\contentsline {subsection}{\numberline {10.9}Lineales no homog\IeC {\'e}neas de orden superior con coeficientes constantes}{30}
+\contentsline {section}{\numberline {11}Sistemas de Ecuaciones diferenciales lineales}{30}
+\contentsline {subsection}{\numberline {11.1}Sistemas homog\IeC {\'e}neos con A diagonalizable}{30}
+\contentsline {subsection}{\numberline {11.2}Sistemas no homog\IeC {\'e}neos con A diagonalizable}{30}
+\contentsline {subsection}{\numberline {11.3}Sistemas homog\IeC {\'e}neos con A no diagonalizable}{30}
+\contentsline {subsubsection}{\numberline {11.3.1}Caso A 2x2}{30}
+\contentsline {subsubsection}{\numberline {11.3.2}Caso A 3x3}{30}

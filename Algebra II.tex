@@ -1484,13 +1484,209 @@ Resumen de Álgebra II\\
 					\end{tikzpicture}
 					
 			\section{Formas cuadráticas}
+			
+				\begin{tikzpicture}
+					\node [definicion] (box){%
+				    \begin{minipage}{0.80\textwidth}
+						Una forma cuadrática en $R^n$ es una función $Q:R^n \to R$ tal que:
+						\begin{align}
+							Q(\vect{x})=\vect{x}^TA\vect{x}
+						\end{align}
+						 Donde $A$ es una matriz simétrica $\in R^{n \times n}$.
+				    \end{minipage}
+					};
+					\node[fancytitle, right=10pt] at (box.north west) {Formas cuadráticas};
+					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+				\end{tikzpicture}
+				
+				\begin{tikzpicture}
+					\node [teorema] (box){%
+				    \begin{minipage}{0.80\textwidth}
+						Sea $A$ una matriz simétrica $\in R^{n \times n}$. Entonces existe un cambio ortogonal de variable, $\vect{x}=P\vect{y}$, donde $P$ es una matriz ortogonal tal que $\dete{P}=+1$ e $\vect{y}$ es el nuevo vector, que transforma la forma cuadrática $\vect{x}^TA\vect{x}$ a una forma cuadrática $\vect{y}^T D \vect{y}$ sin términos cruzados:
+						\begin{align}
+							\vect{x}^T A \vect{x}=\left(P\vect{y}\right)^T A \left(P\vect{y}\right)=\vect{y}^T \underbrace{P^T A P}_{D} \vect{y}=\vect{y}^T D \vect{y}=g(\vect{y})
+						\end{align}
+				    \end{minipage}
+					};
+					\node[fancytitle, right=10pt] at (box.north west) {Teorema de los ejes principales};
+					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+				\end{tikzpicture}
+				
+				\begin{tikzpicture}
+					\node [corolario] (box){%
+				    \begin{minipage}{0.80\textwidth}
+						Sea la forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$, con $A=PDP^T$.\\
+						
+						El conjunto de todas las $\vect{x} \in R^n$ $\vert$ $\vect{x}^T A \vect{x}=c$ es una elipse, una hipérbola, dos rectas, un punto o ninguno.\\
+						
+						Si $A$ es diagonal, la gráfica está en posición estándar. Si $A$ no es diagonal, la gráfica está girada hasta salirse de la posición estándar. Los \textbf{ejes principales} son los autovectores de $A$ y son el nuevo sistema de coordenadas para los cuales la gráfica está en posición estándar.
+				    \end{minipage}
+					};
+					\node[fancytitle, right=10pt] at (box.north west) {Perspectiva geométrica de los ejes principales};
+					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+				\end{tikzpicture}
+						
 				\subsection{Clasificación}
+				
+				\begin{tikzpicture}
+					\node [definicion] (box){%
+				    \begin{minipage}{0.80\textwidth}
+						Una forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$ es:
+						\begin{table}[H]
+				\begin{tabular}{c|c|c|c}
+					 & \textbf{Definición} & \textbf{Criterio I} & \textbf{Criterio II} \\
+					\hline
+					\textbf{Definida positiva} & \parbox{2cm}{\begin{center}$Q(\vect{x})>0$,\\ $\forall \vect{x} \neq 0$\end{center}} & \parbox{2.5cm}{\begin{center}	$a_{11}>0$, \\ $\dete{A}>0$	\end{center}} & Autovalores de $A$ positivos \\
+					\hline
+					\textbf{Semidefinida positiva} & \parbox{2cm}{\begin{center}$Q(\vect{x}) \geq 0$,\\ $\forall \vect{x}$\end{center}} & \parbox{2.5cm}{\begin{center}$\dete{A_k} \geq 0$,\\ $k=1,\ldots,n$\end{center}} & Autovalores de $A$ positivos o nulos \\
+					\hline
+					\textbf{Definida negativa} & \parbox{2cm}{\begin{center}$Q(\vect{x})<0$,\\ $\forall \vect{x} \neq 0$\end{center}} & \parbox{2.5cm}{\begin{center}$a_{11}<0$,\\ $\dete{A}>0$\end{center}} & Autovalores de $A$ negativos \\
+					\hline
+					\textbf{Semidefinida negativa} & \parbox{2cm}{\begin{center}$Q(\vect{x}) \leq 0$,\\ $\forall \vect{x}$\end{center}} & \parbox{2.5cm}{\begin{center}$\dete{A_k} \leq 0$,\\ $k=1,\ldots,n$\end{center}} & Autovalores de $A$ negativos o nulos \\
+					\hline
+					\textbf{Indefinida} & $Q(\vect{x}) \asymp 0$ &  & Autovalores de $A$ negativos y/o positivos \\
+				\end{tabular}
+			\end{table}
+			
+				    \end{minipage}
+					};
+					\node[fancytitle, right=10pt] at (box.north west) {Clasificación de las formas cuadráticas};
+					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+				\end{tikzpicture}
+				
 				\subsection{Optimización restringida}
+				
+				\begin{tikzpicture}
+					\node [teorema] (box){%
+				    \begin{minipage}{0.80\textwidth}
+						Sea la forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$, con $A$ simétrica. Se verifica:
+						\begin{align}
+							\lambda_{min}(A) \leq \frac{Q(\vect{x})}{\parallel \vect{x} \parallel^2} \leq \lambda_{max}(A)
+						\end{align}
+						Sea extremar una forma cuadrática $f:R^n \to R$, $f(\vect{x})=\vect{x}^T A \vect{x}$, ($A$ simétrica), sujeto a la restricción $\vert \vect{x} \vert=\alpha$.\\
+						
+						El máximo de $f$ es $\lambda_{max}(A) \alpha^2$ y se alcanza en $M=\{ \vect{x} \in S_{\lambda_{max}}(A)$ $\vert$ $ \vert \vect{x} \vert =\alpha \}$ \\
+						
+						El mínimo de $f$ es $\lambda_{min}(A) \alpha^2$ y se alcanza en $m=\{ \vect{x} \in S_{\lambda_{min}}(A)$ $\vert$ $ \vert \vect{x} \vert =\alpha \}$ \\
+						
+						Sea extremar una forma cuadrática $f:R^n \to R$, $f(\vect{x})=\vect{x}^T A \vect{x}$,($A$ simétrica), sujeto a la restricción $\vect{x}^T B \vect{x}=\alpha^2$, y sea $B$ definida positiva tal que $B=P_B D_B P_B^T$. Mediante el cambio de variable $\vect{y}=\sqrt{D_B}P_B^T \vect{x} \rightarrow \vect{x}=\sqrt{D_B^{-1}}P_B \vect{y}$, esto es equivalente a extremar $g(\vect{y})=\vect{y}^T \left(\sqrt{D_B^{-1}}^T P_B^T A P_B \sqrt{D_B^{-1}} \right)$ y sujeto a la restricción $\vert \vect{y} \vert=\alpha$. Entonces:
+						\begin{align}
+							\text{Máx }g(\vect{y})=\text{Máx }f(\vect{x}) \\
+							\text{mín }g(\vect{y})=\text{mín }f(\vect{x})
+						\end{align}
+						Los $\vect{x}$ en donde se alcanza ese extremo se hallan realizando $\vect{x}=P_B \vect{y}$
+				    \end{minipage}
+					};
+					\node[fancytitle, right=10pt] at (box.north west) {Teorema de Rayleigh};
+					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+				\end{tikzpicture}
+				
 			\section{Descomposición en Valores Singulares (DVS)}
 				\subsection{Definición}
-				\subsection{Aplicación de las DVS}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							\textbf{Valores singulares:} Se define como:
+							\begin{align}
+								VS(A)=\sqrt{\lambda_i} \text{ , } \forall \lambda_i \in \sigma(A^T A)
+							\end{align}
+							Sea $A$ una matriz de $m \times n$ con rango $r$. Entonces existe una matriz $\Sigma$, y existen una matriz $U$ ortogonal de $m \times m$ y una matriz $V$ ortogonal de $n \times n$ tales que $A=U \Sigma V^T$ donde:
+							\begin{itemize}
+								\item $\Sigma \in R^{m \times n}$ es tal que $\Sigma=\begin{bmatrix}{D}&{0}\\{0}&{0}\end{bmatrix}$, y la matriz diagonal $D$ tiene como elementos a los primeros $r$ valores singulares de $A^T A$, ordenados en forma descendente $\sigma_i \geq \ldots \geq \sigma_r >0$.
+								\item $V \in R^{n \times n}$ es una matriz cuyas columnas son unas Base Ortonormal (BON) de autovectores $\{\vect{v}_1,\ldots,\vect{v}_n \}$ asociados a los autovalores de $A^T A$.
+								\item $U \in R^{m \times m}$ es una matriz cuyas primeras $r$ columnas son los vectores $\frac{A\vect{v}_1}{\sigma_1},\ldots,\frac{A\vect{v}_r}{\sigma_r}$. Las otras columnas se obtienen completando la Base Ortonormal (BON) de $R^m$. Las columnas de $U$ son  autovectores de $A A^T$
+ 							\end{itemize}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Descomposición en Valores Singulares (DVS)};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+				
+				\subsection{Subespacios de las DVS}
+				
+					\begin{tikzpicture}
+						\node [corolario] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Sea $A \in K^{m \times n}$:
+							\begin{align}
+								A=\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{u}_1}&{\ldots}&{\vect{u}_m}\\{|}&{ }&{|}\end{bmatrix}}_{m \times m}\underbrace{\begin{bmatrix}{D}&{\ldots}&{0}\\{\vdots}&{\ddots}&{0}\\{0}&{0}&{0}\end{bmatrix}}_{m \times n}\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{v}_1}&{\ldots}&{\vect{v}_n}\\{|}&{ }&{|}\end{bmatrix}^T}_{n \times n}
+							\end{align}
+							Si $\rg{A}=r$ entonces:
+							\begin{align}
+								\{\underbrace{\vect{u}_1,\ldots,\vect{u}_r}_{\text{BON de } \col{A}},\overbrace{\vect{u}_{r+1},\ldots,\vect{u}_m}^{\text{BON de } \col{A}^\bot} \} \\
+								\{\underbrace{\vect{v}_1,\ldots,\vect{v}_r}_{\text{BON de } \fil{A}},\overbrace{\vect{v}_{r+1},\ldots,\vect{v}_m}^{\text{BON de } \fil{A}^\bot} \}
+							\end{align}					
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Subespacios de la DVS};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{Propiedades de las DVS}
+				
+					\begin{tikzpicture}
+						\node [corolario] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							\begin{itemize}
+								\item $\rg{A}=\rg{\Sigma}=\rg{\Sigma^T}=\# VS(A)_{>0}$
+								\item $A \in R^{n \times n}$ es inversible $\Longleftrightarrow A$ tiene $n$ $VS$ positivos
+								\item $VS(A)_{>0}=VS(A^T)_{>0}$
+								\item Si $A \in R^{n \times n} \Rightarrow \dete{A}=\prod_{i=1}^n VS_i(A)$
+								\item Si $A$ es cuadrada y definida positiva $\Rightarrow \sigma(A)=VS(A)$
+								\item Si $A \sim B \Rightarrow VS(A)=VS(B)$
+								\item Si $B$ es ortogonal $\Rightarrow A,AB$ y $BA$ tienen los mismos valores singulares
+								\item Si $A$ es cuadrada y simétrica $\Rightarrow VS_i(a)=\vert \lambda_i(A) \vert$
+								\item Si las filas de $A$ son una Base Ortonormal (BON), los valores singulares no nulos de $A$ son $1$
+								\item Si las columnas de $A$ son una Base Ortonormal (BON), los valores singulares de $A$ son $1$
+								\item La matriz $A^T A$ (\emph{Matriz de Gram} de $A$) es siempre simétrica y semidefinida positiva, con lo cual nunca tendrá valores singulares negativos. Será definida positiva cuando $A$ tenga columnas Linealmente Independientes.
+								\item Sea $T:R^m \to R^n$ una transformación lineal tal que $T(\vect{x})=A\vect{x}$. Sea la forma cuadrática $f(\vect{x})=\vert T(\vect{x}) \vert^2=\vect{x}^T(A^T A)\vect{x}$. Entonces:
+								\begin{itemize}
+									\item El máximo de $f(\vect{x})$ sujeto a $\vert \vect{x} \vert=1$ es $\lambda_{max}\left(A^T A\right)$. Entonces el máximo de $\vert T(\vect{x}) \vert$ es $VS_{max}(A)$ y se alcanza en $M=\{\vect{x} \in R^m$ $\vert$ $\vect{x} \in S_{\lambda_{max}}\left(A^T A\right), \vert \vect{x} \vert=1 \}$
+									\item El mínimo de $f(\vect{x})$ sujeto a $\vert \vect{x} \vert=1$ es $\lambda_{min}\left(A^T A\right)$. Entonces el mínimo de $\vert T(\vect{x}) \vert$ es $VS_{min}(A)$ y se alcanza en $m=\{\vect{x} \in R^m$ $\vert$ $\vect{x} \in S_{\lambda_{min}}\left(A^T A\right), \vert \vect{x} \vert=1 \}$
+								\end{itemize}
+							\end{itemize}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Propiedades de la DVS};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 				\subsection{DVS reducida y Pseudoinversa}
+				
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Sea $A \in R^{n \times m}$. Si $A=U\Sigma V^T$ y $\rg{A}=r$. Entonces una Descomposición en Valores Singulares reducida (DVSr) de $A$ es:
+							\begin{align}
+								A=U_r \Sigma_r V_r^T
+							\end{align}
+							Siendo $U_r \in R^{n \times r}$,$\Sigma_r \in R^{r \times r}$,$V_r^T \in R^{r \times m}$
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {DVS reducida};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
+					\begin{tikzpicture}
+						\node [definicion] (box){%
+					    \begin{minipage}{0.80\textwidth}
+							Se define la pseudoinversa de Moore-Pensore como:
+							\begin{align}
+								A^+=V_r \Sigma_r^{-1}U_r^T
+							\end{align}
+							Sea $A \in R^{n \times m}$, se deducen las siguientes propiedades:
+							\begin{itemize}
+								\item $A^+=A^{\#}$ cuando $\rg{A}=m$
+								\item $A^+ A=V_r V_r^T=P_{\fil{A}}$
+								\item $A A^+=U_r U_r^T=P_{\col{A}}$
+							\end{itemize}
+					    \end{minipage}
+						};
+						\node[fancytitle, right=10pt] at (box.north west) {Pseudoinversa de Moore-Penrose};
+						\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
+					\end{tikzpicture}
+					
 			\section{Ecuaciones diferenciales}
 				\subsection{Wronskiano}
 				\subsection{Identidad de Abel}
