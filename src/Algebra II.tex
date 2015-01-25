@@ -1,23 +1,19 @@
-\documentclass[twoside]{article}
-% Título y autor(es):
-\title{Resumen de Álgebra II (61.08)}
-\author{Menéndez Martín}
+\documentclass[a4paper, twoside]{article}
+\usepackage[utf8]{inputenc} % Especifica la codificación de caracteres de los documentos.
+\usepackage[spanish]{babel} % Indica que el documento se escribirá en español.
+\usepackage[top=3cm, bottom=2.5cm, inner=1.5cm, outer=2.5cm]{geometry} % Márgenes personalizados
+\usepackage{subfiles} % Paquete para incluir el preambulo en los sub archivos.
+\usepackage{afterpage} % Permite añadir páginas despues de una página dada.
+\usepackage{hyperref} % Permite incluir enlaces en los archivos.
+\usepackage{lastpage} % Paquete para poder contabilizar el total de páginas del documento.
+\usepackage{fancyhdr} % Permite personalizar los header y footer del documento.
 
-\usepackage[spanish]{babel}
 \usepackage{amsmath,bm,times}
-\usepackage[a4paper,headheight=16pt,scale={0.7,0.8},hoffset=0.5cm]{geometry}
 \usepackage{pdfpages}
-\usepackage[utf8]{inputenc}
-\usepackage{lastpage}
 \usepackage{float}
 \usepackage{array}
 \usepackage{listings}
 \usepackage{anysize}
-\usepackage{pdfpages}
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
-\usepackage{fancyhdr}
 \usepackage[hang,bf]{caption}
 \usepackage{graphicx}
 \usepackage{svg}
@@ -27,12 +23,60 @@
 \usepackage{verbatim}
 \usepackage{booktabs}
 
+% Defino la ruta de los paquetes personalizados para el apunte
+\newcommand{\rutapaquetes}{./paquetes-apunte}
+
+\usepackage{\rutapaquetes/caratula} % Caratula personalizada (cargada desde caratula.sty)
+\usepackage[mostrarrevisores]{\rutapaquetes/colaboradores} % Seccion de colaboradores (cargada y creada con colaboradores.sty)
+\usepackage{\rutapaquetes/historial} % Seccion de historial de cambios (cargada y creada con historial.sty)
+
+% Define los estilos de los enlaces interpretados por el paquete hyperref
+\hypersetup{
+    colorlinks=true,   % false: boxed links; true: colored links
+    linkcolor=black,   % color of internal links (change box color with linkbordercolor)
+    citecolor=green,   % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=blue,     % color of external links
+}
+
+\newcommand{\imgdir}{../resources/images} % Ruta de las imágenes
+
+% Define los directorios de las imágenes y gráficos
+\graphicspath{ {\imgdir/} {\rutapaquetes/} }
+
+\newcommand{\nombremateria}{Álgebra II (61.08 - 81.02)} % Defino el comando "\nombremateria" para no harcodear el nombre en varios lugares.
+
+% Define el pagestyle personalizado
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{}{\thesection\ \ #1}}
+% Define header para pagina par
+\fancyhead[ER]{\rightmark}
+% Define header para pagina impar
+\fancyhead[OL]{\rightmark}
+% Define footer para pagina par
+\fancyfoot[EL]{\nombremateria \hspace{0.1cm} - Resumen} % Nombre del apunte a la izquierda
+\fancyfoot[ER]{Página \thepage\ de \pageref{LastPage}} % Numero de pagina a la derecha
+% Define footer para pagina impar
+\fancyfoot[OL]{Página \thepage\ de \pageref{LastPage}} % Numero de pagina a la izquierda
+\fancyfoot[OR]{\nombremateria \hspace{0.1cm} - Resumen} % Nombre del apunte a la derecha
+
+\renewcommand{\footrulewidth}{0.4pt} % Agrego linea que separa el footer
+
+% Configura la caratula
+\materia{\nombremateria}
+\tipoapunte{Resumen}
+%\tema{Tema de la Materia}
+%\subtema{Subtema}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
 \includepdfset{pagecommand=\thispagestyle{plain}}
 \usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
 
 \pdfcompresslevel=9
-\newcommand{\imgdir}{../resources/images}
-\graphicspath{{\imgdir/}}
 
 \everymath{\displaystyle}
 \newcommand{\vect}[1]{\overline{\textbf{#1}}}
@@ -71,48 +115,16 @@
 \cfoot{}
 \rfoot{P\'agina \thepage\ de \pageref{LastPage}}
 % Carátula:
-\begin{titlepage}
+\maketitle
 
-\thispagestyle{empty}
-
-\begin{center}
-\includegraphics[scale=0.3]{fiuba}\\
-\large{\textsc{Universidad de Buenos Aires}}\\
-\large{\textsc{Facultad De Ingeniería}}\\
-\small{A\~no 2015 - 1\textsuperscript{er} Cuatrimestre}
-\end{center}
-
-\begin{center}
-\Large{\underline{\textsc{Álgebra II A (61.08)}}}
-
-\vspace*{2cm}
-
-\textbf{\begin{LARGE}
-Resumen de Álgebra II\\
-\end{LARGE}}
-\end{center}
-
-\vspace*{3cm}
-
-\begin{tabbing}
-\hspace{2cm}\=\+
-\\
-	INTEGRANTE:\hspace{-1cm}\=\+\hspace{1cm}\=\hspace{6cm}\=\\
-		Maria Inés Parnisari	\>\>- \ 92235\\
-		$\langle$maineparnisari@gmail.com$\rangle$\\
-		\\
-		Menéndez, Martín Nicolás	\>\>- \ 92830\\
-		$\langle$menendez91@live.com.ar$\rangle$\\
-		\\
-\end{tabbing}
-\end{titlepage}
 % Hago que las páginas se comiencen a contar a partir de aquí:
 \setcounter{page}{1}
 % Pongo el índice en una página aparte:
 \tableofcontents
 %\listoffigures
 %\listoftables
-\newpage
+\subfile{\rutapaquetes/sobre-el-proyecto.tex} % Inlcuye informacion sobre el proyecto FIUBA Apuntes
+
 % Inicio del TP:
 \marginsize{1cm}{1cm}{1cm}{1cm}
 %\setcounter{chapter}{1}
