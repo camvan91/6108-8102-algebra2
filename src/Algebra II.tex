@@ -7,27 +7,19 @@
 \usepackage{hyperref} % Permite incluir enlaces en los archivos.
 \usepackage{lastpage} % Paquete para poder contabilizar el total de páginas del documento.
 \usepackage{fancyhdr} % Permite personalizar los header y footer del documento.
-
-\usepackage{amsmath,bm,times}
-\usepackage{pdfpages}
-\usepackage{float}
-\usepackage{array}
-\usepackage{listings}
-\usepackage{anysize}
-\usepackage[hang,bf]{caption}
-\usepackage{graphicx}
-\usepackage{svg}
+\usepackage{amsmath} % Comandos para la escritura de fórmulas matemáticas de mayor complejidad
+\usepackage{amsfonts} % Proporciona fuentes matemáticas
+\usepackage{amssymb} % Proporciona símbolos matemáticos de la American Mathematical Society
+\usepackage{graphicx} % Permite incluir gráficos
+\usepackage[hang, bf]{caption} % Personaliza los subtítulos de las figuras y tablas
+\usepackage{float} % Permite posicionar mejor las figuras y tablas
 \usepackage{pgf,tikz}
-\usepackage{tikz-timing}
-\usepackage{setspace}
-\usepackage{verbatim}
-\usepackage{booktabs}
 
 % Defino la ruta de los paquetes personalizados para el apunte
 \newcommand{\rutapaquetes}{./paquetes-apunte}
 
 \usepackage{\rutapaquetes/caratula} % Caratula personalizada (cargada desde caratula.sty)
-\usepackage[mostrarrevisores]{\rutapaquetes/colaboradores} % Seccion de colaboradores (cargada y creada con colaboradores.sty)
+\usepackage[ocultarrevisores]{\rutapaquetes/colaboradores} % Seccion de colaboradores (cargada y creada con colaboradores.sty)
 \usepackage{\rutapaquetes/historial} % Seccion de historial de cambios (cargada y creada con historial.sty)
 
 % Define los estilos de los enlaces interpretados por el paquete hyperref
@@ -73,9 +65,6 @@
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
-\includepdfset{pagecommand=\thispagestyle{plain}}
-\usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
-
 \pdfcompresslevel=9
 
 \everymath{\displaystyle}
@@ -93,6 +82,8 @@
 \newcommand{\gen}[1]{\text{gen}\left\{#1\right\}}
 \newcommand{\produ}[1]{(#1)}
 
+\usetikzlibrary{shapes, arrows, positioning, shadows, trees, automata}
+
 \tikzstyle{definicion} = [draw=red, fill=gray!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
 					
@@ -105,29 +96,14 @@
 %------------------------- Inicio del documento ---------------------------
 
 \begin{document}
-% Hago que en la cabecera de página se muestre a la derecha la sección, y en el pie, en número de página a la derecha:
-\pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\markboth{}{\thesection\ \ #1}}
-\lhead{}
-\chead{}
-\rhead{\rightmark}
-\lfoot{Álgebra II (61.08)}
-\cfoot{}
-\rfoot{P\'agina \thepage\ de \pageref{LastPage}}
-% Carátula:
-\maketitle
 
-% Hago que las páginas se comiencen a contar a partir de aquí:
-\setcounter{page}{1}
-% Pongo el índice en una página aparte:
-\tableofcontents
-%\listoffigures
-%\listoftables
+\maketitle % Carátula
+
+\tableofcontents % Índice de contenido
+%\listoffigures % Índice de figuras
+%\listoftables % Índice de tablas
+
 \subfile{\rutapaquetes/sobre-el-proyecto.tex} % Inlcuye informacion sobre el proyecto FIUBA Apuntes
-
-% Inicio del TP:
-\marginsize{1cm}{1cm}{1cm}{1cm}
-%\setcounter{chapter}{1}
 
 	\section{Matrices}
 	
