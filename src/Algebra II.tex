@@ -14,6 +14,7 @@
 \usepackage[hang, bf]{caption} % Personaliza los subtítulos de las figuras y tablas
 \usepackage{float} % Permite posicionar mejor las figuras y tablas
 \usepackage{pgf,tikz}
+\usepackage{environ}
 
 % Defino la ruta de los paquetes personalizados para el apunte
 \newcommand{\rutapaquetes}{./paquetes-apunte}
@@ -93,6 +94,27 @@
 \tikzstyle{teorema} = [draw=red, fill=blue!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
 
+\NewEnviron{corolario}[1]{%
+  \begin{tikzpicture}
+    \node [corolario] (box){%
+      \begin{minipage}{0.80\textwidth}
+       \BODY
+        \end{minipage}};
+    \node[fancytitle, right=10pt] at (box.north west) {#1};
+    \node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+   \end{tikzpicture}
+}
+
+\NewEnviron{definicion}[1]{%
+  \begin{tikzpicture}
+    \node [definicion] (box){%
+      \begin{minipage}{0.80\textwidth}
+       \BODY
+        \end{minipage}};
+    \node[fancytitle, right=10pt] at (box.north west) {#1};
+    \node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+   \end{tikzpicture}
+}
 %------------------------- Inicio del documento ---------------------------
 
 \begin{document}
@@ -107,185 +129,148 @@
 
 \section{Matrices}
 \subsection{Propiedades generales}
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Dadas las matrices $A,B,C$ se tiene que:\\
-			
-			\begin{minipage}{0.4\textwidth}
-				\begin{itemize}
-					\item $A+B=B+A$
-					\item $A+(B+C)=(A+B)+C$
-					\item $\alpha(A+B)=\alpha A+\alpha B$
-					\item $(\alpha+\beta)A=\alpha A+\beta A$
-					\item $\alpha\left(\beta A\right)=(\alpha\beta)A$
-					\item $A+0_n=A$
-				\end{itemize}
-			\end{minipage}
-			\begin{minipage}{0.4\textwidth}
-				\begin{itemize}
-					\item $A+(-A)=0_n$
-					\item $A(B+C)=AB+AC$
-					\item $(A+B)C=AC+BC$
-					\item $A(BC)=(AB)C$
-					\item $\alpha(AB)=(\alpha A)B=A(\alpha B)$
-					\item $A 0_n=0_n$
-				\end{itemize}
-			\end{minipage}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de matrices};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Propiedades de matrices}
+  Dadas las matrices $A,B,C$ se tiene que:\\
+  
+    \begin{minipage}{0.4\textwidth}
+    \begin{itemize}
+      \item $A+B=B+A$
+      \item $A+(B+C)=(A+B)+C$
+      \item $\alpha(A+B)=\alpha A+\alpha B$
+      \item $(\alpha+\beta)A=\alpha A+\beta A$
+      \item $\alpha\left(\beta A\right)=(\alpha\beta)A$
+      \item $A+0_n=A$
+    \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{itemize}
+        \item $A+(-A)=0_n$
+        \item $A(B+C)=AB+AC$
+        \item $(A+B)C=AC+BC$
+        \item $A(BC)=(AB)C$
+        \item $\alpha(AB)=(\alpha A)B=A(\alpha B)$
+        \item $A 0_n=0_n$
+      \end{itemize}
+    \end{minipage}
+ 
+\end{corolario}
+
+
 
 \subsection{Propiedades de la inversa, la traza y la traspuesta}
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Dadas las matrices $A,B,C$ se tiene que:\\
-			
-			\begin{minipage}{0.3\textwidth}
-				Propiedades de la inversa:
-				\begin{itemize}
-					\item $\left(A^{-1}\right)^{-1}$
-					\item $\left(AB\right)^{-1}=B^{-1}A^{-1}$
-					\item $\left(\alpha A\right)^{-1}=\frac{A^{-1}}{\alpha}, \alpha \neq 0$
-					\item $\left(A^n\right)^{-1}=\left(A^{-1}\right)^n$
-					\item $A^{-1}=\frac{\text{adj}(A)}{\dete{A}}$
-				\end{itemize}
-			\end{minipage}
-			\begin{minipage}{0.3\textwidth}
-				Propiedades de la traza:
-				\begin{itemize}
-					\item $\tr{A+B}=\tr{A}+\tr{B}$
-					\item $\tr{AB}=\tr{BA}$
-					\item $\tr{\alpha A}=\alpha \tr{A}$
-					\item $\tr{A^T}=\tr{A}$
-				\end{itemize}
-			\end{minipage}
-			\begin{minipage}{0.3\textwidth}
-				Propiedades de la traspuesta:
-				\begin{itemize}
-					\item $\left(A+B\right)^T=A^T+B^T$
-					\item $\left(AB\right)^T=B^T A^T$
-					\item $\left(A^T\right)^T=A$
-					\item $\left(\alpha A\right)^T=\alpha A^T$
-					\item $\left(A^T\right)^{-1}=\left(A^{-1}\right)^T$
-				\end{itemize}
-			\end{minipage}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de matrices};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Propiedades de matrices}
+  Dadas las matrices $A,B,C$ se tiene que:\\
+  
+  \begin{minipage}{0.3\textwidth}
+    Propiedades de la inversa:
+    \begin{itemize}
+      \item $\left(A^{-1}\right)^{-1}$
+      \item $\left(AB\right)^{-1}=B^{-1}A^{-1}$
+      \item $\left(\alpha A\right)^{-1}=\frac{A^{-1}}{\alpha}, \alpha \neq 0$
+      \item $\left(A^n\right)^{-1}=\left(A^{-1}\right)^n$
+      \item $A^{-1}=\frac{\text{adj}(A)}{\dete{A}}$
+    \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.3\textwidth}
+    Propiedades de la traza:
+    \begin{itemize}
+      \item $\tr{A+B}=\tr{A}+\tr{B}$
+      \item $\tr{AB}=\tr{BA}$
+      \item $\tr{\alpha A}=\alpha \tr{A}$
+      \item $\tr{A^T}=\tr{A}$
+    \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.3\textwidth}
+    Propiedades de la traspuesta:
+      \begin{itemize}
+        \item $\left(A+B\right)^T=A^T+B^T$
+        \item $\left(AB\right)^T=B^T A^T$
+        \item $\left(A^T\right)^T=A$
+        \item $\left(\alpha A\right)^T=\alpha A^T$
+        \item $\left(A^T\right)^{-1}=\left(A^{-1}\right)^T$
+      \end{itemize}
+    \end{minipage}
+\end{corolario}
 
 \subsection{Propiedades de los determinantes}
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sean $A,B \in R^{n \times m}$
-			\begin{align}
-				\dete{A^T}=\dete{A} \\
-				\dete{AB}=\dete{A} \dete{B}
-			\end{align}
-			Si $B$ la obtengo de sumar k veces una fila de $A$ sobre otra:
-			\begin{align}
-				\dete{B}=\dete{A}
-			\end{align}
-			Si $B$ la obtengo de intercambiar $k$ veces las fila de $A$:
-			\begin{align}
-				\dete{B}=(-1)^k\dete{A}
-			\end{align}
-			Si $B$ la obtengo de multiplicar por $k$, $n$ veces las filas de A:
-			\begin{align}
-				\dete{B}=k^n\dete{A}
-			\end{align}
-			Si $A$ es una matriz triangular:
-			\begin{align}
-				\dete{A}=\prod_{i=1}^n a{ii}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de determinantes};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Propiedades de determinantes}
+  Sean $A,B \in R^{n \times m}$
+  \begin{align}
+    \dete{A^T}=\dete{A} \\
+	\dete{AB}=\dete{A} \dete{B}
+  \end{align}
+  Si $B$ la obtengo de sumar k veces una fila de $A$ sobre otra:
+  \begin{align}
+    \dete{B}=\dete{A}
+  \end{align}
+  Si $B$ la obtengo de intercambiar $k$ veces las fila de $A$:
+  \begin{align}
+    \dete{B}=(-1)^k\dete{A}
+  \end{align}
+  Si $B$ la obtengo de multiplicar por $k$, $n$ veces las filas de A:
+  \begin{align}
+    \dete{B}=k^n\dete{A}
+  \end{align}
+  Si $A$ es una matriz triangular:
+  \begin{align}
+    \dete{A}=\prod_{i=1}^n a{ii}
+  \end{align}
+\end{corolario}
 
 \subsection{Subespacios fila, columna y null}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sean $A \in R^{n \times m} \text{ , } B \in R^{r \times n}$, se define:
-			\begin{itemize}
-				\item	\textbf{Espacio Fila:} $\text{Fif}(A)=\{x \in R^m \vert x \text{ es combinación lineal de las filas de } A\}$
-				\item \textbf{Espacio Columna:} $\text{Col}(A)=\{b \in R^n \vert Ax=b \text{ para alguna x}\}$
-				\item \textbf{Espacio nulo:} $\text{Nul}(A)=\{x \in R^m \vert Ax=0\}$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Espacio fila,columna y nulo de matrices};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion}{Espacio fila,columna y nulo de matrices}
+  Sean $A \in R^{n \times m} \text{ , } B \in R^{r \times n}$, se define:
+  \begin{itemize}
+	\item	\textbf{Espacio Fila:} $\text{Fif}(A)=\{x \in R^m \vert x \text{ es combinación lineal de las filas de } A\}$
+	\item \textbf{Espacio Columna:} $\text{Col}(A)=\{b \in R^n \vert Ax=b \text{ para alguna x}\}$
+	\item \textbf{Espacio nulo:} $\text{Nul}(A)=\{x \in R^m \vert Ax=0\}$
+  \end{itemize}
+\end{definicion}
 
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Propiedades:
-			\begin{align}
-				\nul{A}=\nul{A^T A}=\fil{A}^\bot \\
-				\nul{A^T}=\nul{A A^T}=\col{A}^\bot \\
-				\rg{A}=\rg{A^T A} \Rightarrow A^T A \\
-				\dime{\col{A}}=\dime{\fil{A}} \\
-				\col{A} \bigotimes \col{A}^\bot=R^n \\
-				\fil{A} \bigotimes \fil{A}^\bot=R^m \\
-				\rg{A}+\dim{\nul{A}}=m \\	
-				\col{BA} \subseteq \col{B} \text{, Iguales si } \rg{A}=n \\
-				\nul{A} \subseteq \nul{BA} \text{, Iguales si } \rg{B}=n \\
-				\text{Si } \rg{A}=n \Rightarrow \rg{BA}=\rg{B} \\
-				\text{Si } \rg{B}=n \Rightarrow \rg{BA}=\rg{A} \\
-				\col{A} \bot \col{B} \Leftrightarrow A^T B=0
-			\end{align}
-			De \textbf{(1.15)} se ve que $A^T A \text{ invertible } \longleftrightarrow A \text{ invertible}$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de los espacios definidos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Propiedades de los espacios definidos}
+  Propiedades:
+  \begin{align}
+	\nul{A}=\nul{A^T A}=\fil{A}^\bot \\
+	\nul{A^T}=\nul{A A^T}=\col{A}^\bot \\
+	\rg{A}=\rg{A^T A} \Rightarrow A^T A \\
+	\dime{\col{A}}=\dime{\fil{A}} \\
+	\col{A} \bigotimes \col{A}^\bot=R^n \\
+	\fil{A} \bigotimes \fil{A}^\bot=R^m \\
+	\rg{A}+\dim{\nul{A}}=m \\	
+	\col{BA} \subseteq \col{B} \text{, Iguales si } \rg{A}=n \\
+	\nul{A} \subseteq \nul{BA} \text{, Iguales si } \rg{B}=n \\
+	\text{Si } \rg{A}=n \Rightarrow \rg{BA}=\rg{B} \\
+	\text{Si } \rg{B}=n \Rightarrow \rg{BA}=\rg{A} \\
+    \col{A} \bot \col{B} \Leftrightarrow A^T B=0
+  \end{align}
+  De \textbf{(1.15)} se ve que $A^T A \text{ invertible } \longleftrightarrow A \text{ invertible}$
+\end{corolario}
 
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Dos matrices $A$ y $B$ son equivalentes si existen otras dos matrices $E$ y $F$ regulares tal que:
-			\begin{align}
-				A=EBF
-			\end{align}
-			Dos matrices equivalentes pueden pensarse como dos descripciones de una misma Transformación Lineal, pero con respecto a bases distintas.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matrices equivalentes};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion}{Matrices equivalentes}
+  Dos matrices $A$ y $B$ son equivalentes si existen otras dos matrices $E$ y $F$ regulares tal que:
+    \begin{align}
+      A=EBF
+	\end{align}
+	Dos matrices equivalentes pueden pensarse como dos descripciones de una misma Transformación Lineal, pero con respecto a bases distintas.
+\end{definicion}
 
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Dos matrices cuadradas $A$ y $B$ son semejantes (notamos $A \sim B$) si y solo si existe una matriz $P$ inversible tal que:
-			\begin{align}
-				B=P^{-1}AP \text{ ,ó}\\
-				A=PBP^{-1}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matrices semejantes};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion}{Matrices Semejantes}
+  Dos matrices cuadradas $A$ y $B$ son semejantes (notamos $A \sim B$) si y solo si existe una matriz $P$ inversible tal que:
+    \begin{align}
+      B=P^{-1}AP \text{ ,ó}\\
+      A=PBP^{-1}
+    \end{align}
+\end{definicion}
 
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Dos matrices semejantes pueden pensarse como dos descripciones de un mismo operador lineal, pero con respecto a bases distintas. Estas dos matrices cumplen que:
-			\begin{align}
-				\dete{A}=\dete{B} \\
-				\tr{A}=\tr{B} \\
-				\rg{A}=\rg{B} \\
-				p_A(\lambda)=p_B(\lambda) \Rightarrow \sigma(A)=\sigma(B)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de matrices semejantes};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Propiedades de matrices semejantes}
+  Dos matrices semejantes pueden pensarse como dos descripciones de un mismo operador lineal, pero con respecto a bases distintas. Estas dos matrices cumplen que:
+    \begin{align}
+      \dete{A}=\dete{B} \\
+      \tr{A}=\tr{B} \\
+      \rg{A}=\rg{B} \\
+      p_A(\lambda)=p_B(\lambda) \Rightarrow \sigma(A)=\sigma(B)
+	\end{align}
+\end{corolario}
 
 \newpage
 \section{Espacios vectoriales}
@@ -1763,61 +1748,51 @@ $\begin{cases} x^\prime(t)=a_{11}x+a_{12}y+b_1 \\ y^\prime(t)=a_{21}x+a_{22}y+b_
 	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
 \end{tikzpicture}
 
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			$A$ necesariamente posee un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$, con lo cual la matriz $J$ posee un solo bloque correspondiente a $\lambda$:
-			\begin{align}
-				J=\begin{bmatrix} {\lambda}&{1} \\ {0}&{\lambda} \end{bmatrix}
-			\end{align}
-			Respecto de la matriz $P=[\vect{v}_1,\vect{v}_2]$ debe ser inversible y $AP=PJ$. La matriz $P$ se obtiene hallando un par de vectores $\vect{v}_1$ y $\vect{v}_2$ Linealmente Independientes que satisfagan las condiciones $\left( A-\lambda I \right)\vect{v}_1=0$ y $\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1$. Observamos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A \in R^{2 \times 2}$ no diagonalizable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Sistemas no homogéneos con $A \in R^{2 \times 2}$ no diagonalizable}
+  $A$ necesariamente posee un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$, con lo cual la matriz $J$ posee un solo bloque correspondiente a $\lambda$:
+  \begin{align}
+    J=\begin{bmatrix} {\lambda}&{1} \\ {0}&{\lambda} \end{bmatrix}
+  \end{align}
+  Respecto de la matriz $P=[\vect{v}_1,\vect{v}_2]$ debe ser inversible y $AP=PJ$. La matriz $P$ se obtiene hallando un par de vectores $\vect{v}_1$ y $\vect{v}_2$ Linealmente Independientes que satisfagan las condiciones $\left( A-\lambda I \right)\vect{v}_1=0$ y $\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1$. Observamos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
+\end{corolario}
 
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\begin{enumerate}
-				\item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $1$. En este caso:
-				\begin{align}
-					J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{1} \\ {0}&{0}&{\lambda} \end{bmatrix}
-				\end{align}
-				Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
-				\begin{align}
-					\left( A-\lambda I \right)\vect{v}_1=0 \\
-					\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
-					\left( A-\lambda I \right)\vect{v}_3=\vect{v}_2
-				\end{align}
-				Observemos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
-				\item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $2$. En este caso:
-				\begin{align}
-					J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\lambda} \end{bmatrix}
-				\end{align}
-				Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
-				\begin{align}
-					\left( A-\lambda I \right)\vect{v}_1=0 \\
-					\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
-					\left( A-\lambda I \right)\vect{v}_3=0
-				\end{align}
-				Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$
-				\item $A$ tiene un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$ y un autovalor $\mu \in R$ simple. En este caso $J$ debe tener dos bloques de Jordan
-				\begin{align}
-					J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\mu} \end{bmatrix}
-				\end{align}
-				Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
-				\begin{align}
-					\left( A-\lambda I \right)\vect{v}_1=0 \\
-					\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
-					\left( A-\lambda I \right)\vect{v}_3=0
-				\end{align}
-				Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$ y $\mu$ respectivamente.
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A \in R^{3 \times 3}$ no diagonalizable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario}{Sistemas no homogéneos con $A \in R^{3 \times 3}$ no diagonalizable}
+  \begin{enumerate}
+    \item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $1$. En este caso:
+    \begin{align}
+      J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{1} \\ {0}&{0}&{\lambda} \end{bmatrix}
+    \end{align}
+    Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+    \begin{align}
+      \left( A-\lambda I \right)\vect{v}_1=0 \\
+      \left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+      \left( A-\lambda I \right)\vect{v}_3=\vect{v}_2
+    \end{align}
+    Observemos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
+    \item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $2$. En este caso:
+    \begin{align}
+    J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\lambda} \end{bmatrix}
+    \end{align}
+    Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+    \begin{align}
+      \left( A-\lambda I \right)\vect{v}_1=0 \\
+      \left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+      \left( A-\lambda I \right)\vect{v}_3=0
+    \end{align}
+    Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$
+    \item $A$ tiene un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$ y un autovalor $\mu \in R$ simple. En este caso $J$ debe tener dos bloques de Jordan
+    \begin{align}
+      J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\mu} \end{bmatrix}
+    \end{align}
+    Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+    \begin{align}
+      \left( A-\lambda I \right)\vect{v}_1=0 \\
+      \left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+      \left( A-\lambda I \right)\vect{v}_3=0
+    \end{align}
+    Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$ y $\mu$ respectivamente.
+  \end{enumerate}
+\end{corolario}
 
 % Bibliografía utilizada en el apunte
 %\newpage
