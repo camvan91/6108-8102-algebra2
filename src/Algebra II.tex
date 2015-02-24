@@ -94,27 +94,25 @@
 \tikzstyle{teorema} = [draw=red, fill=blue!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
 
-\NewEnviron{corolario}[1]{%
-  \begin{tikzpicture}
-    \node [corolario] (box){%
-      \begin{minipage}{0.80\textwidth}
-       \BODY
-        \end{minipage}};
-    \node[fancytitle, right=10pt] at (box.north west) {#1};
-    \node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-   \end{tikzpicture}
+\newcommand{\cuadro}[3][0.8\textwidth]{
+	\tikzstyle{#2frame} = [draw=black!40!#3, fill=#3!20, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+	\tikzstyle{#2title} = [fill=black!40!#3, text=white]
+	\NewEnviron{#2}[1]{%
+		\begin{tikzpicture}
+			\node[#2frame](box){%
+				\begin{minipage}{#1}
+					\BODY
+				\end{minipage}};
+			\node[#2title, rounded corners, right=10pt] at (box.north west) {\textbf{##1}};
+			\node[#2title, rounded corners] at (box.south) {$\aleph$};
+		\end{tikzpicture}
+	}
 }
 
-\NewEnviron{definicion}[1]{%
-  \begin{tikzpicture}
-    \node [definicion] (box){%
-      \begin{minipage}{0.80\textwidth}
-       \BODY
-        \end{minipage}};
-    \node[fancytitle, right=10pt] at (box.north west) {#1};
-    \node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-   \end{tikzpicture}
-}
+\cuadro{teorema}{blue}
+\cuadro{definicion}{gray}
+\cuadro{corolario}{green}
+
 %------------------------- Inicio del documento ---------------------------
 
 \begin{document}
@@ -384,18 +382,13 @@
 \end{tikzpicture}
 
 \subsection{Teorema de la dimensión}
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Dados los subespacios $S,H$ y $T$:
-			\begin{align}
-				\dime{S+H}=\dime{S}+\dime{H}-\dime{S \cap H} \\
-				\dime{S+H+T}=\dime{S}+\dime{H}+\dime{T}-\dime{S \cap (H+T)}-\dime{H \cap T}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de la dimensión};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema}{Teorema de la dimensión}
+	Dados los subespacios $S,H$ y $T$:
+	\begin{align}
+		\dime{S+H}=\dime{S}+\dime{H}-\dime{S \cap H} \\
+		\dime{S+H+T}=\dime{S}+\dime{H}+\dime{T}-\dime{S \cap (H+T)}-\dime{H \cap T}
+	\end{align}
+\end{teorema}
 
 \newpage
 \section{Producto interno}
@@ -482,7 +475,7 @@
 			\end{itemize}
 			\emph{Los elementos pueden ser de cualquier espacio vectorial, se utilizaron vectores por comodidad.}
 		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {norma de un vector};
+	\node[fancytitle, right=10pt] at (box.north west) {Norma de un vector};
 	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
 \end{tikzpicture}
 
