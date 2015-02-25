@@ -113,142 +113,142 @@
 \section{Matrices}
 \subsection{Propiedades generales}
 \begin{corolario*}{Propiedades de matrices}
-  Dadas las matrices $A,B,C$ se tiene que:\\
-  
-    \begin{minipage}{0.4\textwidth}
-    \begin{itemize}
-      \item $A+B=B+A$
-      \item $A+(B+C)=(A+B)+C$
-      \item $\alpha(A+B)=\alpha A+\alpha B$
-      \item $(\alpha+\beta)A=\alpha A+\beta A$
-      \item $\alpha\left(\beta A\right)=(\alpha\beta)A$
-      \item $A+0_n=A$
-    \end{itemize}
-    \end{minipage}
-    \begin{minipage}{0.4\textwidth}
-      \begin{itemize}
-        \item $A+(-A)=0_n$
-        \item $A(B+C)=AB+AC$
-        \item $(A+B)C=AC+BC$
-        \item $A(BC)=(AB)C$
-        \item $\alpha(AB)=(\alpha A)B=A(\alpha B)$
-        \item $A 0_n=0_n$
-      \end{itemize}
-    \end{minipage}
+	Dadas las matrices $A,B,C$ se tiene que:\\
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{itemize}
+			\item $A+B=B+A$
+			\item $A+(B+C)=(A+B)+C$
+			\item $\alpha(A+B)=\alpha A+\alpha B$
+			\item $(\alpha+\beta)A=\alpha A+\beta A$
+			\item $\alpha\left(\beta A\right)=(\alpha\beta)A$
+			\item $A+0_n=A$
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\begin{itemize}
+			\item $A+(-A)=0_n$
+			\item $A(B+C)=AB+AC$
+			\item $(A+B)C=AC+BC$
+			\item $A(BC)=(AB)C$
+			\item $\alpha(AB)=(\alpha A)B=A(\alpha B)$
+			\item $A 0_n=0_n$
+		\end{itemize}
+	\end{minipage}
 \end{corolario*}
 
 \subsection{Propiedades de la inversa, la traza y la traspuesta}
 \begin{corolario*}{Propiedades de matrices}
-  Dadas las matrices $A,B,C$ se tiene que:\\
-  
-  \begin{minipage}{0.3\textwidth}
-    Propiedades de la inversa:
-    \begin{itemize}
-      \item $\left(A^{-1}\right)^{-1}$
-      \item $\left(AB\right)^{-1}=B^{-1}A^{-1}$
-      \item $\left(\alpha A\right)^{-1}=\frac{A^{-1}}{\alpha}, \alpha \neq 0$
-      \item $\left(A^n\right)^{-1}=\left(A^{-1}\right)^n$
-      \item $A^{-1}=\frac{\text{adj}(A)}{\dete{A}}$
-    \end{itemize}
-    \end{minipage}
-    \begin{minipage}{0.3\textwidth}
-    Propiedades de la traza:
-    \begin{itemize}
-      \item $\tr{A+B}=\tr{A}+\tr{B}$
-      \item $\tr{AB}=\tr{BA}$
-      \item $\tr{\alpha A}=\alpha \tr{A}$
-      \item $\tr{A^T}=\tr{A}$
-    \end{itemize}
-    \end{minipage}
-    \begin{minipage}{0.3\textwidth}
-    Propiedades de la traspuesta:
-      \begin{itemize}
-        \item $\left(A+B\right)^T=A^T+B^T$
-        \item $\left(AB\right)^T=B^T A^T$
-        \item $\left(A^T\right)^T=A$
-        \item $\left(\alpha A\right)^T=\alpha A^T$
-        \item $\left(A^T\right)^{-1}=\left(A^{-1}\right)^T$
-      \end{itemize}
-    \end{minipage}
+	Dadas las matrices $A,B,C$ se tiene que:\\
+	
+	\begin{minipage}{0.3\textwidth}
+		Propiedades de la inversa:
+		\begin{itemize}
+			\item $\left(A^{-1}\right)^{-1}$
+			\item $\left(AB\right)^{-1}=B^{-1}A^{-1}$
+			\item $\left(\alpha A\right)^{-1}=\frac{A^{-1}}{\alpha}, \alpha \neq 0$
+			\item $\left(A^n\right)^{-1}=\left(A^{-1}\right)^n$
+			\item $A^{-1}=\frac{\text{adj}(A)}{\dete{A}}$
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		Propiedades de la traza:
+		\begin{itemize}
+			\item $\tr{A+B}=\tr{A}+\tr{B}$
+			\item $\tr{AB}=\tr{BA}$
+			\item $\tr{\alpha A}=\alpha \tr{A}$
+			\item $\tr{A^T}=\tr{A}$
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		Propiedades de la traspuesta:
+		\begin{itemize}
+			\item $\left(A+B\right)^T=A^T+B^T$
+			\item $\left(AB\right)^T=B^T A^T$
+			\item $\left(A^T\right)^T=A$
+			\item $\left(\alpha A\right)^T=\alpha A^T$
+			\item $\left(A^T\right)^{-1}=\left(A^{-1}\right)^T$
+		\end{itemize}
+	\end{minipage}
 \end{corolario*}
 
 \subsection{Propiedades de los determinantes}
 \begin{corolario*}{Propiedades de determinantes}
-  Sean $A,B \in R^{n \times m}$
-  \begin{align}
-    \dete{A^T}=\dete{A} \\
-	\dete{AB}=\dete{A} \dete{B}
-  \end{align}
-  Si $B$ la obtengo de sumar k veces una fila de $A$ sobre otra:
-  \begin{align}
-    \dete{B}=\dete{A}
-  \end{align}
-  Si $B$ la obtengo de intercambiar $k$ veces las fila de $A$:
-  \begin{align}
-    \dete{B}=(-1)^k\dete{A}
-  \end{align}
-  Si $B$ la obtengo de multiplicar por $k$, $n$ veces las filas de A:
-  \begin{align}
-    \dete{B}=k^n\dete{A}
-  \end{align}
-  Si $A$ es una matriz triangular:
-  \begin{align}
-    \dete{A}=\prod_{i=1}^n a{ii}
-  \end{align}
+	Sean $A,B \in R^{n \times m}$
+	\begin{align}
+		\dete{A^T}=\dete{A} \\
+		\dete{AB}=\dete{A} \dete{B}
+	\end{align}
+	Si $B$ la obtengo de sumar k veces una fila de $A$ sobre otra:
+	\begin{align}
+		\dete{B}=\dete{A}
+	\end{align}
+	Si $B$ la obtengo de intercambiar $k$ veces las fila de $A$:
+	\begin{align}
+		\dete{B}=(-1)^k\dete{A}
+	\end{align}
+	Si $B$ la obtengo de multiplicar por $k$, $n$ veces las filas de A:
+	\begin{align}
+		\dete{B}=k^n\dete{A}
+	\end{align}
+	Si $A$ es una matriz triangular:
+	\begin{align}
+		\dete{A}=\prod_{i=1}^n a{ii}
+	\end{align}
 \end{corolario*}
 
 \subsection{Subespacios fila, columna y null}
 \begin{definicion*}{Espacio fila,columna y nulo de matrices}
-  Sean $A \in R^{n \times m} \text{ , } B \in R^{r \times n}$, se define:
-  \begin{itemize}
-	\item	\textbf{Espacio Fila:} $\text{Fif}(A)=\{x \in R^m \vert x \text{ es combinación lineal de las filas de } A\}$
-	\item \textbf{Espacio Columna:} $\text{Col}(A)=\{b \in R^n \vert Ax=b \text{ para alguna x}\}$
-	\item \textbf{Espacio nulo:} $\text{Nul}(A)=\{x \in R^m \vert Ax=0\}$
-  \end{itemize}
+	Sean $A \in R^{n \times m} \text{ , } B \in R^{r \times n}$, se define:
+	\begin{itemize}
+		\item\textbf{Espacio Fila:} $\text{Fif}(A)=\{x \in R^m \vert x \text{ es combinación lineal de las filas de } A\}$
+		\item \textbf{Espacio Columna:} $\text{Col}(A)=\{b \in R^n \vert Ax=b \text{ para alguna x}\}$
+		\item \textbf{Espacio nulo:} $\text{Nul}(A)=\{x \in R^m \vert Ax=0\}$
+	\end{itemize}
 \end{definicion*}
 
 \begin{corolario*}{Propiedades de los espacios definidos}
-  Propiedades:
-  \begin{align}
-	\nul{A}=\nul{A^T A}=\fil{A}^\bot \\
-	\nul{A^T}=\nul{A A^T}=\col{A}^\bot \\
-	\rg{A}=\rg{A^T A} \Rightarrow A^T A \\
-	\dime{\col{A}}=\dime{\fil{A}} \\
-	\col{A} \bigotimes \col{A}^\bot=R^n \\
-	\fil{A} \bigotimes \fil{A}^\bot=R^m \\
-	\rg{A}+\dim{\nul{A}}=m \\	
-	\col{BA} \subseteq \col{B} \text{, Iguales si } \rg{A}=n \\
-	\nul{A} \subseteq \nul{BA} \text{, Iguales si } \rg{B}=n \\
-	\text{Si } \rg{A}=n \Rightarrow \rg{BA}=\rg{B} \\
-	\text{Si } \rg{B}=n \Rightarrow \rg{BA}=\rg{A} \\
-    \col{A} \bot \col{B} \Leftrightarrow A^T B=0
-  \end{align}
-  De \textbf{(1.15)} se ve que $A^T A \text{ invertible } \longleftrightarrow A \text{ invertible}$
+	Propiedades:
+	\begin{align}
+		\nul{A}=\nul{A^T A}=\fil{A}^\bot \\
+		\nul{A^T}=\nul{A A^T}=\col{A}^\bot \\
+		\rg{A}=\rg{A^T A} \Rightarrow A^T A \\
+		\dime{\col{A}}=\dime{\fil{A}} \\
+		\col{A} \bigotimes \col{A}^\bot=R^n \\
+		\fil{A} \bigotimes \fil{A}^\bot=R^m \\
+		\rg{A}+\dim{\nul{A}}=m \\	
+		\col{BA} \subseteq \col{B} \text{, Iguales si } \rg{A}=n \\
+		\nul{A} \subseteq \nul{BA} \text{, Iguales si } \rg{B}=n \\
+		\text{Si } \rg{A}=n \Rightarrow \rg{BA}=\rg{B} \\
+		\text{Si } \rg{B}=n \Rightarrow \rg{BA}=\rg{A} \\
+		\col{A} \bot \col{B} \Leftrightarrow A^T B=0
+	\end{align}
+	De \textbf{(1.15)} se ve que $A^T A \text{ invertible } \longleftrightarrow A \text{ invertible}$
 \end{corolario*}
 
 \begin{definicion*}{Matrices equivalentes}
-  Dos matrices $A$ y $B$ son equivalentes si existen otras dos matrices $E$ y $F$ regulares tal que:
-    \begin{align}
-      A=EBF
+	Dos matrices $A$ y $B$ son equivalentes si existen otras dos matrices $E$ y $F$ regulares tal que:
+	\begin{align}
+		A=EBF
 	\end{align}
 	Dos matrices equivalentes pueden pensarse como dos descripciones de una misma Transformación Lineal, pero con respecto a bases distintas.
 \end{definicion*}
 
 \begin{definicion*}{Matrices Semejantes}
-  Dos matrices cuadradas $A$ y $B$ son semejantes (notamos $A \sim B$) si y solo si existe una matriz $P$ inversible tal que:
-    \begin{align}
-      B=P^{-1}AP \text{ ,ó}\\
-      A=PBP^{-1}
-    \end{align}
+	Dos matrices cuadradas $A$ y $B$ son semejantes (notamos $A \sim B$) si y solo si existe una matriz $P$ inversible tal que:
+	\begin{align}
+		B=P^{-1}AP \text{ ,ó}\\
+		A=PBP^{-1}
+	\end{align}
 \end{definicion*}
 
 \begin{corolario*}{Propiedades de matrices semejantes}
-  Dos matrices semejantes pueden pensarse como dos descripciones de un mismo operador lineal, pero con respecto a bases distintas. Estas dos matrices cumplen que:
-    \begin{align}
-      \dete{A}=\dete{B} \\
-      \tr{A}=\tr{B} \\
-      \rg{A}=\rg{B} \\
-      p_A(\lambda)=p_B(\lambda) \Rightarrow \sigma(A)=\sigma(B)
+	Dos matrices semejantes pueden pensarse como dos descripciones de un mismo operador lineal, pero con respecto a bases distintas. Estas dos matrices cumplen que:
+	\begin{align}
+		\dete{A}=\dete{B} \\
+		\tr{A}=\tr{B} \\
+		\rg{A}=\rg{B} \\
+		p_A(\lambda)=p_B(\lambda) \Rightarrow \sigma(A)=\sigma(B)
 	\end{align}
 \end{corolario*}
 
@@ -636,224 +636,188 @@
 \end{definicion*}
 
 \subsection{Cuadrados mínimos}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $A \in K^{n \times q}, \vect{x} \in K^q, \vect{b} \in R^n$. Si $Ax=b$ tiene una solución extra, entonces $\vect{b} \in \col{A}$. Si $b \notin \col{A}$, intentamos hallar una solución $\hat{\vect{x}} \in K^q$ (la solución por \textbf{cuadrados mínimos}) tal que:
-			\begin{minipage}{0.65\textwidth}
-				\begin{itemize}
-					\item $\dete{A\hat{\vect{x}}-\vect{b}} < \dete{A\vect{u}-\vect{b}}$, $\forall \vect{u} \in K^q$	
-					\item $d(A\hat{\vect{x}},\vect{b}) \leq d(A\vect{u},\vect{b})$, $ \forall \vect{u} \in K^q$
-					\item $\dete{A\hat{\vect{x}}} \leq \dete{\vect{b}}$ (Son iguales si $\vect{b} \in \col{A}$)
-					\item Ecuaciones normales de cuadrados mínimos: $A^T A \hat{\vect{x}}=A^T \vect{b}=\hat{\vect{b}}$
-					\item $A \hat{\vect{x}}=\hat{\vect{b}}=P_{\col{A}}(\vect{b})$ si y solo si:
-						\begin{align}
-							A\hat{\vect{x}} \in \col{A} \\
-							\vect{b}-A\hat{\vect{x}} \in \col{A}^\bot
-						\end{align}
-				\end{itemize}
-			\end{minipage}
-			\begin{minipage}{0.3\textwidth}
-				\begin{figure}[H]
-					\begin{flushright}
-						\includegraphics[scale=0.35]{cuad_min}\caption{Cuadrados mínimos}
-					\end{flushright}
-				\end{figure}
-			\end{minipage}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Cuadrados mínimos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Cuadrados mínimos}
+	Sea $A \in K^{n \times q}, \vect{x} \in K^q, \vect{b} \in R^n$. Si $Ax=b$ tiene una solución extra, entonces $\vect{b} \in \col{A}$. Si $b \notin \col{A}$, intentamos hallar una solución $\hat{\vect{x}} \in K^q$ (la solución por \textbf{cuadrados mínimos}) tal que:
+	
+	\begin{minipage}{0.65\textwidth}
+		\begin{itemize}
+			\item $\dete{A\hat{\vect{x}}-\vect{b}} < \dete{A\vect{u}-\vect{b}}$, $\forall \vect{u} \in K^q$	
+			\item $d(A\hat{\vect{x}},\vect{b}) \leq d(A\vect{u},\vect{b})$, $ \forall \vect{u} \in K^q$
+			\item $\dete{A\hat{\vect{x}}} \leq \dete{\vect{b}}$ (Son iguales si $\vect{b} \in \col{A}$)
+			\item Ecuaciones normales de cuadrados mínimos: 
+			
+			$A^T A \hat{\vect{x}}=A^T \vect{b}=\hat{\vect{b}}$
+			\item $A \hat{\vect{x}}=\hat{\vect{b}}=P_{\col{A}}(\vect{b})$ si y solo si:
+				\begin{align}
+					A\hat{\vect{x}} \in \col{A} \\
+					\vect{b}-A\hat{\vect{x}} \in \col{A}^\bot
+				\end{align}
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		\begin{flushright}
+			\begin{figure}[H]
+				\includegraphics[scale=0.4]{cuad_min}
+				\caption{Cuadrados mínimos}
+			\end{figure}
+		\end{flushright}
+	\end{minipage}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\begin{enumerate}
-				\item Si $\hat{\vect{x}}=0$ entonces $\vect{b} \in [\col{A}]^\bot$. La recíproca solo es cierta si $A$ es invertible.
-				\item Si las columnas de $A$ son linealmente independientes, la solución por cuadrados mínimos es única y se obtiene mediante:
-					\begin{align}
-						\hat{\vect{x}}=(A^T A)^{-1}A^T \vect{b}=A^{\#}\vect{b}
-					\end{align}
-				Si las columnas de $A$ son linealmente dependientes, el sistema $A^T A\hat{\vect{x}}=A^T b$ tiene infinitas soluciones, y éstas son de la forma $\hat{\vect{x}}=\hat{\vect{x}}_p+\underbrace{\hat{\vect{x}}_n}_{\in \nul{A}}$
-				\item Si $\vect{b} \in \col{A}$, entonces toda solución de $A\vect{x}=\vect{b}$ es una solución exacta y por cuadrados mínimos
-				\item El error de aproximación $\epsilon$ es igual a $\dete{\vect{b}-\hat{\vect{b}}}$
+\begin{corolario*}{Propiedades de Cuadrados mínimos}
+	\begin{enumerate}
+		\item Si $\hat{\vect{x}}=0$ entonces $\vect{b} \in [\col{A}]^\bot$. La recíproca solo es cierta si $A$ es invertible.
+		\item Si las columnas de $A$ son linealmente independientes, la solución por cuadrados mínimos es única y se obtiene mediante:
+			\begin{align}
+				\hat{\vect{x}}=(A^T A)^{-1}A^T \vect{b}=A^{\#}\vect{b}
+			\end{align}
+		Si las columnas de $A$ son linealmente dependientes, el sistema $A^T A\hat{\vect{x}}=A^T b$ tiene infinitas soluciones, y éstas son de la forma $\hat{\vect{x}}=\hat{\vect{x}}_p+\underbrace{\hat{\vect{x}}_n}_{\in \nul{A}}$.
+		\item Si $\vect{b} \in \col{A}$, entonces toda solución de $A\vect{x}=\vect{b}$ es una solución exacta y por cuadrados mínimos.
+		\item El error de aproximación $\epsilon$ es igual a $\dete{\vect{b}-\hat{\vect{b}}}$.
 			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de Cuadrados mínimos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\end{corolario*}
 
 \subsubsection{Norma mínima}
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			La solución por cuadrados mínimos de norma mínima pertenece al espacio $\fil{A}$y se obtiene como:
-			\begin{align}
-				\tilde{\vect{x}}=A^+ \vect{b}
-			\end{align}
-			Siendo $A^+$ la \textbf{pseudoinversa de Moore-Penrose} de $A$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Pseudoinversa de Moore-Pensore};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Pseudoinversa de Moore-Pensore}
+	La solución por cuadrados mínimos de norma mínima pertenece al espacio $\fil{A}$y se obtiene como:
+	\begin{align}
+		\tilde{\vect{x}}=A^+ \vect{b}
+	\end{align}
+	Siendo $A^+$ la \textbf{pseudoinversa de Moore-Penrose} de $A$.
+\end{corolario*}
 
 \subsection{Regresión lineal}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sean los puntos $\vect{P}_i=(x_i,y_i)$ con $i=1,2,\ldots,n$. La recta que mejor aproxima a los puntos es:
-			\begin{align}
-				\vect{y}=\alpha_0\vect{1}+\alpha_1 \vect{x}
-			\end{align}
-			Y los coeficientes $\alpha_i$ se obtienen resolviendo el sistema:
-			\begin{align}
-				\begin{bmatrix}{1}&{x_1}\\{1}&{x_2}\\{\vdots}&{\vdots} \\{1}&{x_n} \end{bmatrix} \begin{bmatrix}{\alpha_0}\\{\alpha_1}\end{bmatrix}=\begin{bmatrix}{y_1}\\{y_2}\\{\vdots}\\{y_n}\end{bmatrix}
-			\end{align}
-			Si se aproxima por una parábola se agrega otro nivel de complejidad, con $y=\alpha_2x^2+\alpha_1x+\alpha_0$, lo que implica una columna adicional a la matriz para los términos cuadráticos, una fila adicional para la constante $\alpha_2$ en la variable.\\
-			
-			Se siguen agregando columnas a la matriz y filas al vector tantas veces como grados de complejidad se necesiten.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Regresión lineal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Regresión lineal}
+	Sean los puntos $\vect{P}_i=(x_i,y_i)$ con $i=1,2,\ldots,n$. La recta que mejor aproxima a los puntos es:
+	\begin{align}
+		\vect{y}=\alpha_0\vect{1}+\alpha_1 \vect{x}
+	\end{align}
+	Y los coeficientes $\alpha_i$ se obtienen resolviendo el sistema:
+	\begin{align}
+		\begin{bmatrix}
+			{1} & {x_1} \\
+			{1} & {x_2} \\
+			{\vdots} & {\vdots} \\
+			{1} & {x_n}
+		\end{bmatrix}
+		\begin{bmatrix}
+			{\alpha_0} \\
+			{\alpha_1}
+		\end{bmatrix} =
+		\begin{bmatrix}
+			{y_1} \\
+			{y_2} \\
+			{\vdots} \\
+			{y_n}
+		\end{bmatrix}
+	\end{align}
+	Si se aproxima por una parábola se agrega otro nivel de complejidad, con $y=\alpha_2x^2+\alpha_1x+\alpha_0$, lo que implica una columna adicional a la matriz para los términos cuadráticos, una fila adicional para la constante $\alpha_2$ en la variable.\\
+	
+	Se siguen agregando columnas a la matriz y filas al vector tantas veces como grados de complejidad se necesiten.
+\end{definicion*}
 
 \newpage
 \section{Transformaciones lineales}
 Sea $T \in \ell (V_K,W_K)$ y $A=[T]_{BC}$ con $B$ base de $V$ y $C$ base de $W$ la matriz de $T$.
 
 \subsection{Condiciones para las Transformaciones lineales}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Para que una transformación se considere lineal debe cumplir:
-			\begin{enumerate}
-				\item $T(\vect{u}+\vect{v})=T(\vect{u})+T(\vect{v})$, con $\vect{u},\vect{v}$ $\in V$
-				\item $T(\alpha \vect{u}+\beta \vect{v})=\alpha \cdot T(\vect{u})+\beta \cdot T(\vect{v})$, con $\vect{u},\vect{v} \in V_K$ y $\alpha,\beta \in K$
-				\item $T(0_{V_K})=0_{V_K}$
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Condiciones para ser Transformación lineal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Condiciones para ser Transformación lineal}
+	Para que una transformación se considere lineal debe cumplir:
+	\begin{enumerate}
+		\item $T(\vect{u}+\vect{v})=T(\vect{u})+T(\vect{v})$, con $\vect{u},\vect{v}$ $\in V$
+		\item $T(\alpha \vect{u}+\beta \vect{v})=\alpha \cdot T(\vect{u})+\beta \cdot T(\vect{v})$, con $\vect{u},\vect{v} \in V_K$ y $\alpha,\beta \in K$
+		\item $T(0_{V_K})=0_{V_K}$
+	\end{enumerate}
+\end{definicion*}
 
-\subsection{Núcleo e Imágen}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\textbf{Núcleo:} $\nul{T}=\{ \vect{v} \in V_K \text{ } \vert \text{ } T(\vect{v})=0_W \}=C_B^{-1}(\nul{A})$.\\
-			\textbf{Imágen:} $\im{T}=\{ \vect{w} \in W_K \text{ } \vert \text{ } T(\vect{v})=\vect{w} \text{ con } \vect{v} \in V_K \}=C_C^{-1}(\col{A})$.\\
-			
-			Ambos son subespacios vectoriales.\\
-			
-			La imágen de una Transformación Lineal puede obtenerse como lo que generan los transformados de una base del espacio de partida.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Núcleo e Imágen};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\subsection{Núcleo e Imagen}
+\begin{definicion*}{Núcleo e Imagen}
+	\textbf{Núcleo:} $\nul{T}=\{ \vect{v} \in V_K \text{ } \vert \text{ } T(\vect{v})=0_W \}=C_B^{-1}(\nul{A})$.\\
+	\textbf{Imagen:} $\im{T}=\{ \vect{w} \in W_K \text{ } \vert \text{ } T(\vect{v})=\vect{w} \text{ con } \vect{v} \in V_K \}=C_C^{-1}(\col{A})$.\\
+	
+	Ambos son subespacios vectoriales.\\
+	
+	La imagen de una Transformación Lineal puede obtenerse como lo que generan los transformados de una base del espacio de partida.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $T \in \ell (V,W)$ y sea $\dime{V}=n$ (finita). Entonces:
-			\begin{align}
-				\dime{V}=\dime{\nul{T}}+\dime{\im{T}}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de la dimensión};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de la dimensión}
+	Sea $T \in \ell (V,W)$ y sea $\dime{V}=n$ (finita). Entonces:
+	\begin{align}
+		\dime{V}=\dime{\nul{T}}+\dime{\im{T}}
+	\end{align}
+\end{teorema*}
 
 \subsection{Clasificación de las Transformaciones lineales}
-\subsubsection{Monomorfismo(Inyectividad)}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Una Transformación lineal es inyectiva si verifica:
-			\begin{align}
-				\vect{v}_1 \neq \vect{v}_2 \Rightarrow T(\vect{v}_1) \neq T(\vect{v}_2) \text{ , } \forall \vect{v}_1,\vect{v}_2 \in V \\
-				\nul{T}=\{0_V\} \Longleftrightarrow \dime{\im{T}}=\dime{V}
-			\end{align}
-			Una Transformación Lineal Inyectiva transforma conjuntos Linealmente Independientes a conjuntos Linealmente Independientes.\\
-			
-			La recíproca también es cierta: si $A$ es un conjunto Linealmente Independiente y es transformado en otro conjunto Linealmente Independiente, la Transformación Lineal es inyectiva. Es decir: Si $T$ es inyectiva y $A$ es Linealmente Independiente, $T(A)$ es Linealmente Independiente.\\
-			
-			Las matrices asociadas a Transformaciones Lineales inyectivas tienen sus columnas Linealmente Independientes.\\
-			
-			Si $\dime{V} > \dime{W}$, $T$ \underline{no} puede ser inyectiva.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Monomorfismo};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\subsubsection{Monomorfismo (Inyectividad)}
+\begin{definicion*}{Monomorfismo}
+	Una Transformación lineal es inyectiva si verifica:
+	\begin{align}
+		\vect{v}_1 \neq \vect{v}_2 \Rightarrow T(\vect{v}_1) \neq T(\vect{v}_2) \text{ , } \forall \vect{v}_1,\vect{v}_2 \in V \\
+		\nul{T}=\{0_V\} \Longleftrightarrow \dime{\im{T}}=\dime{V}
+	\end{align}
+	Una Transformación Lineal Inyectiva transforma conjuntos Linealmente Independientes a conjuntos Linealmente Independientes.\\
+	
+	La recíproca también es cierta: si $A$ es un conjunto Linealmente Independiente y es transformado en otro conjunto Linealmente Independiente, la Transformación Lineal es inyectiva. Es decir: Si $T$ es inyectiva y $A$ es Linealmente Independiente, $T(A)$ es Linealmente Independiente.\\
+	
+	Las matrices asociadas a Transformaciones Lineales inyectivas tienen sus columnas Linealmente Independientes.\\
+	
+	Si $\dime{V} > \dime{W}$, $T$ \underline{no} puede ser inyectiva.
+\end{definicion*}
 
-\subsubsection{Epimorfismo(Sobreyectividad)}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Una Transformación lineal es sobreyectiva si y solo si:
-			\begin{align}
-				\im{T}=W
-			\end{align}
-			Las matrices asociadas a Transformaciones lineales sobreyectivas tienen sus filas Linealmente Independientes.\\
-			
-			Si $\dime{W} > \dime{V}$, $T$ \underline{no} puede ser sobreyectiva.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Epimorfismo};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\subsubsection{Epimorfismo (Sobreyectividad)}
+\begin{definicion*}{Epimorfismo}
+	Una Transformación lineal es sobreyectiva si y solo si:
+	\begin{align}
+		\im{T}=W
+	\end{align}
+	Las matrices asociadas a Transformaciones lineales sobreyectivas tienen sus filas Linealmente Independientes.\\
+	
+	Si $\dime{W} > \dime{V}$, $T$ \underline{no} puede ser sobreyectiva.
+\end{definicion*}
 
 \subsubsection{Isomorfismo(Biyectividad)}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Una Transformación lineal es biyectiva si y solo si:
-			\begin{align}
-				\dime{W}=\dime{V} \\
-				\nul{T}=\{ 0_V \}
-			\end{align}
-			Es decir, si es Inyectiva y Sobreyectiva a la vez.\\
-			
-			$T$ es biyectiva $\Longleftrightarrow$ si $\{\vect{v}_1,\ldots,\vect{v}_n \}$ es base de $V$ $\Rightarrow$ $\{T(\vect{v}_1),\ldots,T(\vect{v}_n) \}$ es base de $W$\\
-			La matriz asociada a una Transformación lineal biyectiva tiene sus filas y columnas Linealmente Independientes, o sea que es una matriz inversible, es decir, existe una transformación lineal inversa $T^{-1}=[T]^{-1}$\\
-			
-			Si $\dime{V}=\dime{W}$, entonces o bien $T$ es inyectiva y sobreyectiva, o no es ninguna de las dos.
-		\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Biyectividad};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+\begin{definicion*}{Biyectividad}
+	Una Transformación lineal es biyectiva si y solo si:
+	\begin{align}
+		\dime{W}=\dime{V} \\
+		\nul{T}=\{ 0_V \}
+	\end{align}
+	Es decir, si es Inyectiva y Sobreyectiva a la vez.\\
+	
+	$T$ es biyectiva $\Longleftrightarrow$ si $\{\vect{v}_1,\ldots,\vect{v}_n \}$ es base de $V$ $\Rightarrow$ $\{T(\vect{v}_1),\ldots,T(\vect{v}_n) \}$ es base de $W$\\
+	La matriz asociada a una Transformación lineal biyectiva tiene sus filas y columnas Linealmente Independientes, o sea que es una matriz inversible, es decir, existe una transformación lineal inversa $T^{-1}=[T]^{-1}$\\
+	
+	Si $\dime{V}=\dime{W}$, entonces o bien $T$ es inyectiva y sobreyectiva, o no es ninguna de las dos.
+\end{definicion*}
 
 \subsection{Matriz asociada a una Transformación lineal}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $T \in \ell (V_K,W_K)$, sea $B=\{ \vect{v}_1,\ldots,\vect{v}_q \}$ base de $V$ y $C=\{ \vect{w}_1,\ldots,\vect{w}_m \}$ base de $W$. Entonces $T$ se puede escribir como $T(\vect{x})=A\vect{x}$, con $A \in K^{m \times q}$ tal que:
-			\begin{align}
-				A=[T]_{BC}=\begin{bmatrix}{|}&{|}&{ }&{|}\\{C_C(T(\vect{v}_1))}&{C_C(T(\vect{v}_2))}&{\ldots}&{C_C(T(\vect{v}_q))}\\{|}&{|}&{ }&{|}\end{bmatrix}
-			\end{align}
-			Dicha matriz posee las siguientes propiedades:
-			\begin{itemize}
-				\item $[T]_{BC} \cdot C_B(\vect{v})=C_C(T(\vect{v}))$ $,\forall \vect{v} \in V$
-				\item $\vect{v} \in \nul{T} \Longleftrightarrow C_B(\vect{v}) \in \nul{A}$
-				\item $\vect{w} \in \im{T} \Longleftrightarrow C_C(\vect{w}) \in \col{A}$
-				\item $\dime{\im{T}}=\rg{A}$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matriz de la Transformación lineal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Matriz de la Transformación lineal}
+	Sea $T \in \ell (V_K,W_K)$, sea $B=\{ \vect{v}_1,\ldots,\vect{v}_q \}$ base de $V$ y $C=\{ \vect{w}_1,\ldots,\vect{w}_m \}$ base de $W$. Entonces $T$ se puede escribir como $T(\vect{x})=A\vect{x}$, con $A \in K^{m \times q}$ tal que:
+	\begin{align}
+		A = [T]_{BC} =
+		\begin{bmatrix}
+			{|} & {|} & { } & {|} \\
+			{C_C(T(\vect{v}_1))} & {C_C(T(\vect{v}_2))} & {\ldots} & {C_C(T(\vect{v}_q))} \\
+			{|} & {|} & { } & {|}
+		\end{bmatrix}
+	\end{align}
+	Dicha matriz posee las siguientes propiedades:
+	\begin{itemize}
+		\item $[T]_{BC} \cdot C_B(\vect{v})=C_C(T(\vect{v}))$ $,\forall \vect{v} \in V$
+		\item $\vect{v} \in \nul{T} \Longleftrightarrow C_B(\vect{v}) \in \nul{A}$
+		\item $\vect{w} \in \im{T} \Longleftrightarrow C_C(\vect{w}) \in \col{A}$
+		\item $\dime{\im{T}}=\rg{A}$
+	\end{itemize}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sean $V$y $W$ $K$-espacios vectoriales ($K=R$ o $C$). Sea $T:V \to W$.\\
-			
-			Si $B_1$ y $B_2$ son bases ordenadas de $V$, y $C_1$ y $C_2$ son bases ordenadas de $W$, entonces:
-			\begin{align}
-				\rg{[T]_{B_1 C_1}}=\rg{[T]_{B_2 C_2}}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema para matrices de Transformación lineal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema para matrices de Transformación lineal}
+	Sean $V$y $W$ $K$-espacios vectoriales ($K=R$ o $C$). Sea $T:V \to W$.\\
+	
+	Si $B_1$ y $B_2$ son bases ordenadas de $V$, y $C_1$ y $C_2$ son bases ordenadas de $W$, entonces:
+	\begin{align}
+		\rg{[T]_{B_1 C_1}}=\rg{[T]_{B_2 C_2}}
+	\end{align}
+\end{teorema*}
 
 \subsection{Teorema fundamental de las Transformaciones lineales}
 \begin{tikzpicture}
@@ -1630,51 +1594,51 @@ $\begin{cases} x^\prime(t)=a_{11}x+a_{12}y+b_1 \\ y^\prime(t)=a_{21}x+a_{22}y+b_
 	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
 \end{tikzpicture}
 
-\begin{corolario}{Sistemas no homogéneos con $A \in R^{2 \times 2}$ no diagonalizable}
-  $A$ necesariamente posee un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$, con lo cual la matriz $J$ posee un solo bloque correspondiente a $\lambda$:
-  \begin{align}
-    J=\begin{bmatrix} {\lambda}&{1} \\ {0}&{\lambda} \end{bmatrix}
-  \end{align}
-  Respecto de la matriz $P=[\vect{v}_1,\vect{v}_2]$ debe ser inversible y $AP=PJ$. La matriz $P$ se obtiene hallando un par de vectores $\vect{v}_1$ y $\vect{v}_2$ Linealmente Independientes que satisfagan las condiciones $\left( A-\lambda I \right)\vect{v}_1=0$ y $\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1$. Observamos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
-\end{corolario}
+\begin{corolario*}{Sistemas no homogéneos con $A \in R^{2 \times 2}$ no diagonalizable}
+	$A$ necesariamente posee un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$, con lo cual la matriz $J$ posee un solo bloque correspondiente a $\lambda$:
+	\begin{align}
+		J=\begin{bmatrix} {\lambda}&{1} \\ {0}&{\lambda} \end{bmatrix}
+	\end{align}
+	Respecto de la matriz $P=[\vect{v}_1,\vect{v}_2]$ debe ser inversible y $AP=PJ$. La matriz $P$ se obtiene hallando un par de vectores $\vect{v}_1$ y $\vect{v}_2$ Linealmente Independientes que satisfagan las condiciones $\left( A-\lambda I \right)\vect{v}_1=0$ y $\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1$. Observamos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
+\end{corolario*}
 
-\begin{corolario}{Sistemas no homogéneos con $A \in R^{3 \times 3}$ no diagonalizable}
-  \begin{enumerate}
-    \item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $1$. En este caso:
-    \begin{align}
-      J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{1} \\ {0}&{0}&{\lambda} \end{bmatrix}
-    \end{align}
-    Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
-    \begin{align}
-      \left( A-\lambda I \right)\vect{v}_1=0 \\
-      \left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
-      \left( A-\lambda I \right)\vect{v}_3=\vect{v}_2
-    \end{align}
-    Observemos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
-    \item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $2$. En este caso:
-    \begin{align}
-    J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\lambda} \end{bmatrix}
-    \end{align}
-    Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
-    \begin{align}
-      \left( A-\lambda I \right)\vect{v}_1=0 \\
-      \left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
-      \left( A-\lambda I \right)\vect{v}_3=0
-    \end{align}
-    Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$
-    \item $A$ tiene un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$ y un autovalor $\mu \in R$ simple. En este caso $J$ debe tener dos bloques de Jordan
-    \begin{align}
-      J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\mu} \end{bmatrix}
-    \end{align}
-    Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
-    \begin{align}
-      \left( A-\lambda I \right)\vect{v}_1=0 \\
-      \left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
-      \left( A-\lambda I \right)\vect{v}_3=0
-    \end{align}
-    Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$ y $\mu$ respectivamente.
-  \end{enumerate}
-\end{corolario}
+\begin{corolario*}{Sistemas no homogéneos con $A \in R^{3 \times 3}$ no diagonalizable}
+	\begin{enumerate}
+		\item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $1$. En este caso:
+		\begin{align}
+			J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{1} \\ {0}&{0}&{\lambda} \end{bmatrix}
+		\end{align}
+		Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+		\begin{align}
+			\left( A-\lambda I \right)\vect{v}_1=0 \\
+			\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+			\left( A-\lambda I \right)\vect{v}_3=\vect{v}_2
+		\end{align}
+		Observemos que $\vect{v}_1$ es autovector de $A$ asociado a $\lambda$
+		\item $A$ tiene un autovalor triple $\lambda \in R$ de multiplicidad geométrica $2$. En este caso:
+		\begin{align}
+		J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\lambda} \end{bmatrix}
+		\end{align}
+		Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+		\begin{align}
+			\left( A-\lambda I \right)\vect{v}_1=0 \\
+			\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+			\left( A-\lambda I \right)\vect{v}_3=0
+		\end{align}
+		Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$
+		\item $A$ tiene un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$ y un autovalor $\mu \in R$ simple. En este caso $J$ debe tener dos bloques de Jordan
+		\begin{align}
+			J=\begin{bmatrix} {\lambda}&{1}&{0} \\ {0}&{\lambda}&{0} \\ {0}&{0}&{\mu} \end{bmatrix}
+		\end{align}
+		Respecto de $P=[\vect{v}_1,\vect{v}_2,\vect{v}_3]$, estos autovectores deben ser Linealmente independientes y satisfacer las condiciones:
+		\begin{align}
+			\left( A-\lambda I \right)\vect{v}_1=0 \\
+			\left( A-\lambda I \right)\vect{v}_2=\vect{v}_1 \\
+			\left( A-\lambda I \right)\vect{v}_3=0
+		\end{align}
+		Observemos que $\vect{v}_1$ y $\vect{v}_3$ son autovectores de $A$ asociados a $\lambda$ y $\mu$ respectivamente.
+	\end{enumerate}
+\end{corolario*}
 
 % Bibliografía utilizada en el apunte
 %\newpage
