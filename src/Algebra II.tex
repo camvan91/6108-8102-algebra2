@@ -820,374 +820,289 @@ Sea $T \in \ell (V_K,W_K)$ y $A=[T]_{BC}$ con $B$ base de $V$ y $C$ base de $W$ 
 \end{teorema*}
 
 \subsection{Teorema fundamental de las Transformaciones lineales}
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $B=\{\vect{v}_1,\ldots,\vect{v}_n \}$ base de $V$ y $\vect{w}_1,\ldots,\vect{w}_n$ vectores de $W$. Entonces existe y es única la Transformación lineal que verifica:
-			\begin{align}
-				T(\vect{v}_i)=\vect{w}_i \text{ , } \forall i=1,\ldots,n
-			\end{align}
-			Además, dada una Transformación lineal y un par de bases, existe una única matriz asociada.\\
-			
-			La recíproca tambíen es verdadera: dada una matriz y un par de bases, existe una única Transformación lineal asociada.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema fundamental de las Transformaciones lineales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema fundamental de las Transformaciones lineales}
+	Sea $B=\{\vect{v}_1,\ldots,\vect{v}_n \}$ base de $V$ y $\vect{w}_1,\ldots,\vect{w}_n$ vectores de $W$. Entonces existe y es única la Transformación lineal que verifica:
+	\begin{align}
+		T(\vect{v}_i)=\vect{w}_i \text{ , } \forall i=1,\ldots,n
+	\end{align}
+	Además, dada una Transformación lineal y un par de bases, existe una única matriz asociada.\\
+	
+	La recíproca tambíen es verdadera: dada una matriz y un par de bases, existe una única Transformación lineal asociada.
+\end{teorema*}
 
 \subsection{Composición de Transformaciones lineales}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node [definicion] (box){%
-			\begin{minipage}{0.90\textwidth}
-				Sea $f \in \ell (V,W)$ y $g \in \ell (W,H)$ $\Rightarrow g \circ f \in (V,H)$. Podemos encontrar la siguientes propiedades:
-				\begin{align}
-					\nul{f} \subseteq \nul{g \circ f} \\
-					\im{g \circ f} \subseteq \im{g}
-				\end{align}
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Composición de Transformaciones lineales};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Composición de Transformaciones lineales}
+		Sea $f \in \ell (V,W)$ y $g \in \ell (W,H)$ $\Rightarrow g \circ f \in (V,H)$. Podemos encontrar la siguientes propiedades:
+		\begin{align}
+			\nul{f} \subseteq \nul{g \circ f} \\
+			\im{g \circ f} \subseteq \im{g}
+		\end{align}
+	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.3]{composicion}\caption{Composición}
-		\end{center}
+		\centering
+		\includegraphics[scale=0.3]{composicion}
+		\caption{Composición}
 	\end{figure}
 \end{minipage}
 
 \subsection{Operadores lineales}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Un operador lineal es una Transformación lineal que va de un espacio en si mismo, se escríbe como $T \in \ell (V)$ y cuenta con las siguientes propiedades:
-			\begin{itemize}
-				\item Si $T_1 \in \ell (V)$ y $T_2 \in \ell (V)$, entonces $T_1 \circ T_2 \in \ell (V)$
-				\item Si $T \in \ell (V)$, $T^n=\underbrace{T \circ T \circ \ldots \circ T}_{\text{n veces}}$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Operadores lineales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Operadores lineales}
+	Un operador lineal es una Transformación lineal que va de un espacio en si mismo, se escríbe como $T \in \ell (V)$ y cuenta con las siguientes propiedades:
+	\begin{itemize}
+		\item Si $T_1 \in \ell (V)$ y $T_2 \in \ell (V)$, entonces $T_1 \circ T_2 \in \ell (V)$
+		\item Si $T \in \ell (V)$, $T^n=\underbrace{T \circ T \circ \ldots \circ T}_{\text{n veces}}$
+	\end{itemize}
+\end{definicion*}
 
 \newpage
 \section{Autovalores y Autovectores}
 \subsection{Definiciones básicas}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\textbf{Autovector:} Un vector $\vect{v} \neq 0$ es autovector de $A \in K^{n \times n} \Longleftrightarrow \exists \lambda \in K$ $\vert$ $A \vect{v}=\lambda \vect{v}$\\
+\begin{definicion*}{Definiciones básicas}
+	\textbf{Autovector:} Un vector $\vect{v} \neq 0$ es autovector de $A \in K^{n \times n} \Longleftrightarrow \exists \lambda \in K$ $\vert$ $A \vect{v}=\lambda \vect{v}$\\
 			
-			\textbf{Autoespacio:} El autoespacio de $A$ asociado a un autovalor $\lambda$ es $S_\lambda (A)=\nul{A-\lambda I}$\\
+	\textbf{Autoespacio:} El autoespacio de $A$ asociado a un autovalor $\lambda$ es $S_\lambda (A)=\nul{A-\lambda I}$\\
 			
-			\textbf{Polinomio característico:} El polinomio característico de una matriz $A \in K^{n \times n}$ es $p_A(\lambda)=\dete{A-\lambda I}$, y tiene grado $n$. Si $K=R$ el polinomio tiene a lo sumo $n$ raíces. Si $K=C$ tiene exactamente $n$ raíces.\\
+	\textbf{Polinomio característico:} El polinomio característico de una matriz $A \in K^{n \times n}$ es $p_A(\lambda)=\dete{A-\lambda I}$, y tiene grado $n$. Si $K=R$ el polinomio tiene a lo sumo $n$ raíces. Si $K=C$ tiene exactamente $n$ raíces.\\
 			
-			\textbf{Autovalor:} Los autovalores $\lambda$ de una matriz son las raíces de su polinomio característico.\\
+	\textbf{Autovalor:} Los autovalores $\lambda$ de una matriz son las raíces de su polinomio característico.\\
 			
-			\textbf{Espectro de una matriz:} $\sigma (A)=\{ \lambda \in K$ $\vert$ $\lambda$ es autovalor de $A \}$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Definiciones básicas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\textbf{Espectro de una matriz:} $\sigma (A)=\{ \lambda \in K$ $\vert$ $\lambda$ es autovalor de $A \}$.
+\end{definicion*}
 
 \subsection{Autovalores complejos de matriz real}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Supongamos que $\vect{v}$ es un autovector de $A \in R^{n \times n}$ asociado a $\lambda=a+\jmath b$ con $a,b \in R,b \neq 0$.\\
-			Entonces $\vect{v}^*$ es también un autovector de $A \in R^{n \times n}$ asociado a $\lambda^*=a-\jmath b$.\\
-			
-			En particular si $\{\vect{v}_1,\ldots,\vect{v}_n \}$ es una base de $S_\lambda$, entonces $\{\vect{v}_1^*,\ldots,\vect{v}_n^* \}$ es una base de $S_{\lambda^*}$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Autovalores complejos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Autovalores complejos}
+	Supongamos que $\vect{v}$ es un autovector de $A \in R^{n \times n}$ asociado a $\lambda=a+\jmath b$ con $a,b \in R,b \neq 0$.\\
+	Entonces $\vect{v}^*$ es también un autovector de $A \in R^{n \times n}$ asociado a $\lambda^*=a-\jmath b$.\\
+	
+	En particular si $\{\vect{v}_1,\ldots,\vect{v}_n \}$ es una base de $S_\lambda$, entonces $\{\vect{v}_1^*,\ldots,\vect{v}_n^* \}$ es una base de $S_{\lambda^*}$
+\end{definicion*}
 
 \subsection{Multiplicidad geométrica y algebráica de un Autovalor}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Se define:
-			\begin{itemize}
-				\item $m_g(\lambda)=\dime{S_\lambda(A)}$
-				\item $m_a(\lambda) \doteq$ número de veces que aparece $\lambda$ como raíz del polinomio característico.
-			\end{itemize}
-			
-			Siempre se verifica que:
-			\begin{align}
-				1 \leq m_g(\lambda) \leq m_a(\lambda)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Multiplicidad de Autovalores};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Multiplicidad de Autovalores}
+	Se define:
+	\begin{itemize}
+		\item $m_g(\lambda)=\dime{S_\lambda(A)}$
+		\item $m_a(\lambda) \doteq$ número de veces que aparece $\lambda$ como raíz del polinomio característico.
+	\end{itemize}
+	
+	Siempre se verifica que:
+	\begin{align}
+		1 \leq m_g(\lambda) \leq m_a(\lambda)
+	\end{align}
+\end{definicion*}
 
 \subsection{Propiedades}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $A \in K^{n \times n}$:
-			\begin{itemize}
-				\item $A$ es singular $\Longleftrightarrow 0$ es un autovalor de $A \Longleftrightarrow m_g(0)=n-k \Longleftrightarrow \rg{A}=k<n$
-				\item Dos autovectores asociados a autovalores distintos son Linealmente Independientes
-				\item Si $A \in K^{2x2}$, entonces $p_A(\lambda)=\lambda^2-\tr{A}\lambda+\dete{A}$
-				\item Si todas las filas o columnas de $A$ sumas $s$, entonces $s$ es autovalor de $A$.
-				\item Sea $p(t)$ un polinomio de grado $k$. Si $\lambda$ es autovalor de $A$, entonces se cumple que $p(\lambda)$ es autovalor de $p(A)$, y para cada autovalor $\mu$ de $p(A)$ existe un autovalor $\lambda$ de $A$ tal que $p(\lambda)=\mu$.
-				\item Si $\lambda$ es autovalor de $A$:
-				\begin{itemize}
-					\item $\lambda$ es autovalor de $A^T$
-					\item $\lambda^{-1}$ es autovalor de $A^{-1}$ y $S_{\lambda^{-1}}\left(A^{-1}\right)=S_\lambda(A)$
-					\item $r \cdot \lambda$ es autovalor de $r \cdot A$
-					\item $\lambda^k$ es autovalor de $A^k$, con $k \in N$
-					\item $\lambda+r$ es autovalor de $A+r \cdot I$
-				\end{itemize}
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de Autovalores y Autovectores};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Propiedades de Autovalores y Autovectores}
+	Sea $A \in K^{n \times n}$:
+	\begin{itemize}
+		\item $A$ es singular $\Longleftrightarrow 0$ es un autovalor de $A \Longleftrightarrow m_g(0)=n-k \Longleftrightarrow \rg{A}=k<n$
+		\item Dos autovectores asociados a autovalores distintos son Linealmente Independientes
+		\item Si $A \in K^{2x2}$, entonces $p_A(\lambda)=\lambda^2-\tr{A}\lambda+\dete{A}$
+		\item Si todas las filas o columnas de $A$ sumas $s$, entonces $s$ es autovalor de $A$.
+		\item Sea $p(t)$ un polinomio de grado $k$. Si $\lambda$ es autovalor de $A$, entonces se cumple que $p(\lambda)$ es autovalor de $p(A)$, y para cada autovalor $\mu$ de $p(A)$ existe un autovalor $\lambda$ de $A$ tal que $p(\lambda)=\mu$.
+		\item Si $\lambda$ es autovalor de $A$:
+		\begin{itemize}
+			\item $\lambda$ es autovalor de $A^T$
+			\item $\lambda^{-1}$ es autovalor de $A^{-1}$ y $S_{\lambda^{-1}}\left(A^{-1}\right) = S_\lambda(A)$
+			\item $r \cdot \lambda$ es autovalor de $r \cdot A$
+			\item $\lambda^k$ es autovalor de $A^k$, con $k \in N$
+			\item $\lambda+r$ es autovalor de $A+r \cdot I$
+		\end{itemize}
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Autovalores y Autovectores de operadores lineales}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			$T:V_K \to V_K$. Un vector $\vect{v} \neq \vect{0}$ es autovector de $T \Longleftrightarrow T(\vect{v})=\lambda \vect{v}$, con $\lambda$ autovalor de $T$.\\
-			$S_\lambda(T)=\{ \vect{x} \in V$ $\vert$ $T(\vect{x})=\lambda \vect{x}$ y $\lambda$ autovalor de $T\}=\nul{T-\lambda I}$. Si $B$ es base de $V$ y $A$ es la matriz de $T$ en esa base, entonces:
-			\begin{align}
-				\sigma(A)=\sigma(T) \forall B \text{ base de } V \\
-				\vect{x} \text{ es autovector de } T \Longleftrightarrow C_B(\vect{x}) \text{ es autovector de } [T]_B=A
-			\end{align}
-			Se deducen las siguientes propiedades:
-			\begin{itemize}
-				\item $T(\vect{x})=\lambda \vect{x} \Rightarrow T^n(\vect{x})=\lambda^n \vect{x}$, $n \in N$
-				\item Si $\lambda$ es autovalor de $T$, $\lambda^{-1}$ es autovalor de $T^{-1}$
-				\item Si $h$ es un polinomio en $K$ y $T(\vect{x})=A\vect{x}$, entonces:
-				\begin{align}
-					\sigma[h(A)]=h[\sigma(A)] \\
-					S_{h(\lambda)}h(A)=S_\lambda(A)
-				\end{align}
-				\item $T:V_K \to V_K$ es regular $\Longleftrightarrow 0 \notin \sigma(T)$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Autovalores y Autovectores de Operadores lineales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Autovalores y Autovectores de Operadores lineales}
+	$T:V_K \to V_K$. Un vector $\vect{v} \neq \vect{0}$ es autovector de $T \Longleftrightarrow T(\vect{v})=\lambda \vect{v}$, con $\lambda$ autovalor de $T$.\\
+	$S_\lambda(T)=\{ \vect{x} \in V$ $\vert$ $T(\vect{x})=\lambda \vect{x}$ y $\lambda$ autovalor de $T\}=\nul{T-\lambda I}$. Si $B$ es base de $V$ y $A$ es la matriz de $T$ en esa base, entonces:
+	\begin{align}
+		\sigma(A)=\sigma(T) \forall B \text{ base de } V \\
+		\vect{x} \text{ es autovector de } T \Longleftrightarrow C_B(\vect{x}) \text{ es autovector de } [T]_B=A
+	\end{align}
+	Se deducen las siguientes propiedades:
+	\begin{itemize}
+		\item $T(\vect{x})=\lambda \vect{x} \Rightarrow T^n(\vect{x})=\lambda^n \vect{x}$, $n \in N$
+		\item Si $\lambda$ es autovalor de $T$, $\lambda^{-1}$ es autovalor de $T^{-1}$
+		\item Si $h$ es un polinomio en $K$ y $T(\vect{x})=A\vect{x}$, entonces:
+		\begin{align}
+			\sigma[h(A)]=h[\sigma(A)] \\
+			S_{h(\lambda)}h(A)=S_\lambda(A)
+		\end{align}
+		\item $T:V_K \to V_K$ es regular $\Longleftrightarrow 0 \notin \sigma(T)$
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Diagonalización}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Los siguientes enunciados son equivalentes para definir si $A \in K^{n \times n}$ es diagonalizable:
-			\begin{itemize}
-				\item $A \sim D$
-				\item $\exists$ una base de $K^n$ compuesta por autovectores de $A$
-				\item $A$ tiene $n$ autovalores Linealmente Independientes 
-				\item $m_g(\lambda)=m_a(\lambda)$ $\forall \lambda \in \sigma(A)$
-				\item $\exists P$ invertible y $D$ diagonal tal que:
-				\begin{align}
-					A=PDP^{-1}
-				\end{align}
-				Siendo $P$ la matriz de autovectores y $D$ la matriz diagonal de autovalores.
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diagonalización};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Diagonalización}
+	Los siguientes enunciados son equivalentes para definir si $A \in K^{n \times n}$ es diagonalizable:
+	\begin{itemize}
+		\item $A \sim D$
+		\item $\exists$ una base de $K^n$ compuesta por autovectores de $A$
+		\item $A$ tiene $n$ autovalores Linealmente Independientes 
+		\item $m_g(\lambda)=m_a(\lambda)$ $\forall \lambda \in \sigma(A)$
+		\item $\exists P$ invertible y $D$ diagonal tal que:
+		\begin{align}
+			A=PDP^{-1}
+		\end{align}
+		Siendo $P$ la matriz de autovectores y $D$ la matriz diagonal de autovalores.
+	\end{itemize}
+\end{definicion*}
 
 \subsubsection{Matrices trivialmente diagonalizables}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
+\begin{definicion*}{Diagonalizaciones triviales}
+	\begin{itemize}
+		\item \textbf{Matriz nula:}
 			\begin{itemize}
-				\item \textbf{Matriz nula:}
-					\begin{itemize}
-						\item \textbf{Autovalores:} 0
-						\item \textbf{Autovectores:} Cualquier vector no nulo
-					\end{itemize}
-				\item \textbf{Matriz identidad:}
-					\begin{itemize}
-						\item \textbf{Autovalores:} 1
-						\item \textbf{Autovectores:} Cualquier vector no nulo
-					\end{itemize}
-				\item \textbf{Matriz diagonal:}
-					\begin{itemize}
-						\item \textbf{Autovalores:} $a_{ii}$, los elementos de la diagonal
-						\item \textbf{Autovectores:} Los que tienen sus componentes nulas, excepto la $n$-ésima.
-					\end{itemize}
-				\item \textbf{Matriz escalar:}
-					\begin{itemize}
-						\item \textbf{Autovalores:} $k \in R$
-						\item \textbf{Autovectores:} Cualquier vector no nulo
-					\end{itemize}
-				\item \textbf{Matriz de proyección:}
-					\begin{itemize}
-						\item \textbf{Autovalores:} 1 con $m_a(1)=m_g(1)=\dime{S}$ y 0 con $m_a(0)=m_g(0)=\dime{S^\bot}$
-						\item \textbf{Autovectores:} Los vectores de $S$ asociados a 1 y los asociados a $S^\bot$ a 0
-					\end{itemize}
-				\item \textbf{Matriz de reflexión:}
-					\begin{itemize}
-						\item \textbf{Autovalores:} 1 con $m_a(1)=m_g(1)=\dime{S}$ y -1 con $m_a(-1)=m_g(-1)=\dime{S^\bot}$
-						\item \textbf{Autovectores:} Los vectores de $S$ asociados a 1 y los asociados a $S^\bot$ a -1
-					\end{itemize}
+				\item \textbf{Autovalores:} 0
+				\item \textbf{Autovectores:} Cualquier vector no nulo
 			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diagonalizaciones triviales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+		\item \textbf{Matriz identidad:}
+			\begin{itemize}
+				\item \textbf{Autovalores:} 1
+				\item \textbf{Autovectores:} Cualquier vector no nulo
+			\end{itemize}
+		\item \textbf{Matriz diagonal:}
+			\begin{itemize}
+				\item \textbf{Autovalores:} $a_{ii}$, los elementos de la diagonal
+				\item \textbf{Autovectores:} Los que tienen sus componentes nulas, excepto la $n$-ésima.
+			\end{itemize}
+		\item \textbf{Matriz escalar:}
+			\begin{itemize}
+				\item \textbf{Autovalores:} $k \in R$
+				\item \textbf{Autovectores:} Cualquier vector no nulo
+			\end{itemize}
+		\item \textbf{Matriz de proyección:}
+			\begin{itemize}
+				\item \textbf{Autovalores:} 1 con $m_a(1)=m_g(1)=\dime{S}$ y 0 con $m_a(0)=m_g(0)=\dime{S^\bot}$
+				\item \textbf{Autovectores:} Los vectores de $S$ asociados a 1 y los asociados a $S^\bot$ a 0
+			\end{itemize}
+		\item \textbf{Matriz de reflexión:}
+			\begin{itemize}
+				\item \textbf{Autovalores:} 1 con $m_a(1)=m_g(1)=\dime{S}$ y -1 con $m_a(-1)=m_g(-1)=\dime{S^\bot}$
+				\item \textbf{Autovectores:} Los vectores de $S$ asociados a 1 y los asociados a $S^\bot$ a -1
+			\end{itemize}
+	\end{itemize}
+\end{definicion*}
 
 \subsubsection{Propiedades}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\begin{itemize}
-				\item Si $A$ es diagonalizable entonces $A^n$ es diagonalizable ($D_A^n=D_{A^n}$ y $\sigma(A^n)=\sigma^n(A)$). La recíproca es falsa
-				\item Si $A \in C^{n \times n}$ tiene $n$ autovalores distintos entonces $A$ es diagonalizable. La recíproca es falsa
-				\item $\dete{A}=\prod_{i=1}^n \lambda_i=p_A(0)$
-				\item $\tr{A}=\sum_{i=1}^n \lambda_i$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de la diagonalización};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Propiedades de la diagonalización}
+	\begin{itemize}
+		\item Si $A$ es diagonalizable entonces $A^n$ es diagonalizable ($D_A^n=D_{A^n}$ y $\sigma(A^n) = \sigma^n(A)$). La recíproca es falsa
+		\item Si $A \in C^{n \times n}$ tiene $n$ autovalores distintos entonces $A$ es diagonalizable. La recíproca es falsa
+		\item $\dete{A}=\prod_{i=1}^n \lambda_i=p_A(0)$
+		\item $\tr{A}=\sum_{i=1}^n \lambda_i$
+	\end{itemize}
+\end{definicion*}
 
 \subsubsection{Diagonalización de transformaciones lineales}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Los siguientes enunciados son equivalentes para decir que $T \in \ell (V_K)$ con $\dime{V_K}=n$, es diagonalizable:
-			\begin{itemize}
-				\item $\exists B$ base de $V_K$ tal que $[T]_B$ es diagonal
-				\item $\exists B$ base de $V_K$ formada por autovectores de $T$
-				\item $T$ tiene $n$ autovectores Linealmente Independientes 
-			\end{itemize}
-			Esa base $B$ y $[T]_B=\text{diag}(\sigma(T))$.\\
-			
-			Si $A=[T]_H$, $H$ cualquiera base, entonces $T$ es diagonalizable si y solo si $A$ es diagonalizable.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diagonalización de Transformaciones Lineales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Diagonalización de Transformaciones Lineales}
+	Los siguientes enunciados son equivalentes para decir que $T \in \ell (V_K)$ con $\dime{V_K}=n$, es diagonalizable:
+	\begin{itemize}
+		\item $\exists B$ base de $V_K$ tal que $[T]_B$ es diagonal
+		\item $\exists B$ base de $V_K$ formada por autovectores de $T$
+		\item $T$ tiene $n$ autovectores Linealmente Independientes 
+	\end{itemize}
+	Esa base $B$ y $[T]_B=\text{diag}(\sigma(T))$.\\
+	
+	Si $A=[T]_H$, $H$ cualquiera base, entonces $T$ es diagonalizable si y solo si $A$ es diagonalizable.
+\end{definicion*}
 
 \newpage
 \section{Matrices hermíticas y simétricas}
 \subsection{Diagonalización}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\textbf{Matriz antisimétrica:} Si $A \in R^{n \times n}$ es antisimétrica ($A^T=A$) entonces:
-			\begin{itemize}
-				\item Los autovalores de $A$ son imaginarios puros o nulos
-				\item Los autovectores asociados a autovalores distintos son ortogonales
-				\item $A$ es diagonalizable unitariamente.
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matriz antisimétrica};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Matriz antisimétrica}
+	\textbf{Matriz antisimétrica:} Si $A \in R^{n \times n}$ es antisimétrica ($A^T=A$) entonces:
+	\begin{itemize}
+		\item Los autovalores de $A$ son imaginarios puros o nulos
+		\item Los autovectores asociados a autovalores distintos son ortogonales
+		\item $A$ es diagonalizable unitariamente.
+	\end{itemize}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\textbf{Matriz simétrica(hermítica):} Si $A \in R^{n \times n}$ es simétrica ($B \in C^{n \times n}$ es hermítica) si y solo si:\\
-			$A$ es diagonalizable ortogonalmente:
-				\begin{align}
-					A=PDP^T
-				\end{align}
-			$B$ es diagonalizable unitariamente:
-				\begin{align}
-					B=PDP^H
-				\end{align}
-			Con $D$ real.\\
-			
-			Se deducen las siguientes propiedades:
-			\begin{itemize}
-				\item $A$ y $B$ tienen $n$ autovalores reales
-				\item Los elementos de la diagonal de $A$ y $B$ son reales
-				\item $\dete{A} \in R$
-				\item $\dime{S_\lambda(A)}=m_a(\lambda) \forall \lambda \in \sigma(A)$
-				\item $\dime{S_\lambda(B)}=m_a(\lambda) \forall \lambda \in \sigma(B)$
-				\item Los autovectores asociados a autovalores distintos son ortogonales
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matriz simétrica(hermítica)};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Matriz simétrica (hermítica)}
+	\textbf{Matriz simétrica (hermítica):} Si $A \in R^{n \times n}$ es simétrica ($B \in C^{n \times n}$ es hermítica) si y solo si:\\
+	$A$ es diagonalizable ortogonalmente:
+		\begin{align}
+			A=PDP^T
+		\end{align}
+	$B$ es diagonalizable unitariamente:
+		\begin{align}
+			B=PDP^H
+		\end{align}
+	Con $D$ real.\\
+	
+	Se deducen las siguientes propiedades:
+	\begin{itemize}
+		\item $A$ y $B$ tienen $n$ autovalores reales
+		\item Los elementos de la diagonal de $A$ y $B$ son reales
+		\item $\dete{A} \in R$
+		\item $\dime{S_\lambda(A)}=m_a(\lambda) \forall \lambda \in \sigma(A)$
+		\item $\dime{S_\lambda(B)}=m_a(\lambda) \forall \lambda \in \sigma(B)$
+		\item Los autovectores asociados a autovalores distintos son ortogonales
+	\end{itemize}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\textbf{Matriz ortogonal(unitaria):} Si $A \in R^{n \times n}$ es ortogonal ($B \in C^{n \times n}$ es unitaria) si y solo si:\\
-			
-			\begin{minipage}{0.4\textwidth}
-				\begin{align}
-					A A^T=A^T A=I_d \\
-					A^T=A^{-1}
-				\end{align}
-			\end{minipage}
-			\begin{minipage}{0.1\textwidth}
-				\begin{flushright}
-					ó
-				\end{flushright}
-			\end{minipage}
-			\begin{minipage}{0.4\textwidth}
-				\begin{align}
-					B B^H=B^H B=I_d \\
-					B^H=B^{-1}
-				\end{align}
-			\end{minipage}
-			\vspace{0.5cm}
-			Las columnas de $A$ y $B$ son Base Ortonormal de $R^n$ y $C^n$ respectivamente.\\
-			
-			Se deducen las siguientes propiedades:
-			\begin{itemize}
-				\item $\dete{A}=\pm 1$. Si $\dete{A}=1$, $A$ es la matriz de rotación
-				\item Los autovalores tienen módulo $1$ y pueden ser reales o complejos
-				\item Son matrices unitariamente diagonalizables
-				\item Los autovectores asociados a autovalores distintos son ortogonales
-				\item Preservan los productos internos: $\produ{A\vect{x},A\vect{y}}=\produ{\vect{x},\vect{y}}$
-				\item Preservan las normas asociadas al producto interno: $\vert A \vect{x} \vert= \vert \vect{x} \vert$
-				\item Si $C$ es unitaria, $BC$ y $CB$ son unitarias también.
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matriz ortogonal(unitaria)};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Matriz ortogonal (unitaria)}
+		\textbf{Matriz ortogonal (unitaria):} Si $A \in R^{n \times n}$ es ortogonal ($B \in C^{n \times n}$ es unitaria) si y solo si:\\
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{align}
+			A A^T=A^T A=I_d \\
+			A^T=A^{-1}
+		\end{align}
+	\end{minipage}
+	\begin{minipage}{0.1\textwidth}
+		\begin{flushright}
+			ó
+		\end{flushright}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\begin{align}
+			B B^H=B^H B=I_d \\
+			B^H=B^{-1}
+		\end{align}
+	\end{minipage}
+	\vspace{0.5cm}
+	Las columnas de $A$ y $B$ son Base Ortonormal de $R^n$ y $C^n$ respectivamente.\\
+	
+	Se deducen las siguientes propiedades:
+	\begin{itemize}
+		\item $\dete{A}=\pm 1$. Si $\dete{A}=1$, $A$ es la matriz de rotación
+		\item Los autovalores tienen módulo $1$ y pueden ser reales o complejos
+		\item Son matrices unitariamente diagonalizables
+		\item Los autovectores asociados a autovalores distintos son ortogonales
+		\item Preservan los productos internos: $\produ{A\vect{x},A\vect{y}}=\produ{\vect{x},\vect{y}}$
+		\item Preservan las normas asociadas al producto interno: $\vert A \vect{x} \vert= \vert \vect{x} \vert$
+		\item Si $C$ es unitaria, $BC$ y $CB$ son unitarias también.
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Descomposición espectral}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Si $A=PDP^{-1}=PDP^T$, las columnas de $P$ son autovectores ortonormales $\vect{u}_1,\ldots,\vect{u}_n$ de $A$ y los autovalores correspondientes $\lambda_1,\ldots,\lambda_n$ están en la matriz diagonal $D$. Entonces:
-			\begin{align}
-				A=\sum_{i=1}^n \lambda_i\vect{u}_i \vect{u}_i^T
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Descomposición espectral de matrices simétricas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Descomposición espectral de matrices simétricas}
+	Si $A=PDP^{-1}=PDP^T$, las columnas de $P$ son autovectores ortonormales $\vect{u}_1,\ldots,\vect{u}_n$ de $A$ y los autovalores correspondientes $\lambda_1,\ldots,\lambda_n$ están en la matriz diagonal $D$. Entonces:
+	\begin{align}
+		A=\sum_{i=1}^n \lambda_i\vect{u}_i \vect{u}_i^T
+	\end{align}
+\end{definicion*}
 
 \subsection{Subespacios invariantes por una transformación lineal}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\begin{itemize}
-				\item $S \in K^n$ es invariante por $A \in K^{n \times n} \Longleftrightarrow \forall \vect{x} \in S$ $\vert$ $A\vect{x} \in S$
-				\item $S \subset V$ es invariante por $T \in \ell (V) \Longleftrightarrow \forall \vect{x} \in S$ $\vert$ $T(\vect{x}) \in S$
-			\end{itemize}
-			Se deducen las siguientes propiedades:
-			\begin{itemize}
-				\item Si $\lambda$ es autovalor de $T$, entonces $S_\lambda(T)$ es un subespacio invariante por $T$, puesto que:
-				\begin{align}
-					\forall \vect{x} \in S_\lambda(T) \Rightarrow T(\vect{x})=\lambda \vect{x} \in S_\lambda(T)
-				\end{align}
-				\item No todo subespacio invariante es un autoespacio de $T$, pero sí los de dimensión 1
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Subespacios invariantes por una transformación lineal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Subespacios invariantes por una transformación lineal}
+	\begin{itemize}
+		\item $S \in K^n$ es invariante por $A \in K^{n \times n} \Longleftrightarrow \forall \vect{x} \in S$ $\vert$ $A\vect{x} \in S$
+		\item $S \subset V$ es invariante por $T \in \ell (V) \Longleftrightarrow \forall \vect{x} \in S$ $\vert$ $T(\vect{x}) \in S$
+	\end{itemize}
+	Se deducen las siguientes propiedades:
+	\begin{itemize}
+		\item Si $\lambda$ es autovalor de $T$, entonces $S_\lambda(T)$ es un subespacio invariante por $T$, puesto que:
+		\begin{align}
+			\forall \vect{x} \in S_\lambda(T) \Rightarrow T(\vect{x})=\lambda \vect{x} \in S_\lambda(T)
+		\end{align}
+		\item No todo subespacio invariante es un autoespacio de $T$, pero sí los de dimensión 1
+	\end{itemize}
+\end{definicion*}
 
 \newpage
 \section{Formas cuadráticas}
