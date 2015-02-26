@@ -13,7 +13,6 @@
 \usepackage{graphicx} % Permite incluir gráficos
 \usepackage[hang, bf]{caption} % Personaliza los subtítulos de las figuras y tablas
 \usepackage{float} % Permite posicionar mejor las figuras y tablas
-\usepackage{pgf,tikz}
 
 % Defino la ruta de los paquetes personalizados para el apunte
 \newcommand{\rutapaquetes}{./paquetes-apunte}
@@ -82,17 +81,6 @@
 \newcommand{\tr}[1]{\text{tr}(#1)}
 \newcommand{\gen}[1]{\text{gen}\left\{#1\right\}}
 \newcommand{\produ}[1]{(#1)}
-
-\usetikzlibrary{shapes, arrows, positioning, shadows, trees, automata}
-
-\tikzstyle{definicion} = [draw=red, fill=gray!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
-
-\tikzstyle{corolario} = [draw=red, fill=green!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
-
-\tikzstyle{teorema} = [draw=red, fill=blue!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
 
 \cuadro{teorema}{blue}
 \cuadro{definicion}{gray}
@@ -1106,408 +1094,343 @@ Sea $T \in \ell (V_K,W_K)$ y $A=[T]_{BC}$ con $B$ base de $V$ y $C$ base de $W$ 
 
 \newpage
 \section{Formas cuadráticas}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Una forma cuadrática en $R^n$ es una función $Q:R^n \to R$ tal que:
-			\begin{align}
-				Q(\vect{x})=\vect{x}^TA\vect{x}
-			\end{align}
-			 Donde $A$ es una matriz simétrica $\in R^{n \times n}$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Formas cuadráticas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Formas cuadráticas}
+	Una forma cuadrática en $R^n$ es una función $Q:R^n \to R$ tal que:
+	\begin{align}
+		Q(\vect{x})=\vect{x}^TA\vect{x}
+	\end{align}
+	Donde $A$ es una matriz simétrica $\in R^{n \times n}$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $A$ una matriz simétrica $\in R^{n \times n}$. Entonces existe un cambio ortogonal de variable, $\vect{x}=P\vect{y}$, donde $P$ es una matriz ortogonal tal que $\dete{P}=+1$ e $\vect{y}$ es el nuevo vector, que transforma la forma cuadrática $\vect{x}^TA\vect{x}$ a una forma cuadrática $\vect{y}^T D \vect{y}$ sin términos cruzados:
-			\begin{align}
-				\vect{x}^T A \vect{x}=\left(P\vect{y}\right)^T A \left(P\vect{y}\right)=\vect{y}^T \underbrace{P^T A P}_{D} \vect{y}=\vect{y}^T D \vect{y}=g(\vect{y})
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de los ejes principales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de los ejes principales}
+	Sea $A$ una matriz simétrica $\in R^{n \times n}$. Entonces existe un cambio ortogonal de variable, $\vect{x} = P\vect{y}$, donde $P$ es una matriz ortogonal tal que $\dete{P}=+1$ e $\vect{y}$ es el nuevo vector, que transforma la forma cuadrática $\vect{x}^TA\vect{x}$ a una forma cuadrática $\vect{y}^T D \vect{y}$ sin términos cruzados:
+	\begin{align}
+		\vect{x}^T A \vect{x}=\left(P\vect{y}\right)^T A \left(P\vect{y}\right)=\vect{y}^T \underbrace{P^T A P}_{D} \vect{y}=\vect{y}^T D \vect{y}=g(\vect{y})
+	\end{align}
+\end{teorema*}
 
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea la forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$, con $A=PDP^T$.\\
-			
-			El conjunto de todas las $\vect{x} \in R^n$ $\vert$ $\vect{x}^T A \vect{x}=c$ es una elipse, una hipérbola, dos rectas, un punto o ninguno.\\
-			
-			Si $A$ es diagonal, la gráfica está en posición estándar. Si $A$ no es diagonal, la gráfica está girada hasta salirse de la posición estándar. Los \textbf{ejes principales} son los autovectores de $A$ y son el nuevo sistema de coordenadas para los cuales la gráfica está en posición estándar.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Perspectiva geométrica de los ejes principales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Perspectiva geométrica de los ejes principales}
+	Sea la forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$, con $A=PDP^T$.\\
+	
+	El conjunto de todas las $\vect{x} \in R^n$ $\vert$ $\vect{x}^T A \vect{x}=c$ es una elipse, una hipérbola, dos rectas, un punto o ninguno.\\
+	
+	Si $A$ es diagonal, la gráfica está en posición estándar. Si $A$ no es diagonal, la gráfica está girada hasta salirse de la posición estándar. Los \textbf{ejes principales} son los autovectores de $A$ y son el nuevo sistema de coordenadas para los cuales la gráfica está en posición estándar.
+\end{corolario*}
 
 \subsection{Clasificación}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Una forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$ es:
-			\begin{table}[H]
-				\begin{tabular}{c|c|c|c}
-					 & \textbf{Definición} & \textbf{Criterio I} & \textbf{Criterio II} \\
-					\hline
-					\textbf{Definida positiva} & \parbox{2cm}{\begin{center}$Q(\vect{x})>0$,\\ $\forall \vect{x} \neq 0$\end{center}} & \parbox{2.5cm}{\begin{center}	$a_{11}>0$, \\ $\dete{A}>0$	\end{center}} & Autovalores de $A$ positivos \\
-					\hline
-					\textbf{Semidefinida positiva} & \parbox{2cm}{\begin{center}$Q(\vect{x}) \geq 0$,\\ $\forall \vect{x}$\end{center}} & \parbox{2.5cm}{\begin{center}$\dete{A_k} \geq 0$,\\ $k=1,\ldots,n$\end{center}} & Autovalores de $A$ positivos o nulos \\
-					\hline
-					\textbf{Definida negativa} & \parbox{2cm}{\begin{center}$Q(\vect{x})<0$,\\ $\forall \vect{x} \neq 0$\end{center}} & \parbox{2.5cm}{\begin{center}$a_{11}<0$,\\ $\dete{A}>0$\end{center}} & Autovalores de $A$ negativos \\
-					\hline
-					\textbf{Semidefinida negativa} & \parbox{2cm}{\begin{center}$Q(\vect{x}) \leq 0$,\\ $\forall \vect{x}$\end{center}} & \parbox{2.5cm}{\begin{center}$\dete{A_k} \leq 0$,\\ $k=1,\ldots,n$\end{center}} & Autovalores de $A$ negativos o nulos \\
-					\hline
-					\textbf{Indefinida} & $Q(\vect{x}) \asymp 0$ &  & Autovalores de $A$ negativos y/o positivos \\
-				\end{tabular}
-			\end{table}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Clasificación de las formas cuadráticas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}[0.9\textwidth]{Clasificación de las formas cuadráticas}
+	Una forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$ es:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c|p{0.3\textwidth}}
+			 & \textbf{Definición} & \textbf{Criterio I} & \textbf{Criterio II} \\
+			\hline
+			\hline
+			\textbf{Definida positiva} & \parbox{2cm}{\begin{center}$Q(\vect{x})>0$,\\ $\forall \vect{x} \neq 0$\end{center}} & \parbox{2.5cm}{\begin{center}	$a_{11}>0$, \\ $\dete{A}>0$	\end{center}} & Autovalores de $A$ positivos \\
+			\hline
+			\textbf{Semidefinida positiva} & \parbox{2cm}{\begin{center}$Q(\vect{x}) \geq 0$,\\ $\forall \vect{x}$\end{center}} & \parbox{2.5cm}{\begin{center}$\dete{A_k} \geq 0$,\\ $k=1,\ldots,n$\end{center}} & Autovalores de $A$ positivos o nulos \\
+			\hline
+			\textbf{Definida negativa} & \parbox{2cm}{\begin{center}$Q(\vect{x})<0$,\\ $\forall \vect{x} \neq 0$\end{center}} & \parbox{2.5cm}{\begin{center}$a_{11}<0$,\\ $\dete{A}>0$\end{center}} & Autovalores de $A$ negativos \\
+			\hline
+			\textbf{Semidefinida negativa} & \parbox{2cm}{\begin{center}$Q(\vect{x}) \leq 0$,\\ $\forall \vect{x}$\end{center}} & \parbox{2.5cm}{\begin{center}$\dete{A_k} \leq 0$,\\ $k=1,\ldots,n$\end{center}} & Autovalores de $A$ negativos o nulos \\
+			\hline
+			\textbf{Indefinida} & $Q(\vect{x}) \asymp 0$ &  & Autovalores de $A$ negativos y/o positivos \\
+		\end{tabular}
+	\end{table}
+\end{definicion*}
 
 \subsection{Optimización restringida}
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea la forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$, con $A$ simétrica. Se verifica:
-			\begin{align}
-				\lambda_{min}(A) \leq \frac{Q(\vect{x})}{\parallel \vect{x} \parallel^2} \leq \lambda_{max}(A)
-			\end{align}
-			Sea extremar una forma cuadrática $f:R^n \to R$, $f(\vect{x})=\vect{x}^T A \vect{x}$, ($A$ simétrica), sujeto a la restricción $\vert \vect{x} \vert=\alpha$.\\
-			
-			El máximo de $f$ es $\lambda_{max}(A) \alpha^2$ y se alcanza en $M=\{ \vect{x} \in S_{\lambda_{max}}(A)$ $\vert$ $ \vert \vect{x} \vert =\alpha \}$ \\
-			
-			El mínimo de $f$ es $\lambda_{min}(A) \alpha^2$ y se alcanza en $m=\{ \vect{x} \in S_{\lambda_{min}}(A)$ $\vert$ $ \vert \vect{x} \vert =\alpha \}$ \\
-			
-			Sea extremar una forma cuadrática $f:R^n \to R$, $f(\vect{x})=\vect{x}^T A \vect{x}$,($A$ simétrica), sujeto a la restricción $\vect{x}^T B \vect{x}=\alpha^2$, y sea $B$ definida positiva tal que $B=P_B D_B P_B^T$. Mediante el cambio de variable $\vect{y}=\sqrt{D_B}P_B^T \vect{x} \rightarrow \vect{x}=\sqrt{D_B^{-1}}P_B \vect{y}$, esto es equivalente a extremar $g(\vect{y})=\vect{y}^T \left(\sqrt{D_B^{-1}}^T P_B^T A P_B \sqrt{D_B^{-1}} \right)$ y sujeto a la restricción $\vert \vect{y} \vert=\alpha$. Entonces:
-			\begin{align}
-				\text{Máx }g(\vect{y})=\text{Máx }f(\vect{x}) \\
-				\text{mín }g(\vect{y})=\text{mín }f(\vect{x})
-			\end{align}
-			Los $\vect{x}$ en donde se alcanza ese extremo se hallan realizando $\vect{x}=P_B \vect{y}$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de Rayleigh};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de Rayleigh}
+	Sea la forma cuadrática $Q(\vect{x})=\vect{x}^T A \vect{x}$, con $A$ simétrica. Se verifica:
+	\begin{align}
+		\lambda_{min}(A) \leq \frac{Q(\vect{x})}{\parallel \vect{x} \parallel^2} \leq \lambda_{max}(A)
+	\end{align}
+	Sea extremar una forma cuadrática $f:R^n \to R$, $f(\vect{x})=\vect{x}^T A \vect{x}$, ($A$ simétrica), sujeto a la restricción $\vert \vect{x} \vert=\alpha$.\\
+	
+	El máximo de $f$ es $\lambda_{max}(A) \alpha^2$ y se alcanza en $M=\{ \vect{x} \in S_{\lambda_{max}}(A)$ $\vert$ $ \vert \vect{x} \vert =\alpha \}$ \\
+	
+	El mínimo de $f$ es $\lambda_{min}(A) \alpha^2$ y se alcanza en $m=\{ \vect{x} \in S_{\lambda_{min}}(A)$ $\vert$ $ \vert \vect{x} \vert =\alpha \}$ \\
+	
+	Sea extremar una forma cuadrática $f:R^n \to R$, $f(\vect{x})=\vect{x}^T A \vect{x}$,($A$ simétrica), sujeto a la restricción $\vect{x}^T B \vect{x}=\alpha^2$, y sea $B$ definida positiva tal que $B=P_B D_B P_B^T$. Mediante el cambio de variable $\vect{y}=\sqrt{D_B}P_B^T \vect{x} \rightarrow \vect{x}=\sqrt{D_B^{-1}}P_B \vect{y}$, esto es equivalente a extremar $g(\vect{y})=\vect{y}^T \left(\sqrt{D_B^{-1}}^T P_B^T A P_B \sqrt{D_B^{-1}} \right)$ y sujeto a la restricción $\vert \vect{y} \vert=\alpha$. Entonces:
+	\begin{align}
+		\text{Máx }g(\vect{y})=\text{Máx }f(\vect{x}) \\
+		\text{mín }g(\vect{y})=\text{mín }f(\vect{x})
+	\end{align}
+	Los $\vect{x}$ en donde se alcanza ese extremo se hallan realizando $\vect{x}=P_B \vect{y}$
+\end{teorema*}
 
 \newpage
 \section{Descomposición en Valores Singulares (DVS)}
 \subsection{Definición}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\textbf{Valores singulares:} Se define como:
-			\begin{align}
-				VS(A)=\sqrt{\lambda_i} \text{ , } \forall \lambda_i \in \sigma(A^T A)
-			\end{align}
-			Sea $A$ una matriz de $m \times n$ con rango $r$. Entonces existe una matriz $\Sigma$, y existen una matriz $U$ ortogonal de $m \times m$ y una matriz $V$ ortogonal de $n \times n$ tales que $A=U \Sigma V^T$ donde:
-			\begin{itemize}
-				\item $\Sigma \in R^{m \times n}$ es tal que $\Sigma=\begin{bmatrix}{D}&{0}\\{0}&{0}\end{bmatrix}$, y la matriz diagonal $D$ tiene como elementos a los primeros $r$ valores singulares de $A^T A$, ordenados en forma descendente $\sigma_i \geq \ldots \geq \sigma_r >0$.
-				\item $V \in R^{n \times n}$ es una matriz cuyas columnas son unas Base Ortonormal (BON) de autovectores $\{\vect{v}_1,\ldots,\vect{v}_n \}$ asociados a los autovalores de $A^T A$.
-				\item $U \in R^{m \times m}$ es una matriz cuyas primeras $r$ columnas son los vectores $\frac{A\vect{v}_1}{\sigma_1},\ldots,\frac{A\vect{v}_r}{\sigma_r}$. Las otras columnas se obtienen completando la Base Ortonormal (BON) de $R^m$. Las columnas de $U$ son autovectores de $A A^T$
-				\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Descomposición en Valores Singulares (DVS)};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Descomposición en Valores Singulares (DVS)}
+	\textbf{Valores singulares:} Se define como:
+	\begin{align}
+		VS(A)=\sqrt{\lambda_i} \text{ , } \forall \lambda_i \in \sigma(A^T A)
+	\end{align}
+	Sea $A$ una matriz de $m \times n$ con rango $r$. Entonces existe una matriz $\Sigma$, y existen una matriz $U$ ortogonal de $m \times m$ y una matriz $V$ ortogonal de $n \times n$ tales que $A=U \Sigma V^T$ donde:
+	\begin{itemize}
+		\item $\Sigma \in R^{m \times n}$ es tal que $\Sigma=\begin{bmatrix}{D}&{0}\\{0}&{0}\end{bmatrix}$, y la matriz diagonal $D$ tiene como elementos a los primeros $r$ valores singulares de $A^T A$, ordenados en forma descendente $\sigma_i \geq \ldots \geq \sigma_r >0$.
+		\item $V \in R^{n \times n}$ es una matriz cuyas columnas son unas Base Ortonormal (BON) de autovectores $\{\vect{v}_1,\ldots,\vect{v}_n \}$ asociados a los autovalores de $A^T A$.
+		\item $U \in R^{m \times m}$ es una matriz cuyas primeras $r$ columnas son los vectores $\frac{A\vect{v}_1}{\sigma_1},\ldots,\frac{A\vect{v}_r}{\sigma_r}$. Las otras columnas se obtienen completando la Base Ortonormal (BON) de $R^m$. Las columnas de $U$ son autovectores de $A A^T$
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Subespacios de las DVS}
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $A \in K^{m \times n}$:
-			\begin{align}
-				A=\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{u}_1}&{\ldots}&{\vect{u}_m}\\{|}&{ }&{|}\end{bmatrix}}_{m \times m}\underbrace{\begin{bmatrix}{D}&{\ldots}&{0}\\{\vdots}&{\ddots}&{0}\\{0}&{0}&{0}\end{bmatrix}}_{m \times n}\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{v}_1}&{\ldots}&{\vect{v}_n}\\{|}&{ }&{|}\end{bmatrix}^T}_{n \times n}
-			\end{align}
-			Si $\rg{A}=r$ entonces:
-			\begin{align}
-				\{\underbrace{\vect{u}_1,\ldots,\vect{u}_r}_{\text{BON de } \col{A}},\overbrace{\vect{u}_{r+1},\ldots,\vect{u}_m}^{\text{BON de } \col{A}^\bot} \} \\
-				\{\underbrace{\vect{v}_1,\ldots,\vect{v}_r}_{\text{BON de } \fil{A}},\overbrace{\vect{v}_{r+1},\ldots,\vect{v}_m}^{\text{BON de } \fil{A}^\bot} \}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Subespacios de la DVS};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Subespacios de la DVS}
+	Sea $A \in K^{m \times n}$:
+	\begin{align}
+		A=\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{u}_1}&{\ldots}&{\vect{u}_m}\\{|}&{ }&{|}\end{bmatrix}}_{m \times m}\underbrace{\begin{bmatrix}{D}&{\ldots}&{0}\\{\vdots}&{\ddots}&{0}\\{0}&{0}&{0}\end{bmatrix}}_{m \times n}\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{v}_1}&{\ldots}&{\vect{v}_n}\\{|}&{ }&{|}\end{bmatrix}^T}_{n \times n}
+	\end{align}
+	Si $\rg{A}=r$ entonces:
+	\begin{align}
+		\{\underbrace{\vect{u}_1,\ldots,\vect{u}_r}_{\text{BON de } \col{A}},\overbrace{\vect{u}_{r+1},\ldots,\vect{u}_m}^{\text{BON de } \col{A}^\bot} \} \\
+		\{\underbrace{\vect{v}_1,\ldots,\vect{v}_r}_{\text{BON de } \fil{A}},\overbrace{\vect{v}_{r+1},\ldots,\vect{v}_m}^{\text{BON de } \fil{A}^\bot} \}
+	\end{align}
+\end{corolario*}
 
 \subsection{Propiedades de las DVS}
-\begin{tikzpicture}
-	\node [corolario] (box){%
-		\begin{minipage}{0.80\textwidth}
-			\begin{itemize}
-				\item $\rg{A}=\rg{\Sigma}=\rg{\Sigma^T}=\# VS(A)_{>0}$
-				\item $A \in R^{n \times n}$ es inversible $\Longleftrightarrow A$ tiene $n$ $VS$ positivos
-				\item $VS(A)_{>0}=VS(A^T)_{>0}$
-				\item Si $A \in R^{n \times n} \Rightarrow \dete{A}=\prod_{i=1}^n VS_i(A)$
-				\item Si $A$ es cuadrada y definida positiva $\Rightarrow \sigma(A)=VS(A)$
-				\item Si $A \sim B \Rightarrow VS(A)=VS(B)$
-				\item Si $B$ es ortogonal $\Rightarrow A,AB$ y $BA$ tienen los mismos valores singulares
-				\item Si $A$ es cuadrada y simétrica $\Rightarrow VS_i(a)=\vert \lambda_i(A) \vert$
-				\item Si las filas de $A$ son una Base Ortonormal (BON), los valores singulares no nulos de $A$ son $1$
-				\item Si las columnas de $A$ son una Base Ortonormal (BON), los valores singulares de $A$ son $1$
-				\item La matriz $A^T A$ (\emph{Matriz de Gram} de $A$) es siempre simétrica y semidefinida positiva, con lo cual nunca tendrá valores singulares negativos. Será definida positiva cuando $A$ tenga columnas Linealmente Independientes.
-				\item Sea $T:R^m \to R^n$ una transformación lineal tal que $T(\vect{x})=A\vect{x}$. Sea la forma cuadrática $f(\vect{x})=\vert T(\vect{x}) \vert^2=\vect{x}^T(A^T A)\vect{x}$. Entonces:
-				\begin{itemize}
-					\item El máximo de $f(\vect{x})$ sujeto a $\vert \vect{x} \vert=1$ es $\lambda_{max}\left(A^T A\right)$. Entonces el máximo de $\vert T(\vect{x}) \vert$ es $VS_{max}(A)$ y se alcanza en $M=\{\vect{x} \in R^m$ $\vert$ $\vect{x} \in S_{\lambda_{max}}\left(A^T A\right), \vert \vect{x} \vert=1 \}$
-					\item El mínimo de $f(\vect{x})$ sujeto a $\vert \vect{x} \vert=1$ es $\lambda_{min}\left(A^T A\right)$. Entonces el mínimo de $\vert T(\vect{x}) \vert$ es $VS_{min}(A)$ y se alcanza en $m=\{\vect{x} \in R^m$ $\vert$ $\vect{x} \in S_{\lambda_{min}}\left(A^T A\right), \vert \vect{x} \vert=1 \}$
-				\end{itemize}
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de la DVS};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Propiedades de la DVS}
+	\begin{itemize}
+		\item $\rg{A}=\rg{\Sigma}=\rg{\Sigma^T}=\# VS(A)_{>0}$
+		\item $A \in R^{n \times n}$ es inversible $\Longleftrightarrow A$ tiene $n$ $VS$ positivos
+		\item $VS(A)_{>0}=VS(A^T)_{>0}$
+		\item Si $A \in R^{n \times n} \Rightarrow \dete{A}=\prod_{i=1}^n VS_i(A)$
+		\item Si $A$ es cuadrada y definida positiva $\Rightarrow \sigma(A)=VS(A)$
+		\item Si $A \sim B \Rightarrow VS(A)=VS(B)$
+		\item Si $B$ es ortogonal $\Rightarrow A,AB$ y $BA$ tienen los mismos valores singulares
+		\item Si $A$ es cuadrada y simétrica $\Rightarrow VS_i(a)=\vert \lambda_i(A) \vert$
+		\item Si las filas de $A$ son una Base Ortonormal (BON), los valores singulares no nulos de $A$ son $1$
+		\item Si las columnas de $A$ son una Base Ortonormal (BON), los valores singulares de $A$ son $1$
+		\item La matriz $A^T A$ (\emph{Matriz de Gram} de $A$) es siempre simétrica y semidefinida positiva, con lo cual nunca tendrá valores singulares negativos. Será definida positiva cuando $A$ tenga columnas Linealmente Independientes.
+		\item Sea $T:R^m \to R^n$ una transformación lineal tal que $T(\vect{x})=A\vect{x}$. Sea la forma cuadrática $f(\vect{x})=\vert T(\vect{x}) \vert^2=\vect{x}^T(A^T A)\vect{x}$. Entonces:
+		\begin{itemize}
+			\item El máximo de $f(\vect{x})$ sujeto a $\vert \vect{x} \vert=1$ es $\lambda_{max}\left(A^T A\right)$. Entonces el máximo de $\vert T(\vect{x}) \vert$ es $VS_{max}(A)$ y se alcanza en $M=\{\vect{x} \in R^m$ $\vert$ $\vect{x} \in S_{\lambda_{max}}\left(A^T A\right), \vert \vect{x} \vert=1 \}$
+			\item El mínimo de $f(\vect{x})$ sujeto a $\vert \vect{x} \vert=1$ es $\lambda_{min}\left(A^T A\right)$. Entonces el mínimo de $\vert T(\vect{x}) \vert$ es $VS_{min}(A)$ y se alcanza en $m=\{\vect{x} \in R^m$ $\vert$ $\vect{x} \in S_{\lambda_{min}}\left(A^T A\right), \vert \vect{x} \vert=1 \}$
+		\end{itemize}
+	\end{itemize}
+\end{corolario*}
 
 \subsection{DVS reducida y Pseudoinversa}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $A \in R^{n \times m}$. Si $A=U\Sigma V^T$ y $\rg{A}=r$. Entonces una Descomposición en Valores Singulares reducida (DVSr) de $A$ es:
-			\begin{align}
-				A=U_r \Sigma_r V_r^T
-			\end{align}
-			Siendo $U_r \in R^{n \times r}$,$\Sigma_r \in R^{r \times r}$,$V_r^T \in R^{r \times m}$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {DVS reducida};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{DVS reducida}
+	Sea $A \in R^{n \times m}$. Si $A=U\Sigma V^T$ y $\rg{A}=r$. Entonces una Descomposición en Valores Singulares reducida (DVSr) de $A$ es:
+	\begin{align}
+		A=U_r \Sigma_r V_r^T
+	\end{align}
+	Siendo $U_r \in R^{n \times r}$,$\Sigma_r \in R^{r \times r}$,$V_r^T \in R^{r \times m}$
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Se define la \textbf{pseudoinversa de Moore-Pensore} como:
-			\begin{align}
-				A^+=V_r \Sigma_r^{-1}U_r^T
-			\end{align}
-			Sea $A \in R^{n \times m}$, se deducen las siguientes propiedades:
-			\begin{itemize}
-				\item $A^+=A^{\#}$ cuando $\rg{A}=m$
-				\item $A^+ A=V_r V_r^T=P_{\fil{A}}$
-				\item $A A^+=U_r U_r^T=P_{\col{A}}$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Pseudoinversa de Moore-Penrose};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Pseudoinversa de Moore-Penrose}
+	Se define la \textbf{pseudoinversa de Moore-Pensore} como:
+	\begin{align}
+		A^+=V_r \Sigma_r^{-1}U_r^T
+	\end{align}
+	Sea $A \in R^{n \times m}$, se deducen las siguientes propiedades:
+	\begin{itemize}
+		\item $A^+=A^{\#}$ cuando $\rg{A}=m$
+		\item $A^+ A=V_r V_r^T=P_{\fil{A}}$
+		\item $A A^+=U_r U_r^T=P_{\col{A}}$
+	\end{itemize}
+\end{definicion*}
 
 \newpage
 \section{Ecuaciones diferenciales}
 \subsection{Wronskiano}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea $A=\{f_1,\ldots,f_q \}$ funciones definidas en un invervalo $I \subset R$, a valores en $C$, con derivada hasta el orden $q-1$ continua en $I$. La \textbf{matriz de Wronski} de $A$ es,para cada $\vect{x} \in I$
-			\begin{align}
-				M_{w_A}(\vect{x})=\begin{bmatrix} {f_1(\vect{x})}&{\ldots}&{f_q(\vect{x})} \\ {f_1^\prime(\vect{x})}&{\ldots}&{f_q^\prime(\vect{x})} \\ {f_1^{\prime\prime}(\vect{x})}&{\ldots}&{f_q^{\prime\prime}(\vect{x})} \\ {\vdots}&{ }&{\vdots} \\ {f_1^{(q-1)}(\vect{x})}&{\ldots}&{f_q^{(q-1)}(\vect{x})} \end{bmatrix}
-			\end{align}
-			Se define al \textbf{Wronskiano} como:
-			\begin{align}
-				w_A(\vect{x})=\dete{M_{w_A}}=\dete{\begin{matrix} {f_1(\vect{x})}&{\ldots}&{f_q(\vect{x})} \\ {f_1^\prime(\vect{x})}&{\ldots}&{f_q^\prime(\vect{x})} \\ {f_1^{\prime\prime}(\vect{x})}&{\ldots}&{f_q^{\prime\prime}(\vect{x})} \\ {\vdots}&{ }&{\vdots} \\ {f_1^{(q-1)}(\vect{x})}&{\ldots}&{f_q^{(q-1)}(\vect{x})} \end{matrix}}
-			\end{align}
-			Se deducen las siguientes propiedades:
-			\begin{itemize}
-				\item Si existe un $\vect{x}_0 \in I$ tal que $w_A(\vect{x}_0) \neq 0$, entonces las funciones $f_1, \ldots,f_q$ son Linealmente Independientes 
-				\item Si un conjunto es Linealmente Dependiente en $I$, su wronskiano es la función nula. La recíproca es falsa; es verdadera solo si las funciones que componen el wronskiano son soluciones de una Ecuación Diferencial lineal de orden superior
-				\item La derivada del wronskiano es el determinante obtenido derivando la última fila.
-				\item La derivada del wronskiano es la suma de $q$ determinantes.
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Matriz de Wronski};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Matriz de Wronski}
+	Sea $A=\{f_1,\ldots,f_q \}$ funciones definidas en un invervalo $I \subset R$, a valores en $C$, con derivada hasta el orden $q-1$ continua en $I$. La \textbf{matriz de Wronski} de $A$ es,para cada $\vect{x} \in I$
+	\begin{align}
+		M_{w_A} (\vect{x}) = 
+			\begin{bmatrix}
+				{f_1(\vect{x})} & {\ldots} & {f_q(\vect{x})} \\
+				{f_1^\prime(\vect{x})} & {\ldots} & {f_q^\prime(\vect{x})} \\
+				{f_1^{\prime\prime}(\vect{x})} & {\ldots} & {f_q^{\prime\prime}(\vect{x})} \\
+				{\vdots} & { } & {\vdots} \\
+				{f_1^{(q-1)}(\vect{x})} & {\ldots} & {f_q^{(q-1)}(\vect{x})}
+			\end{bmatrix}
+	\end{align}
+	Se define al \textbf{Wronskiano} como:
+	\begin{align}
+		w_A (\vect{x}) = \dete{M_{w_A}} = \dete{
+			\begin{matrix}
+				{f_1(\vect{x})} & {\ldots} & {f_q(\vect{x})} \\
+				{f_1^\prime(\vect{x})} & {\ldots} & {f_q^\prime(\vect{x})} \\
+				{f_1^{\prime\prime}(\vect{x})} & {\ldots} & {f_q^{\prime\prime}(\vect{x})} \\
+				{\vdots} & { } & {\vdots} \\
+				{f_1^{(q-1)}(\vect{x})} & {\ldots} & {f_q^{(q-1)}(\vect{x})}
+			\end{matrix}}
+	\end{align}
+	Se deducen las siguientes propiedades:
+	\begin{itemize}
+		\item Si existe un $\vect{x}_0 \in I$ tal que $w_A(\vect{x}_0) \neq 0$, entonces las funciones $f_1, \ldots,f_q$ son Linealmente Independientes 
+		\item Si un conjunto es Linealmente Dependiente en $I$, su wronskiano es la función nula. La recíproca es falsa; es verdadera solo si las funciones que componen el wronskiano son soluciones de una Ecuación Diferencial lineal de orden superior
+		\item La derivada del wronskiano es el determinante obtenido derivando la última fila.
+		\item La derivada del wronskiano es la suma de $q$ determinantes.
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Identidad de Abel}
-\begin{tikzpicture}
-	\node [teorema] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea la ecuación diferencial $y(\vect{x})^{(n)}+a_{n-1} \cdot y(\vect{x})^{(n-1)}+\ldots+a_1 \cdot y^\prime(\vect{x})+a_0 \cdot y(\vect{x})=0$ en un intervalo $I \subset R$, sea $S=\{y_1,\ldots,y_n \}$ el conjunto de las soluciones de la ecuación diferencial, y sea $W_s$ el Wronskiano de este conjunto. Entonces se verifica que:
-			\begin{align}
-				W^\prime_s(\vect{x})=-a_{n-1} \cdot W_s(\vect{x})
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Identidad de Abel};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Identidad de Abel}
+	Sea la ecuación diferencial $y(\vect{x})^{(n)} + a_{n-1} \cdot y(\vect{x})^{(n-1)} + \ldots + a_1 \cdot y^\prime(\vect{x}) + a_0 \cdot y(\vect{x}) = 0$ en un intervalo $I \subset R$, sea $S=\{y_1, \ldots, y_n \}$ el conjunto de las soluciones de la ecuación diferencial, y sea $W_s$ el Wronskiano de este conjunto. Entonces se verifica que:
+	\begin{align}
+		W^\prime_s(\vect{x})=-a_{n-1} \cdot W_s(\vect{x})
+	\end{align}
+\end{teorema*}
 
 \subsection{Existencia y unicidad de Problemas de Valores Iniciales (PVI)}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea el problema $a_ny(\vect{x})^{(n)}+a_{n-1} \cdot y(\vect{x})^{(n-1)}+\ldots+a_1 \cdot y^\prime(\vect{x})+a_0 \cdot y(\vect{x})=f(\vect{x})$ sujeto a la condición inigial $y(\vect{x}_0)=y_0$. La condición de existencia y unicidad de la solución del problema de valores iniciales es:
-			\begin{align}
-				\text{Ecuación diferencial normal en } I:a_n \neq 0, \forall \vect{x} \in I \\
-				\vect{x}_0 \in I
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Problemas de Valores Iniciales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Problemas de Valores Iniciales}
+	Sea el problema $a_ny(\vect{x})^{(n)} + a_{n-1} \cdot y(\vect{x})^{(n-1)} + \ldots + a_1 \cdot y^\prime(\vect{x}) + a_0 \cdot y(\vect{x}) = f(\vect{x})$ sujeto a la condición inigial $y(\vect{x}_0) = y_0$. La condición de existencia y unicidad de la solución del problema de valores iniciales es:
+	\begin{align}
+		\text{Ecuación diferencial normal en } I:a_n \neq 0, \forall \vect{x} \in I \\
+		\vect{x}_0 \in I
+	\end{align}
+\end{definicion*}
 
 \subsection{Variables separables}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.50\textwidth}
-			\begin{align*}
-				y^\prime(\vect{x})=\frac{f(\vect{x})}{g(y)} \\
-				\frac{dy}{d\vect{x}}=\frac{f(\vect{x})}{g(y)} \\
-				g(y) dy =f(\vect{x}) d\vect{x} \\
-				G(y)=F(\vect{x})+c
-			\end{align*}
-		\end{minipage}
-		\begin{minipage}{0.30\textwidth}
-			\begin{align*}
-				\text{Ecuación diferencial} \\
-				\text{ } \\
-				\text{Derivada con diferenciales} \\
-				\text{ } \\
-				\text{Separo las variables} \\
-				\text{Integro}
-			\end{align*}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Variables separables};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Variables separables}
+	\begin{minipage}{0.50\textwidth}
+		\begin{align*}
+			y^\prime(\vect{x})=\frac{f(\vect{x})}{g(y)} \\
+			\frac{dy}{d\vect{x}}=\frac{f(\vect{x})}{g(y)} \\
+			g(y) dy =f(\vect{x}) d\vect{x} \\
+			G(y)=F(\vect{x})+c
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}{0.30\textwidth}
+		\begin{align*}
+			\text{Ecuación diferencial} \\
+			\text{ } \\
+			\text{Derivada con diferenciales} \\
+			\text{ } \\
+			\text{Separo las variables} \\
+			\text{Integro}
+		\end{align*}
+	\end{minipage}
+\end{definicion*}
 
 \subsection{Lineales de $1^{er}$ orden}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Obtenemos primero la solución general de la homogénea $y_H$ y luego una particular de la no homogénea $y_P$. La solución buscada será $y_G=y_H+y_P$
-			\begin{itemize}
-				\item La solución de la ecuación homogénea asociada a $y^\prime=p(x)y=0$ es de variables separables, una solución es $y_H(x)=e^{-\int p(x)dx}$
-				\item La solución no homogénea se obtiene multiplicando toda la ecuación por el factor integrante de Lagrange:
-				\begin{align}
-					u(v)=e^{\int p(x) dx}
-				\end{align}
-				Y la ecuación a resolver será $[u(v) \cdot y(x)]^\prime=u(v) \cdot q(x)$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Lineales de $1^{er}$ orden};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Lineales de $1^{er}$ orden}
+	Obtenemos primero la solución general de la homogénea $y_H$ y luego una particular de la no homogénea $y_P$. La solución buscada será $y_G=y_H+y_P$
+	\begin{itemize}
+		\item La solución de la ecuación homogénea asociada a $y^\prime=p(x)y=0$ es de variables separables, una solución es $y_H(x)=e^{-\int p(x)dx}$
+		\item La solución no homogénea se obtiene multiplicando toda la ecuación por el factor integrante de Lagrange:
+		\begin{align}
+			u(v)=e^{\int p(x) dx}
+		\end{align}
+		Y la ecuación a resolver será $[u(v) \cdot y(x)]^\prime=u(v) \cdot q(x)$
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Diferencial exacta}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Son del tipo $P(x,y)dx+Q(x,y)dy=0$.\\
-			
-			Es diferencial exacta si existe $f(x,y)$ tal que $df=P(x,y)dx+Q(x,y)dy$, es decir si:
-			\begin{align}
-				\frac{df}{dx}=P(x,y) \\
-				\frac{df}{dy}=Q(x,y)
-			\end{align}
-			En ese caso, la solución general es $f(x,y)=C$. Se cumple que la ecuación anterior es diferencial exacta si y solo si $\frac{dP}{dy}=\frac{dQ}{dx}$\\
-			
-			Se dice además que $\mu(x,y)$ es un factor integrante de la ecuación $P(x,y)dx+Q(x,y)dy=0$ si al multiplicar la ecuación por $\mu(x,y)$ la ecuación resulta diferencial exacta.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diferencial exacta};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Diferencial exacta}
+	Son del tipo $P(x,y)dx+Q(x,y)dy=0$.\\
+	
+	Es diferencial exacta si existe $f(x,y)$ tal que $df=P(x,y)dx+Q(x,y)dy$, es decir si:
+	\begin{align}
+		\frac{df}{dx}=P(x,y) \\
+		\frac{df}{dy}=Q(x,y)
+	\end{align}
+	En ese caso, la solución general es $f(x,y)=C$. Se cumple que la ecuación anterior es diferencial exacta si y solo si $\frac{dP}{dy}=\frac{dQ}{dx}$\\
+	
+	Se dice además que $\mu(x,y)$ es un factor integrante de la ecuación $P(x,y)dx+Q(x,y)dy=0$ si al multiplicar la ecuación por $\mu(x,y)$ la ecuación resulta diferencial exacta.
+\end{definicion*}
 
 \subsection{Lineales homogéneas de orden superior con coeficientes constantes}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Son del tipo $\sum_{i=0}^n a_i \cdot y^{(i)}(t)=0$, $\forall t \in I$.\\
-			
-			Polinomio característico: $p(\lambda)=\sum_{i=0}^n a_i \lambda_i^n$\\
-			
-			Espectro de la ecuación diferencial: $\sigma(p)=\{ \lambda \in C$ $\vert$ $p(\lambda)=0 \}$\\
-			
-			$y_H(t)=t^k e^{\lambda t}$ es una solución de la Ecuación diferencial si $\lambda \in \sigma(p)$, con multiplicidad $m$, $k=0,1,\ldots,m-1$\\
-			
-			Si la ecuación diferencial es de coeficientes reales, las raíces del polinomio característico aparecerán conjugadas. Es decir: $\lambda_{1,2}=\alpha \pm \jmath \beta$.Luego:
-			\begin{align*}
-				y_1(t)=e^{\alpha t} \left(\cos (\beta t)+\jmath \sin (\beta t) \right) \\
-				y_2(t)=e^{\alpha t} \left(\cos (\beta t)-\jmath \sin (\beta t) \right)
-			\end{align*}
-			Entonces, $\text{gen}\{ y_1,y_2\}=\text{gen} \{e^{\alpha t} \cos (\beta t),e^{\alpha t} \sin (\beta t) \}$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Lineales homogéneas de orden superior con coeficientes constantes};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Lineales homogéneas de orden superior con coeficientes constantes}
+	Son del tipo $\sum_{i=0}^n a_i \cdot y^{(i)}(t)=0$, $\forall t \in I$.\\
+	
+	Polinomio característico: $p(\lambda)=\sum_{i=0}^n a_i \lambda_i^n$\\
+	
+	Espectro de la ecuación diferencial: $\sigma(p)=\{ \lambda \in C$ $\vert$ $p(\lambda)=0 \}$\\
+	
+	$y_H(t)=t^k e^{\lambda t}$ es una solución de la Ecuación diferencial si $\lambda \in \sigma(p)$, con multiplicidad $m$, $k=0,1,\ldots,m-1$\\
+	
+	Si la ecuación diferencial es de coeficientes reales, las raíces del polinomio característico aparecerán conjugadas. Es decir: $\lambda_{1,2}=\alpha \pm \jmath \beta$.Luego:
+	\begin{align*}
+		y_1(t)=e^{\alpha t} \left(\cos (\beta t)+\jmath \sin (\beta t) \right) \\
+		y_2(t)=e^{\alpha t} \left(\cos (\beta t)-\jmath \sin (\beta t) \right)
+	\end{align*}
+	Entonces, $\text{gen}\{ y_1,y_2\}=\text{gen} \{e^{\alpha t} \cos (\beta t),e^{\alpha t} \sin (\beta t) \}$
+\end{definicion*}
 
 \subsection{Lineales no homogéneas de orden superior con coeficientes constantes}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Son del tipo $\sum_{i=0}^n a_i \cdot y^{(i)}(t)=f(x)$.\\
-			
-			La solución es de la forma $y_G(x)=y_H(x)+y_P(x)$, donde $y_H(x)$ se obtiene del caso anterior, e $y_P(x)$ se obtiene mediante algunos de estos métodos:
-			\begin{itemize}
-				\item \textbf{Método de variación de parámetros:} Aplicable en cualquier caso.\\
-				$y_P(t)=\sum_{i=1}^n u_i(x) \cdot y_i(x)$, siendo $y_i(x)$ las soluciones de $y_H(x)$, y $u_i(x)$ las funciones que satisfacen:
-				\begin{align}
-					\begin{bmatrix} {y_1}&{y_2}&{\ldots}&{y_n} \\ {y^\prime_1}&{y^\prime_2}&{\ldots}&{y^\prime_n} \\ {\vdots}&{\vdots}&{\ddots}&{\vdots} \\ {y^{(n)}_1}&{y^{(n)}_2}&{\ldots}&{y^{(n)}_n} \end{bmatrix} \begin{bmatrix} {u^\prime_1} \\ {u^\prime_2} \\ {\vdots} \\ {u^\prime_n} \end{bmatrix}=\begin{bmatrix} {0} \\ {0} \\ {\vdots} \\ {\frac{f(x)}{a_n}} \end{bmatrix}
-				\end{align}
-				\item \textbf{Método de coeficientes indeterminados:} Aplicable cuando $f(x)$ es exponencial, polinómica o trigonométrica.\\
-				Siendo $a_2y^{\prime\prime}(t)+a_1y^\prime(t)+a_0y(t)=f(x)$, con $f(x)=\sum_{i=1}^k p_i(x) \cdot e^{m_i x}$, $y_P(t)=\sum_{i=1}^k q_i(x) \cdot e^{m_i x}$
-				\begin{itemize}
-					\item Si $e^{m_k x}$ no es solución de la Ecuación diferencial ordinaria homogénea asociada (i.e. $m_k$ no es solución de $a_2 \lambda^2+a_1\lambda+a_0=$), $q_k$ es un polinomio de grado $p_k$ con coeficientes a determinar
-					\item Si $e^{m_k x}$ si es solución de la Ecuación diferencial ordinaria homogénea asociada (i.e. $m_k$ no es solución de $a_2 \lambda^2+a_1\lambda+a_0=$), $q_k$ es un polinomio de un grado mayor que $p_k$ con coeficientes a determinar
-					\item Una vez armada la $y_P(t)$ se reemplaza en la ecuación diferencial original, e igualando los términos semejantes se hallan los coeficientes indeterminados.
-				\end{itemize}
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Lineales no homogéneas de orden superior con coeficientes constantes};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Lineales no homogéneas de orden superior con coeficientes constantes}
+	Son del tipo $\sum_{i=0}^n a_i \cdot y^{(i)}(t)=f(x)$.\\
+	
+	La solución es de la forma $y_G(x)=y_H(x)+y_P(x)$, donde $y_H(x)$ se obtiene del caso anterior, e $y_P(x)$ se obtiene mediante algunos de estos métodos:
+	\begin{itemize}
+		\item \textbf{Método de variación de parámetros:} Aplicable en cualquier caso.\\
+		$y_P(t)=\sum_{i=1}^n u_i(x) \cdot y_i(x)$, siendo $y_i(x)$ las soluciones de $y_H(x)$, y $u_i(x)$ las funciones que satisfacen:
+		\begin{align}
+			\begin{bmatrix}
+				{y_1} & {y_2} & {\ldots} & {y_n} \\
+				{y^\prime_1} & {y^\prime_2} & {\ldots} & {y^\prime_n} \\
+				{\vdots} & {\vdots} & {\ddots} & {\vdots} \\
+				{y^{(n)}_1} & {y^{(n)}_2} & {\ldots} & {y^{(n)}_n}
+			\end{bmatrix}
+			\begin{bmatrix}
+				{u^\prime_1} \\
+				{u^\prime_2} \\
+				{\vdots} \\
+				{u^\prime_n}
+			\end{bmatrix} =
+			\begin{bmatrix}
+				{0} \\
+				{0} \\
+				{\vdots} \\
+				{\frac{f(x)}{a_n}}
+			\end{bmatrix}
+		\end{align}
+		\item \textbf{Método de coeficientes indeterminados:} Aplicable cuando $f(x)$ es exponencial, polinómica o trigonométrica.\\
+		Siendo $a_2y^{\prime\prime}(t)+a_1y^\prime(t)+a_0y(t)=f(x)$, con $f(x)=\sum_{i=1}^k p_i(x) \cdot e^{m_i x}$, $y_P(t)=\sum_{i=1}^k q_i(x) \cdot e^{m_i x}$
+		\begin{itemize}
+			\item Si $e^{m_k x}$ no es solución de la Ecuación diferencial ordinaria homogénea asociada (i.e. $m_k$ no es solución de $a_2 \lambda^2+a_1\lambda+a_0=$), $q_k$ es un polinomio de grado $p_k$ con coeficientes a determinar
+			\item Si $e^{m_k x}$ si es solución de la Ecuación diferencial ordinaria homogénea asociada (i.e. $m_k$ no es solución de $a_2 \lambda^2+a_1\lambda+a_0=$), $q_k$ es un polinomio de un grado mayor que $p_k$ con coeficientes a determinar
+			\item Una vez armada la $y_P(t)$ se reemplaza en la ecuación diferencial original, e igualando los términos semejantes se hallan los coeficientes indeterminados.
+		\end{itemize}
+	\end{itemize}
+\end{definicion*}
 
 \newpage
 \section{Sistemas de Ecuaciones diferenciales lineales}
 $\begin{cases} x^\prime(t)=a_{11}x+a_{12}y+b_1 \\ y^\prime(t)=a_{21}x+a_{22}y+b_2 \end{cases} \Rightarrow \begin{bmatrix} {x^\prime} \\ {y^\prime} \end{bmatrix}=\begin{bmatrix} {a_{11}}&{a_{12}} \\ {a_{21}}&{a_{22}} \end{bmatrix} \begin{bmatrix} {x} \\ {y} \end{bmatrix}+\begin{bmatrix} {b_1} \\ {b_2} \end{bmatrix} \Rightarrow X^\prime=AX+B$
 
 \subsection{Sistemas homogéneos con $A$ diagonalizable}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			La solución de $X^\prime=AX+B$, $(A \in K^{n \times n}$, con $\lambda_i$ autovalor de $A$ y $\vect{v}_i$ autovector de $A$ asociado a $\lambda_i$,es:
-			\begin{align}
-				X=\sum_{i=1}^n c_i \vect{v}_i e^{\lambda_i t}=\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{v}_1 e^{\lambda_1 t}}&{\ldots}&{\vect{v}_n e^{\lambda_n t}}\\{|}&{ }&{|}\end{bmatrix}}_{\varphi (t) \in K^{n \times n}} \underbrace{\begin{bmatrix} {c_1} \\ {\vdots} \\ {c_n}\end{bmatrix}}_{C}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Sistemas homogéneos con $A$ diagonalizable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Sistemas homogéneos con $A$ diagonalizable}
+	La solución de $X^\prime=AX+B$, $(A \in K^{n \times n}$, con $\lambda_i$ autovalor de $A$ y $\vect{v}_i$ autovector de $A$ asociado a $\lambda_i$,es:
+	\begin{align}
+		X=\sum_{i=1}^n c_i \vect{v}_i e^{\lambda_i t}=\underbrace{\begin{bmatrix}{|}&{ }&{|}\\{\vect{v}_1 e^{\lambda_1 t}}&{\ldots}&{\vect{v}_n e^{\lambda_n t}}\\{|}&{ }&{|}\end{bmatrix}}_{\varphi (t) \in K^{n \times n}} \underbrace{\begin{bmatrix} {c_1} \\ {\vdots} \\ {c_n}\end{bmatrix}}_{C}
+	\end{align}
+\end{definicion*}
 
 \subsection{Sistemas no homogéneos con $A$ diagonalizable}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea el sistema $X^\prime=AX+B$. La solución es $X_G=X_H+X_P$ con:
-			\begin{itemize}
-				\item $X_H=\sum_{i=1}^n c_i \vect{v}_i e^{\lambda_i t}=\varphi (t) C$
-				\item $X_P=\varphi (t) \cdot u(t)$, siendo $u(t)$ tal que $\varphi (t) \cdot u^\prime(t)=B$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A$ no diagonalizable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Sistemas no homogéneos con $A$ no diagonalizable}
+	Sea el sistema $X^\prime=AX+B$. La solución es $X_G=X_H+X_P$ con:
+	\begin{itemize}
+		\item $X_H=\sum_{i=1}^n c_i \vect{v}_i e^{\lambda_i t}=\varphi (t) C$
+		\item $X_P=\varphi (t) \cdot u(t)$, siendo $u(t)$ tal que $\varphi (t) \cdot u^\prime(t)=B$
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Sistemas homogéneos con $A$ no diagonalizable}
-\begin{tikzpicture}
-	\node [definicion] (box){%
-		\begin{minipage}{0.80\textwidth}
-			Sea el sistema $X^\prime=AX$. Con $A$ no diagonalizable, proponemos una factorización de la forma $A=PJP^{-1}$, donde $J \in C^{n \times n}$ es la \textbf{matriz de Jordan} de $A$ que tiene la siguiente estructura en bloques:
-			\begin{align}
-				J=\begin{bmatrix} {J_1}&{0}&{0}&{0} \\ {0}&{J_2}&{0}&{0} \\ {\vdots}&{\vdots}&{\ddots}&{0} \\ {0}&{0}&{\ldots}&{J_l} \end{bmatrix}
-			\end{align}
-			Donde cada bloque $J_i$ es una matriz de $k_i \times k_i$ de la forma:
-			\begin{align}
-				J_i=\begin{bmatrix} {\lambda_i}&{1}&{0}&{0} \\ {0}&{\lambda_i}&{1}&{0} \\ {\vdots}&{\vdots}&{\ddots}&{1} \\ {0}&{0}&{\ldots}&{\lambda_i} \end{bmatrix}
-			\end{align}
-			Para algún autovalor $\lambda_i$ de $A$.\\
-			
-			Dado un autovalor $\lambda_i$, su multiplicidad geométrica es el número de bloques de Jordan correspondientes a $\lambda_i$, y su multiplicidad algebraica es la suma de los tamaños de los bloques correspondientes a ese autovalor.\\
-			
-			Luego: $X^\prime=AX$ $\underrightarrow{\text{{\scriptsize X=PY}}}$ $P Y^\prime=PJP^{-1}PY \longrightarrow Y^\prime=JY$. Resolvemos este sistema y la solución general del problema se expresará como $X(t)=P Y(t)$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Sistemas no homogéneos con $A$ diagonalizable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Sistemas no homogéneos con $A$ diagonalizable}
+	Sea el sistema $X^\prime=AX$. Con $A$ no diagonalizable, proponemos una factorización de la forma $A=PJP^{-1}$, donde $J \in C^{n \times n}$ es la \textbf{matriz de Jordan} de $A$ que tiene la siguiente estructura en bloques:
+	\begin{align}
+		J = \begin{bmatrix}
+				{J_1} & {0} & {0} & {0} \\
+				{0} & {J_2} & {0} & {0} \\
+				{\vdots} & {\vdots} & {\ddots} & {0} \\
+				{0} & {0} & {\ldots} & {J_l}
+			\end{bmatrix}
+	\end{align}
+	Donde cada bloque $J_i$ es una matriz de $k_i \times k_i$ de la forma:
+	\begin{align}
+		J_i=\begin{bmatrix} {\lambda_i}&{1}&{0}&{0} \\ {0}&{\lambda_i}&{1}&{0} \\ {\vdots}&{\vdots}&{\ddots}&{1} \\ {0}&{0}&{\ldots}&{\lambda_i} \end{bmatrix}
+	\end{align}
+	Para algún autovalor $\lambda_i$ de $A$.\\
+	
+	Dado un autovalor $\lambda_i$, su multiplicidad geométrica es el número de bloques de Jordan correspondientes a $\lambda_i$, y su multiplicidad algebraica es la suma de los tamaños de los bloques correspondientes a ese autovalor.\\
+	
+	Luego: $X^\prime=AX$ $\underrightarrow{\text{{\scriptsize X=PY}}}$ $P Y^\prime=PJP^{-1}PY \longrightarrow Y^\prime=JY$. Resolvemos este sistema y la solución general del problema se expresará como $X(t)=P Y(t)$
+\end{definicion*}
 
 \begin{corolario*}{Sistemas no homogéneos con $A \in R^{2 \times 2}$ no diagonalizable}
 	$A$ necesariamente posee un autovalor doble $\lambda \in R$ de multiplicidad geométrica $1$, con lo cual la matriz $J$ posee un solo bloque correspondiente a $\lambda$:
